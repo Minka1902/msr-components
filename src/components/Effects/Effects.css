@@ -1,0 +1,87 @@
+/* TiltCard */
+.msr-TiltCard {
+  transform: perspective(800px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg)) scale(var(--tilt-scale, 1));
+  transition: transform 120ms ease-out;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  .msr-TiltCard { transform: none; transition: none; }
+}
+
+/* SpotlightCard */
+.msr-Spotlight {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+}
+.msr-Spotlight::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--msr-transition-base);
+  background: radial-gradient(
+    var(--spot-size, 200px) circle at var(--spot-x, 50%) var(--spot-y, 50%),
+    color-mix(in srgb, var(--msr-color-primary) 18%, transparent),
+    transparent 70%
+  );
+}
+.msr-Spotlight:hover::before {
+  opacity: 1;
+}
+
+/* Marquee */
+.msr-Marquee {
+  overflow: hidden;
+  width: 100%;
+}
+.msr-Marquee__track {
+  display: flex;
+  width: max-content;
+  animation: msr-marquee var(--marquee-duration, 20s) linear infinite;
+}
+.msr-Marquee[data-direction="right"] .msr-Marquee__track {
+  animation-direction: reverse;
+}
+.msr-Marquee[data-pause]:hover .msr-Marquee__track {
+  animation-play-state: paused;
+}
+.msr-Marquee__group {
+  display: flex;
+  flex: none;
+  gap: var(--msr-space-6);
+  padding-right: var(--msr-space-6);
+}
+@keyframes msr-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .msr-Marquee__track { animation: none; }
+}
+
+/* ShimmerText */
+.msr-Shimmer {
+  background: linear-gradient(
+    100deg,
+    var(--msr-color-fg-subtle) 0%,
+    var(--msr-color-fg) 20%,
+    var(--msr-color-fg-subtle) 40%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: msr-shimmer var(--shimmer-duration, 2.5s) linear infinite;
+}
+@keyframes msr-shimmer {
+  to { background-position: -200% 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .msr-Shimmer { animation: none; }
+}

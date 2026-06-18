@@ -1,0 +1,15 @@
+.msr-HoverCard__anchor {
+  display: inline-flex;
+  outline: none;
+}
+.msr-HoverCard {
+  z-index: var(--msr-z-popover);
+  max-width: 320px;
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-md);
+  box-shadow: var(--msr-shadow-3);
+  padding: var(--msr-space-4);
+  color: var(--msr-color-fg);
+  animation: msr-popover-in var(--msr-transition-fast);
+}

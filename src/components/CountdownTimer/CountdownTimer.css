@@ -1,0 +1,38 @@
+.msr-Countdown {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--msr-space-2);
+}
+.msr-Countdown__seg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+.msr-Countdown__num {
+  font-variant-numeric: tabular-nums;
+  font-weight: var(--msr-weight-bold);
+  font-size: var(--msr-text-2xl);
+  color: var(--msr-color-fg);
+  line-height: 1;
+}
+.msr-Countdown[data-boxed] .msr-Countdown__num {
+  background-color: var(--msr-color-surface-2);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-md);
+  padding: var(--msr-space-2) var(--msr-space-3);
+  min-width: 2.4ch;
+  text-align: center;
+}
+.msr-Countdown__label {
+  font-size: var(--msr-text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--msr-color-fg-subtle);
+}
+.msr-Countdown__colon {
+  font-size: var(--msr-text-2xl);
+  font-weight: var(--msr-weight-bold);
+  color: var(--msr-color-fg-subtle);
+  line-height: 1;
+}

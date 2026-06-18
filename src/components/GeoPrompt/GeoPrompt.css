@@ -1,0 +1,64 @@
+.msr-GeoPrompt {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-3);
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  padding: var(--msr-space-4);
+}
+.msr-GeoPrompt__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--msr-radius-full);
+  background-color: var(--msr-tone-info-bg);
+  color: var(--msr-tone-info-fg);
+  flex: none;
+}
+.msr-GeoPrompt__body {
+  flex: 1;
+  min-width: 0;
+}
+.msr-GeoPrompt__title {
+  font-weight: var(--msr-weight-semibold);
+  color: var(--msr-color-fg);
+}
+.msr-GeoPrompt__desc {
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg-muted);
+}
+.msr-GeoPrompt__coords {
+  font-family: var(--msr-font-mono);
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg);
+}
+.msr-GeoPrompt__acc {
+  color: var(--msr-color-fg-subtle);
+}
+.msr-GeoPrompt__error {
+  font-size: var(--msr-text-sm);
+  color: var(--msr-tone-danger-fg);
+}
+.msr-GeoPrompt__btn {
+  appearance: none;
+  border: none;
+  background-color: var(--msr-color-primary);
+  color: var(--msr-color-primary-fg);
+  font: inherit;
+  font-weight: var(--msr-weight-medium);
+  font-size: var(--msr-text-sm);
+  border-radius: var(--msr-radius-md);
+  padding: var(--msr-space-2) var(--msr-space-4);
+  cursor: pointer;
+  flex: none;
+}
+.msr-GeoPrompt__btn:hover:not(:disabled) {
+  background-color: var(--msr-color-primary-hover);
+}
+.msr-GeoPrompt__btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}

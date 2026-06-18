@@ -88,6 +88,15 @@ Every component also accepts `className` / `style` and renders stable
 | `msr-components/charts` | Sparkline, LineChart, BarChart, DonutChart, RadialProgress, Gauge, Heatmap, ProgressBar (dependency-free SVG/CSS) |
 | `msr-components/styles.css` | The full stylesheet (tokens + 15 themes + all components) |
 
+**Navigation & overlays**: Drawer/Sheet, Stepper, TreeView, HoverCard,
+ScrollToTop.
+
+**Motion & delight**: AnimatedCounter, ScrollProgressBar, ScrollReveal, Confetti,
+TiltCard, SpotlightCard, Marquee, ShimmerText, AnimatedThemeToggle.
+
+**Powered by `msr-hooks`** (showcase components): NetworkStatusBanner,
+CountdownTimer, IdleDialog, GeoPrompt.
+
 **Advanced inputs** (in core `msr-components`): Combobox/Autocomplete (single +
 multi), Slider, RangeSlider, NumberStepper, PinInput, RatingStars, ToggleGroup,
 TagInput, FileDropzone, ColorPicker, DatePicker (+ standalone Calendar).

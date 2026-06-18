@@ -1,0 +1,61 @@
+.msr-ThemeToggle {
+  --tt-size: 26px;
+  position: relative;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  width: 52px;
+  height: 30px;
+  border-radius: var(--msr-radius-full);
+  background-color: #7dd3fc;
+  transition: background-color var(--msr-transition-base);
+  overflow: hidden;
+}
+.msr-ThemeToggle[data-dark] {
+  background-color: #1e293b;
+}
+.msr-ThemeToggle:focus-visible {
+  outline: 2px solid var(--msr-color-ring);
+  outline-offset: 2px;
+}
+.msr-ThemeToggle__orb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: var(--tt-size);
+  height: var(--tt-size);
+  border-radius: var(--msr-radius-full);
+  background: #fde047;
+  box-shadow: 0 0 8px rgba(253, 224, 71, 0.7);
+  transition: transform var(--msr-transition-base), background var(--msr-transition-base), box-shadow var(--msr-transition-base);
+}
+.msr-ThemeToggle[data-dark] .msr-ThemeToggle__orb {
+  transform: translateX(22px);
+  background: #e2e8f0;
+  box-shadow: inset -6px -2px 0 0 #cbd5e1;
+}
+.msr-ThemeToggle__rays {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: var(--tt-size);
+  height: var(--tt-size);
+  transition: opacity var(--msr-transition-base);
+}
+.msr-ThemeToggle[data-dark] .msr-ThemeToggle__rays {
+  opacity: 0;
+}
+.msr-ThemeToggle__ray {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 4px;
+  background: #fde047;
+  border-radius: 2px;
+  transform: rotate(calc(var(--ray) * 45deg)) translateY(-11px);
+  transform-origin: center top;
+}
+@media (prefers-reduced-motion: reduce) {
+  .msr-ThemeToggle, .msr-ThemeToggle__orb, .msr-ThemeToggle__rays { transition: none; }
+}

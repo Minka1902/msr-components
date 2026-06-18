@@ -89,3 +89,23 @@ export * from "./components/TagInput";
 export * from "./components/FileDropzone";
 export * from "./components/ColorPicker";
 export * from "./components/DatePicker";
+
+// ---- Components: navigation & overlays ----
+export * from "./components/Drawer";
+export * from "./components/Stepper";
+export * from "./components/TreeView";
+export * from "./components/HoverCard";
+export * from "./components/ScrollToTop";
+
+// ---- Components: motion / delight ----
+export * from "./components/AnimatedCounter";
+export * from "./components/Motion";
+export * from "./components/Effects";
+export * from "./components/Confetti";
+export * from "./components/AnimatedThemeToggle";
+
+// ---- Components: powered-by-msr-hooks showcases ----
+export * from "./components/NetworkStatusBanner";
+export * from "./components/CountdownTimer";
+export * from "./components/IdleDialog";
+export * from "./components/GeoPrompt";
