@@ -15,4 +15,12 @@ upstream into `msr-hooks` so the whole ecosystem benefits.
 
 `usePortal`, `useEscapeKey`, `useClickOutsideObject`, `useClipboard`,
 `useLockBodyScroll`, `useToggle`, `useMediaQuery`, `useHoverIntent`,
-`useDebounce`, `useEventListener`, `useId` (React built-in).
+`useDebounce`, `useEventListener`, `useLocalStorage`, `useId` (React built-in).
+
+## Caveats discovered
+
+- **`useLocalStorage(key, initialValue)`** re-reads storage in an effect keyed on
+  `initialValue`'s identity, so passing an inline literal (e.g. `[]`/`{}`) causes an
+  infinite render loop. Always pass a **stable reference**. We use a module-level
+  `const EMPTY_RECENTS: string[] = []` in `CommandPalette` and `SmartSearchInput`.
+  Worth fixing upstream (memoize the initial value or read once).

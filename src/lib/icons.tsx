@@ -52,6 +52,7 @@ import {
   Map as MapIcon,
   Eye,
   EyeOff,
+  Columns,
   MoreVertical2,
   MoreHorizontal2,
   Adjust,
@@ -130,6 +131,7 @@ export const glyphs = {
   map: MapIcon,
   eye: Eye,
   eyeOff: EyeOff,
+  columns: Columns,
   moreVertical: MoreVertical2, // alias
   moreHorizontal: MoreHorizontal2, // alias
   filter: Adjust, // alias: no neutral `Filter`

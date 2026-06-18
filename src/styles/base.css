@@ -11,3 +11,14 @@
   outline: 2px solid var(--msr-color-ring);
   outline-offset: 2px;
 }
+
+/* Density presets — apply via ThemeProvider `density` or a `data-density` attr. */
+[data-density="compact"] {
+  --msr-density-scale: 0.86;
+}
+[data-density="comfortable"] {
+  --msr-density-scale: 1;
+}
+[data-density="spacious"] {
+  --msr-density-scale: 1.15;
+}

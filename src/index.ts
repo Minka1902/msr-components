@@ -3,7 +3,7 @@
 
 // ---- Theme ----
 export { ThemeProvider } from "./theme/ThemeProvider";
-export type { ThemeProviderProps } from "./theme/ThemeProvider";
+export type { ThemeProviderProps, Density } from "./theme/ThemeProvider";
 export { useTheme } from "./theme/useTheme";
 export type { UseThemeResult } from "./theme/useTheme";
 export { THEMES, LIGHT_THEMES } from "./theme/themes";
@@ -24,7 +24,21 @@ export { usePosition } from "./lib/usePosition";
 export type { Placement, PositionResult } from "./lib/usePosition";
 export { useListNavigation } from "./lib/useListNavigation";
 
-// ---- Components ----
+// ---- Components: base / form primitives ----
+export * from "./components/Spinner";
+export * from "./components/Divider";
+export * from "./components/Avatar";
+export * from "./components/Input";
+export * from "./components/Textarea";
+export * from "./components/Checkbox";
+export * from "./components/Radio";
+export * from "./components/Switch";
+export * from "./components/Select";
+export * from "./components/Popover";
+export * from "./components/Menu";
+export * from "./components/Accordion";
+
+// ---- Components: core UI + polish ----
 export * from "./components/Button";
 export * from "./components/StatusBadge";
 export * from "./components/Card";
@@ -40,3 +54,11 @@ export * from "./components/ContextMenu";
 export * from "./components/FloatingActionButton";
 export * from "./components/KeyboardShortcutOverlay";
 export * from "./components/ThemePreviewCard";
+
+// ---- Components: heavier general UI ----
+export * from "./components/CommandPalette";
+export * from "./components/SmartSearchInput";
+export * from "./components/ResizableSplitPanel";
+export * from "./components/DataTable";
+export * from "./components/JsonViewer";
+export * from "./components/FilePathViewer";

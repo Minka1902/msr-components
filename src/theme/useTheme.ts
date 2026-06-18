@@ -1,10 +1,11 @@
-import { useThemeContext } from "./ThemeProvider";
+import { useThemeContext, type Density } from "./ThemeProvider";
 import { THEMES, type ThemeName } from "./themes";
 
 export interface UseThemeResult {
   theme: ThemeName;
   setTheme: (theme: ThemeName) => void;
   themes: readonly ThemeName[];
+  density: Density;
 }
 
 /**

@@ -1,6 +1,7 @@
 import * as React from "react";
 import { cx } from "../../lib/cx";
 import { Icon } from "../../lib/icons";
+import { Switch } from "../../components/Switch/Switch";
 
 export interface FeatureToggleCardProps
   extends Omit<React.HTMLAttributes<HTMLDivElement>, "title"> {
@@ -56,17 +57,12 @@ export const FeatureToggleCard = React.forwardRef<HTMLDivElement, FeatureToggleC
               <div className="msr-FeatureToggle__description">{description}</div>
             )}
           </div>
-          <button
-            type="button"
-            role="switch"
-            aria-checked={enabled}
+          <Switch
+            checked={enabled}
             aria-labelledby={labelId}
-            className="msr-Switch"
             disabled={blocked}
-            onClick={() => onToggle(!enabled)}
-          >
-            <span className="msr-Switch__thumb" />
-          </button>
+            onCheckedChange={onToggle}
+          />
         </div>
 
         {hasMissing && (

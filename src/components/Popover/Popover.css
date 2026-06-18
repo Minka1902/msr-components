@@ -1,0 +1,16 @@
+.msr-Popover__anchor {
+  display: inline-flex;
+}
+.msr-Popover {
+  z-index: var(--msr-z-popover);
+  animation: msr-popover-in var(--msr-transition-fast);
+}
+.msr-Popover--surface {
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-md);
+  box-shadow: var(--msr-shadow-3);
+  padding: var(--msr-space-3);
+  color: var(--msr-color-fg);
+  max-width: 320px;
+}

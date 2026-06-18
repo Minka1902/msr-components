@@ -6,10 +6,11 @@ CSS custom properties + `data-*` attributes (no Tailwind required by consumers),
 and built on the zero-dependency [`msr-hooks`](https://www.npmjs.com/package/msr-hooks)
 and [`msr-icons`](https://www.npmjs.com/package/msr-icons) packages.
 
-> Status: **v0.1 — foundation + first wave of components.** The theming system,
-> build pipeline, and a representative component in every domain module are in
-> place. Remaining components from the catalog are being added on the same
-> pattern (see [Roadmap](#roadmap)).
+> Status: **foundation + complete core/general-UI module.** The theming system
+> (15 themes, density scale, OS `system` theme), build pipeline, all base/form
+> primitives, the full general-UI set, and a representative component in every
+> domain module are in place. Remaining domain components are being added on the
+> same pattern (see [Roadmap](#roadmap)).
 
 ## Install
 
@@ -55,6 +56,13 @@ setTheme("dracula");
 `forest`, `sunset`, `rose`, `grape`, `nord`, `dracula`, `solarized`, `mono`,
 `contrast` (high-contrast a11y).
 
+**Follow the OS preference** with `defaultTheme="system"`, and adjust **density**
+(`compact` | `comfortable` | `spacious`), which scales control sizes:
+
+```tsx
+<ThemeProvider defaultTheme="system" density="compact">…</ThemeProvider>
+```
+
 ### Customizing
 
 Override tokens globally or per-scope:
@@ -71,7 +79,7 @@ Every component also accepts `className` / `style` and renders stable
 
 | Import | Contents |
 | --- | --- |
-| `msr-components` | Core UI + polish (Button, StatusBadge, Card, Skeleton, EmptyState, AnimatedTabs, CopyableCodeBlock, PopoverHelp, Toast, Modal, ConfirmDialog, ContextMenu, FloatingActionButton, KeyboardShortcutOverlay, ThemePreviewCard) + theme + hooks |
+| `msr-components` | **Primitives:** Button, Input, Textarea, Select, Checkbox, RadioGroup, Switch, Avatar, Spinner, Divider, Popover, Menu, Accordion, Card, StatusBadge, Skeleton. **Polish:** AnimatedTabs, CopyableCodeBlock, PopoverHelp, Toast, Modal, ConfirmDialog, ContextMenu, FloatingActionButton, KeyboardShortcutOverlay, ThemePreviewCard, EmptyState. **General UI:** CommandPalette, SmartSearchInput, ResizableSplitPanel, DataTable, JsonViewer, FilePathViewer. Plus theme + hooks. |
 | `msr-components/dashboard` | MetricCard, ActivityTimeline |
 | `msr-components/firmware` | CveSeverityPanel, AnalysisConfidenceBadge, FileMetadataCard |
 | `msr-components/business` | FeatureToggleCard, SetupChecklist |

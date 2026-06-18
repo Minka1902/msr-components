@@ -1,0 +1,12 @@
+.msr-Spinner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: currentColor;
+  animation: msr-spin 0.7s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .msr-Spinner {
+    animation-duration: 1.5s;
+  }
+}

@@ -46,10 +46,13 @@
   --msr-radius-xl: 16px;
   --msr-radius-full: 9999px;
 
-  /* ---- Primitive: control sizes ---- */
-  --msr-control-sm: 28px;
-  --msr-control-md: 36px;
-  --msr-control-lg: 44px;
+  /* ---- Density: scales control heights. Overridden by [data-density]. ---- */
+  --msr-density-scale: 1;
+
+  /* ---- Primitive: control sizes (scale with density) ---- */
+  --msr-control-sm: calc(28px * var(--msr-density-scale));
+  --msr-control-md: calc(36px * var(--msr-density-scale));
+  --msr-control-lg: calc(44px * var(--msr-density-scale));
 
   /* ---- Primitive: motion ---- */
   --msr-transition-fast: 120ms ease;
