@@ -1,0 +1,26 @@
+/* Theme: rose (soft pink, light) */
+[data-theme="rose"] {
+  --msr-color-bg: #fdf2f5;
+  --msr-color-surface: #fffafc;
+  --msr-color-surface-2: #fbe4ea;
+  --msr-color-overlay: rgba(76, 5, 25, 0.35);
+  --msr-color-fg: #4c0519;
+  --msr-color-fg-muted: #9f5c70;
+  --msr-color-fg-subtle: #c98ba0;
+  --msr-color-border: #f6d2dd;
+  --msr-color-border-strong: #eeb0c2;
+  --msr-color-primary: #e11d48;
+  --msr-color-primary-hover: #be123c;
+  --msr-color-primary-fg: #fff1f4;
+  --msr-color-ring: rgba(225, 29, 72, 0.4);
+  --msr-shadow-1: 0 1px 2px rgba(76, 5, 25, 0.06), 0 1px 3px rgba(76, 5, 25, 0.1);
+  --msr-shadow-2: 0 4px 8px rgba(76, 5, 25, 0.08);
+  --msr-shadow-3: 0 12px 24px rgba(76, 5, 25, 0.14);
+  --msr-tone-success-bg: #dcf6e6; --msr-tone-success-fg: #166534; --msr-tone-success-border: #8fdcab;
+  --msr-tone-warning-bg: #fcefcf; --msr-tone-warning-fg: #92400e; --msr-tone-warning-border: #f0cd80;
+  --msr-tone-danger-bg: #fde0e3; --msr-tone-danger-fg: #9f1239; --msr-tone-danger-border: #f5a8b6;
+  --msr-tone-info-bg: #e0ecfb; --msr-tone-info-fg: #1e40af; --msr-tone-info-border: #a8c8f2;
+  --msr-tone-muted-bg: #fbe4ea; --msr-tone-muted-fg: #9f5c70; --msr-tone-muted-border: #f6d2dd;
+  --msr-tone-processing-bg: #efe2fb; --msr-tone-processing-fg: #6b21a8; --msr-tone-processing-border: #d2b6f0;
+  --msr-tone-new-bg: #d6f3f6; --msr-tone-new-fg: #155e63; --msr-tone-new-border: #9bdce2;
+}

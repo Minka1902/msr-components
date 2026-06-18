@@ -1,0 +1,92 @@
+.msr-Timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msr-Timeline__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: var(--msr-space-3);
+  padding-bottom: var(--msr-space-5);
+}
+.msr-Timeline[data-dense] .msr-Timeline__item {
+  padding-bottom: var(--msr-space-3);
+}
+.msr-Timeline__item:last-child {
+  padding-bottom: 0;
+}
+/* connector line */
+.msr-Timeline__item::before {
+  content: "";
+  position: absolute;
+  left: 13px;
+  top: 24px;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--msr-color-border);
+}
+.msr-Timeline__item:last-child::before {
+  display: none;
+}
+
+.msr-Timeline__marker {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--msr-radius-full);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--msr-color-surface);
+  border: 2px solid var(--msr-color-border);
+  color: var(--msr-color-fg-muted);
+  z-index: 1;
+  font-size: 14px;
+}
+.msr-Timeline__marker[data-tone="success"] {
+  border-color: var(--msr-tone-success-border);
+  color: var(--msr-tone-success-fg);
+}
+.msr-Timeline__marker[data-tone="warning"] {
+  border-color: var(--msr-tone-warning-border);
+  color: var(--msr-tone-warning-fg);
+}
+.msr-Timeline__marker[data-tone="danger"] {
+  border-color: var(--msr-tone-danger-border);
+  color: var(--msr-tone-danger-fg);
+}
+.msr-Timeline__marker[data-tone="info"] {
+  border-color: var(--msr-tone-info-border);
+  color: var(--msr-tone-info-fg);
+}
+.msr-Timeline__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--msr-radius-full);
+  background-color: currentColor;
+}
+
+.msr-Timeline__content {
+  padding-top: 3px;
+}
+.msr-Timeline__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--msr-space-3);
+}
+.msr-Timeline__title {
+  font-weight: var(--msr-weight-medium);
+  color: var(--msr-color-fg);
+  font-size: var(--msr-text-md);
+}
+.msr-Timeline__time {
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg-subtle);
+  flex: none;
+}
+.msr-Timeline__description {
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg-muted);
+  margin-top: 2px;
+}

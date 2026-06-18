@@ -1,0 +1,115 @@
+# msr-components
+
+A themeable, highly customizable React component library. Every component is
+driven by one shared design-token system with **15 built-in themes**, styled with
+CSS custom properties + `data-*` attributes (no Tailwind required by consumers),
+and built on the zero-dependency [`msr-hooks`](https://www.npmjs.com/package/msr-hooks)
+and [`msr-icons`](https://www.npmjs.com/package/msr-icons) packages.
+
+> Status: **v0.1 — foundation + first wave of components.** The theming system,
+> build pipeline, and a representative component in every domain module are in
+> place. Remaining components from the catalog are being added on the same
+> pattern (see [Roadmap](#roadmap)).
+
+## Install
+
+```bash
+npm install msr-components msr-hooks msr-icons
+```
+
+`react` and `react-dom` (>=18) are peer dependencies.
+
+## Usage
+
+```tsx
+import "msr-components/styles.css";
+import { ThemeProvider, Button, StatusBadge, useToast, ToastProvider } from "msr-components";
+import { MetricCard } from "msr-components/dashboard";
+
+function App() {
+  return (
+    <ThemeProvider defaultTheme="dark">
+      <ToastProvider>
+        <Button tone="primary">Save</Button>
+        <StatusBadge tone="success" dot>Active</StatusBadge>
+      </ToastProvider>
+    </ThemeProvider>
+  );
+}
+```
+
+Import the stylesheet **once** in your app entry. Components also work without a
+`ThemeProvider` (the `light` theme is the `:root` default).
+
+## Theming
+
+Themes are pure CSS-variable overrides scoped by `[data-theme="…"]`. Switch themes
+by setting the attribute (via `ThemeProvider`) — no component re-styling needed.
+
+```tsx
+const { theme, setTheme, themes } = useTheme(); // themes = all 15 names
+setTheme("dracula");
+```
+
+**The 15 themes:** `light`, `dark`, `midnight`, `slate`, `sand`, `ocean`,
+`forest`, `sunset`, `rose`, `grape`, `nord`, `dracula`, `solarized`, `mono`,
+`contrast` (high-contrast a11y).
+
+### Customizing
+
+Override tokens globally or per-scope:
+
+```css
+:root { --msr-color-primary: #ff5a5f; --msr-radius-md: 10px; }
+```
+
+Every component also accepts `className` / `style` and renders stable
+`.msr-*` class names you can target. Add your own theme by defining a new
+`[data-theme="brand"] { … }` block — no component changes required.
+
+## Subpath exports
+
+| Import | Contents |
+| --- | --- |
+| `msr-components` | Core UI + polish (Button, StatusBadge, Card, Skeleton, EmptyState, AnimatedTabs, CopyableCodeBlock, PopoverHelp, Toast, Modal, ConfirmDialog, ContextMenu, FloatingActionButton, KeyboardShortcutOverlay, ThemePreviewCard) + theme + hooks |
+| `msr-components/dashboard` | MetricCard, ActivityTimeline |
+| `msr-components/firmware` | CveSeverityPanel, AnalysisConfidenceBadge, FileMetadataCard |
+| `msr-components/business` | FeatureToggleCard, SetupChecklist |
+| `msr-components/pets` | DogProfileHeader, MedicalRecordCard |
+| `msr-components/game` | HotColdDistanceMeter, DistanceFeedbackCard |
+| `msr-components/styles.css` | The full stylesheet (tokens + 15 themes + all components) |
+
+Each subpath is independently tree-shakeable.
+
+## Architecture
+
+- **Zero-runtime-CSS, token-driven** styling. Two token layers: primitives
+  (spacing/radius/typography/motion) + semantic colors (overridden per theme).
+- **Behavior from `msr-hooks`** (portals, escape, click-outside, scroll-lock,
+  clipboard, keyboard, …). Gaps not covered upstream (`useFocusTrap`,
+  `usePosition`, `useControllableState`, `useListNavigation`) ship as small local
+  fallbacks and are tracked in [`MISSING_HOOKS.md`](./MISSING_HOOKS.md).
+- **Icons from `msr-icons`** via a central registry (`Icon` + `glyphs`). Aliased
+  names are tracked in [`MISSING_ICONS.md`](./MISSING_ICONS.md).
+- **Build:** `tsup` → dual ESM/CJS + `.d.ts`, per-entry tree-shaking, `"use client"`
+  directive for RSC compatibility.
+
+## Scripts
+
+```bash
+npm run build      # tsup + "use client" + bundle styles.css
+npm run typecheck  # tsc --noEmit
+npm test           # vitest (unit + jest-axe a11y)
+```
+
+## Roadmap
+
+The full catalog (~60 components across general UI, dashboard, firmware, business,
+pets, and game domains) is being built on the established pattern. See the project
+plan for the complete list. Contributions follow the per-component structure:
+`Component.tsx` + `Component.css` + `index.ts` (+ tests), variants via `data-*`
+attributes, behavior via `msr-hooks`.
+
+## License
+
+MIT

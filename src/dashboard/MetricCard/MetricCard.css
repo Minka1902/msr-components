@@ -1,0 +1,71 @@
+.msr-MetricCard {
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  box-shadow: var(--msr-shadow-1);
+  padding: var(--msr-space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-2);
+}
+.msr-MetricCard__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--msr-space-2);
+}
+.msr-MetricCard__label {
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg-muted);
+}
+.msr-MetricCard__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--msr-radius-md);
+  background-color: var(--msr-color-surface-2);
+  color: var(--msr-color-primary);
+}
+.msr-MetricCard__value {
+  font-size: var(--msr-text-3xl);
+  font-weight: var(--msr-weight-bold);
+  line-height: var(--msr-leading-tight);
+  color: var(--msr-color-fg);
+}
+.msr-MetricCard__bottom {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-3);
+}
+.msr-MetricCard__trend {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-size: var(--msr-text-sm);
+  font-weight: var(--msr-weight-medium);
+  color: var(--msr-tone-danger-fg);
+}
+.msr-MetricCard__trend[data-good] {
+  color: var(--msr-tone-success-fg);
+}
+.msr-MetricCard__caption {
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg-subtle);
+}
+.msr-MetricCard__spark {
+  margin-left: auto;
+  width: 96px;
+  height: 28px;
+}
+.msr-MetricCard__spark-line {
+  fill: none;
+  stroke: var(--msr-color-primary);
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+}
+.msr-MetricCard__spark-area {
+  fill: var(--msr-color-primary);
+  opacity: 0.12;
+}

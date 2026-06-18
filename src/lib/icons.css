@@ -1,0 +1,15 @@
+.msr-Icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  flex: none;
+  width: 1em;
+  height: 1em;
+}
+
+.msr-Icon svg {
+  width: 1em;
+  height: 1em;
+  display: block;
+}

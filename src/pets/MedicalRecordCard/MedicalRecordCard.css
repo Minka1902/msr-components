@@ -1,0 +1,73 @@
+.msr-MedRecord {
+  display: flex;
+  gap: var(--msr-space-3);
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  padding: var(--msr-space-4);
+}
+.msr-MedRecord__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--msr-radius-md);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  background-color: var(--msr-tone-info-bg);
+  color: var(--msr-tone-info-fg);
+}
+.msr-MedRecord__icon[data-kind="vaccination"] {
+  background-color: var(--msr-tone-success-bg);
+  color: var(--msr-tone-success-fg);
+}
+.msr-MedRecord__icon[data-kind="medication"] {
+  background-color: var(--msr-tone-processing-bg);
+  color: var(--msr-tone-processing-fg);
+}
+.msr-MedRecord__icon[data-kind="vet-visit"] {
+  background-color: var(--msr-tone-info-bg);
+  color: var(--msr-tone-info-fg);
+}
+.msr-MedRecord__icon[data-kind="checkup"] {
+  background-color: var(--msr-tone-danger-bg);
+  color: var(--msr-tone-danger-fg);
+}
+.msr-MedRecord__body {
+  flex: 1;
+  min-width: 0;
+}
+.msr-MedRecord__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--msr-space-3);
+}
+.msr-MedRecord__kind {
+  font-size: var(--msr-text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--msr-color-fg-subtle);
+}
+.msr-MedRecord__date {
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg-subtle);
+}
+.msr-MedRecord__title {
+  font-weight: var(--msr-weight-medium);
+  color: var(--msr-color-fg);
+  margin-top: 2px;
+}
+.msr-MedRecord__notes {
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg-muted);
+  margin-top: var(--msr-space-1);
+}
+.msr-MedRecord__due {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-2);
+  margin-top: var(--msr-space-2);
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg-muted);
+}

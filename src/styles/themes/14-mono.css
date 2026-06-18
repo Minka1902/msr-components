@@ -1,0 +1,26 @@
+/* Theme: mono (grayscale, light) */
+[data-theme="mono"] {
+  --msr-color-bg: #ffffff;
+  --msr-color-surface: #ffffff;
+  --msr-color-surface-2: #f2f2f2;
+  --msr-color-overlay: rgba(0, 0, 0, 0.5);
+  --msr-color-fg: #161616;
+  --msr-color-fg-muted: #5c5c5c;
+  --msr-color-fg-subtle: #9e9e9e;
+  --msr-color-border: #e2e2e2;
+  --msr-color-border-strong: #c4c4c4;
+  --msr-color-primary: #161616;
+  --msr-color-primary-hover: #3a3a3a;
+  --msr-color-primary-fg: #ffffff;
+  --msr-color-ring: rgba(22, 22, 22, 0.35);
+  --msr-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.1);
+  --msr-shadow-2: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --msr-shadow-3: 0 12px 24px rgba(0, 0, 0, 0.16);
+  --msr-tone-success-bg: #ededed; --msr-tone-success-fg: #1f1f1f; --msr-tone-success-border: #c4c4c4;
+  --msr-tone-warning-bg: #f0f0f0; --msr-tone-warning-fg: #2e2e2e; --msr-tone-warning-border: #cfcfcf;
+  --msr-tone-danger-bg: #e6e6e6; --msr-tone-danger-fg: #161616; --msr-tone-danger-border: #b0b0b0;
+  --msr-tone-info-bg: #f2f2f2; --msr-tone-info-fg: #3a3a3a; --msr-tone-info-border: #d6d6d6;
+  --msr-tone-muted-bg: #f2f2f2; --msr-tone-muted-fg: #5c5c5c; --msr-tone-muted-border: #e2e2e2;
+  --msr-tone-processing-bg: #e9e9e9; --msr-tone-processing-fg: #2e2e2e; --msr-tone-processing-border: #c4c4c4;
+  --msr-tone-new-bg: #1f1f1f; --msr-tone-new-fg: #ffffff; --msr-tone-new-border: #1f1f1f;
+}

@@ -1,0 +1,117 @@
+/* msr-components — design tokens.
+   Two layers:
+   1. Primitive tokens (theme-independent): spacing, radius, typography, motion, z.
+   2. Semantic tokens (theme-dependent): colors. Defaults below = the `light` theme.
+      Each file in themes/ overrides ONLY the semantic tokens. */
+
+:root {
+  /* ---- Primitive: typography ---- */
+  --msr-font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+  --msr-font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    "Liberation Mono", monospace;
+
+  --msr-text-xs: 0.75rem;
+  --msr-text-sm: 0.8125rem;
+  --msr-text-md: 0.875rem;
+  --msr-text-lg: 1rem;
+  --msr-text-xl: 1.25rem;
+  --msr-text-2xl: 1.5rem;
+  --msr-text-3xl: 2rem;
+
+  --msr-weight-normal: 400;
+  --msr-weight-medium: 500;
+  --msr-weight-semibold: 600;
+  --msr-weight-bold: 700;
+
+  --msr-leading-tight: 1.2;
+  --msr-leading-normal: 1.5;
+
+  /* ---- Primitive: spacing ---- */
+  --msr-space-0: 0;
+  --msr-space-1: 0.25rem;
+  --msr-space-2: 0.5rem;
+  --msr-space-3: 0.75rem;
+  --msr-space-4: 1rem;
+  --msr-space-5: 1.25rem;
+  --msr-space-6: 1.5rem;
+  --msr-space-8: 2rem;
+  --msr-space-10: 2.5rem;
+  --msr-space-12: 3rem;
+
+  /* ---- Primitive: radius ---- */
+  --msr-radius-sm: 4px;
+  --msr-radius-md: 8px;
+  --msr-radius-lg: 12px;
+  --msr-radius-xl: 16px;
+  --msr-radius-full: 9999px;
+
+  /* ---- Primitive: control sizes ---- */
+  --msr-control-sm: 28px;
+  --msr-control-md: 36px;
+  --msr-control-lg: 44px;
+
+  /* ---- Primitive: motion ---- */
+  --msr-transition-fast: 120ms ease;
+  --msr-transition-base: 200ms ease;
+
+  /* ---- Primitive: z-index ---- */
+  --msr-z-dropdown: 1000;
+  --msr-z-overlay: 1100;
+  --msr-z-modal: 1200;
+  --msr-z-popover: 1300;
+  --msr-z-toast: 1400;
+  --msr-z-tooltip: 1500;
+
+  /* ---- Semantic: colors (default = light) ---- */
+  --msr-color-bg: #ffffff;
+  --msr-color-surface: #ffffff;
+  --msr-color-surface-2: #f4f5f7;
+  --msr-color-overlay: rgba(17, 24, 39, 0.45);
+
+  --msr-color-fg: #111827;
+  --msr-color-fg-muted: #4b5563;
+  --msr-color-fg-subtle: #9ca3af;
+
+  --msr-color-border: #e5e7eb;
+  --msr-color-border-strong: #d1d5db;
+
+  --msr-color-primary: #2563eb;
+  --msr-color-primary-hover: #1d4ed8;
+  --msr-color-primary-fg: #ffffff;
+
+  --msr-color-ring: rgba(37, 99, 235, 0.45);
+
+  --msr-shadow-1: 0 1px 2px rgba(16, 24, 40, 0.06), 0 1px 3px rgba(16, 24, 40, 0.1);
+  --msr-shadow-2: 0 4px 8px rgba(16, 24, 40, 0.08), 0 2px 4px rgba(16, 24, 40, 0.06);
+  --msr-shadow-3: 0 12px 24px rgba(16, 24, 40, 0.12), 0 4px 8px rgba(16, 24, 40, 0.08);
+
+  /* Status tones: each has -bg / -fg / -border */
+  --msr-tone-success-bg: #dcfce7;
+  --msr-tone-success-fg: #166534;
+  --msr-tone-success-border: #86efac;
+
+  --msr-tone-warning-bg: #fef3c7;
+  --msr-tone-warning-fg: #92400e;
+  --msr-tone-warning-border: #fcd34d;
+
+  --msr-tone-danger-bg: #fee2e2;
+  --msr-tone-danger-fg: #991b1b;
+  --msr-tone-danger-border: #fca5a5;
+
+  --msr-tone-info-bg: #dbeafe;
+  --msr-tone-info-fg: #1e40af;
+  --msr-tone-info-border: #93c5fd;
+
+  --msr-tone-muted-bg: #f3f4f6;
+  --msr-tone-muted-fg: #4b5563;
+  --msr-tone-muted-border: #e5e7eb;
+
+  --msr-tone-processing-bg: #ede9fe;
+  --msr-tone-processing-fg: #5b21b6;
+  --msr-tone-processing-border: #c4b5fd;
+
+  --msr-tone-new-bg: #cffafe;
+  --msr-tone-new-fg: #155e75;
+  --msr-tone-new-border: #67e8f9;
+}

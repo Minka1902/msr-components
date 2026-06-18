@@ -1,0 +1,13 @@
+/* msr-components — minimal, scoped reset. Only targets .msr-* roots to avoid
+   leaking global styles into the consumer's app. */
+.msr-root,
+[class^="msr-"],
+[class*=" msr-"] {
+  box-sizing: border-box;
+}
+
+.msr-root *,
+.msr-root *::before,
+.msr-root *::after {
+  box-sizing: border-box;
+}

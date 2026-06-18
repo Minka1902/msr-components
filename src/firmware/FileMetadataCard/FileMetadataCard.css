@@ -1,0 +1,83 @@
+.msr-FileMeta {
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  padding: var(--msr-space-4);
+}
+.msr-FileMeta__header {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-2);
+  color: var(--msr-color-fg);
+  font-weight: var(--msr-weight-medium);
+  margin-bottom: var(--msr-space-3);
+  word-break: break-all;
+}
+.msr-FileMeta__path {
+  font-family: var(--msr-font-mono);
+  font-size: var(--msr-text-sm);
+}
+.msr-FileMeta__grid {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--msr-space-2) var(--msr-space-4);
+}
+.msr-FileMeta__row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.msr-FileMeta__row dt {
+  font-size: var(--msr-text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--msr-color-fg-subtle);
+}
+.msr-FileMeta__row dd {
+  margin: 0;
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg);
+}
+.msr-FileMeta__row code {
+  font-family: var(--msr-font-mono);
+}
+.msr-FileMeta__hash {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-2);
+  margin-top: var(--msr-space-3);
+  padding-top: var(--msr-space-3);
+  border-top: 1px solid var(--msr-color-border);
+}
+.msr-FileMeta__hash-label {
+  font-size: var(--msr-text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--msr-color-fg-subtle);
+  flex: none;
+}
+.msr-FileMeta__hash-value {
+  font-family: var(--msr-font-mono);
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+.msr-FileMeta__copy {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--msr-color-fg-subtle);
+  cursor: pointer;
+  padding: 2px;
+  border-radius: var(--msr-radius-sm);
+  display: inline-flex;
+  flex: none;
+}
+.msr-FileMeta__copy:hover {
+  color: var(--msr-color-fg);
+  background-color: var(--msr-color-surface-2);
+}

@@ -1,0 +1,87 @@
+.msr-Tabs__list {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--msr-space-1);
+}
+.msr-Tabs__list[data-indicator="underline"] {
+  border-bottom: 1px solid var(--msr-color-border);
+  width: 100%;
+}
+
+.msr-Tabs__tab {
+  position: relative;
+  z-index: 1;
+  appearance: none;
+  background: transparent;
+  border: none;
+  font: inherit;
+  font-weight: var(--msr-weight-medium);
+  color: var(--msr-color-fg-muted);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--msr-space-2);
+  border-radius: var(--msr-radius-md);
+  transition: color var(--msr-transition-fast);
+  white-space: nowrap;
+}
+.msr-Tabs[data-size="sm"] .msr-Tabs__tab {
+  padding: var(--msr-space-2) var(--msr-space-3);
+  font-size: var(--msr-text-sm);
+}
+.msr-Tabs[data-size="md"] .msr-Tabs__tab {
+  padding: var(--msr-space-3) var(--msr-space-4);
+  font-size: var(--msr-text-md);
+}
+.msr-Tabs[data-size="lg"] .msr-Tabs__tab {
+  padding: var(--msr-space-3) var(--msr-space-5);
+  font-size: var(--msr-text-lg);
+}
+.msr-Tabs__tab:hover:not(:disabled) {
+  color: var(--msr-color-fg);
+}
+.msr-Tabs__tab[data-selected] {
+  color: var(--msr-color-primary);
+}
+.msr-Tabs__list[data-indicator="pill"] .msr-Tabs__tab[data-selected] {
+  color: var(--msr-color-primary-fg);
+}
+.msr-Tabs__tab:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.msr-Tabs__icon {
+  display: inline-flex;
+}
+
+.msr-Tabs__indicator {
+  position: absolute;
+  z-index: 0;
+  transition:
+    left var(--msr-transition-base),
+    width var(--msr-transition-base),
+    top var(--msr-transition-base);
+  pointer-events: none;
+}
+.msr-Tabs__list[data-indicator="underline"] .msr-Tabs__indicator {
+  height: 2px !important;
+  top: auto !important;
+  bottom: -1px;
+  background-color: var(--msr-color-primary);
+  border-radius: var(--msr-radius-full);
+}
+.msr-Tabs__list[data-indicator="pill"] .msr-Tabs__indicator {
+  background-color: var(--msr-color-primary);
+  border-radius: var(--msr-radius-md);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .msr-Tabs__indicator {
+    transition: none;
+  }
+}
+
+.msr-Tabs__panel {
+  padding-top: var(--msr-space-4);
+}

@@ -1,0 +1,26 @@
+/* Theme: contrast (high-contrast accessibility, light base) */
+[data-theme="contrast"] {
+  --msr-color-bg: #ffffff;
+  --msr-color-surface: #ffffff;
+  --msr-color-surface-2: #f0f0f0;
+  --msr-color-overlay: rgba(0, 0, 0, 0.7);
+  --msr-color-fg: #000000;
+  --msr-color-fg-muted: #1a1a1a;
+  --msr-color-fg-subtle: #333333;
+  --msr-color-border: #000000;
+  --msr-color-border-strong: #000000;
+  --msr-color-primary: #0033cc;
+  --msr-color-primary-hover: #0022aa;
+  --msr-color-primary-fg: #ffffff;
+  --msr-color-ring: #0033cc;
+  --msr-shadow-1: 0 0 0 1px #000000;
+  --msr-shadow-2: 0 0 0 2px #000000;
+  --msr-shadow-3: 0 0 0 3px #000000;
+  --msr-tone-success-bg: #ffffff; --msr-tone-success-fg: #006600; --msr-tone-success-border: #006600;
+  --msr-tone-warning-bg: #ffffff; --msr-tone-warning-fg: #8a5a00; --msr-tone-warning-border: #8a5a00;
+  --msr-tone-danger-bg: #ffffff; --msr-tone-danger-fg: #cc0000; --msr-tone-danger-border: #cc0000;
+  --msr-tone-info-bg: #ffffff; --msr-tone-info-fg: #0033cc; --msr-tone-info-border: #0033cc;
+  --msr-tone-muted-bg: #ffffff; --msr-tone-muted-fg: #333333; --msr-tone-muted-border: #333333;
+  --msr-tone-processing-bg: #ffffff; --msr-tone-processing-fg: #6600cc; --msr-tone-processing-border: #6600cc;
+  --msr-tone-new-bg: #ffffff; --msr-tone-new-fg: #006699; --msr-tone-new-border: #006699;
+}

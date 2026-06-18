@@ -1,0 +1,88 @@
+.msr-CodeBlock {
+  background-color: var(--msr-color-surface-2);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  overflow: hidden;
+  font-family: var(--msr-font-mono);
+}
+
+.msr-CodeBlock__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--msr-space-3);
+  padding: var(--msr-space-2) var(--msr-space-3);
+  border-bottom: 1px solid var(--msr-color-border);
+  background-color: var(--msr-color-surface);
+}
+.msr-CodeBlock__title {
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg-muted);
+  font-family: var(--msr-font-sans);
+}
+.msr-CodeBlock__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-3);
+}
+.msr-CodeBlock__lang {
+  font-size: var(--msr-text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--msr-color-fg-subtle);
+}
+.msr-CodeBlock__copy {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--msr-space-1);
+  appearance: none;
+  border: 1px solid var(--msr-color-border);
+  background-color: var(--msr-color-surface);
+  color: var(--msr-color-fg-muted);
+  border-radius: var(--msr-radius-sm);
+  padding: 2px var(--msr-space-2);
+  font-size: var(--msr-text-xs);
+  font-family: var(--msr-font-sans);
+  cursor: pointer;
+  transition: color var(--msr-transition-fast), border-color var(--msr-transition-fast);
+}
+.msr-CodeBlock__copy:hover {
+  color: var(--msr-color-fg);
+  border-color: var(--msr-color-border-strong);
+}
+
+.msr-CodeBlock__pre {
+  margin: 0;
+  padding: var(--msr-space-3) 0;
+  overflow-x: auto;
+  font-size: var(--msr-text-sm);
+  line-height: 1.6;
+  color: var(--msr-color-fg);
+}
+.msr-CodeBlock__code {
+  display: block;
+}
+.msr-CodeBlock__line {
+  display: flex;
+}
+.msr-CodeBlock__gutter {
+  flex: none;
+  width: 3ch;
+  padding-right: var(--msr-space-3);
+  margin-right: var(--msr-space-3);
+  text-align: right;
+  color: var(--msr-color-fg-subtle);
+  border-right: 1px solid var(--msr-color-border);
+  user-select: none;
+}
+.msr-CodeBlock__content {
+  padding: 0 var(--msr-space-4);
+  white-space: pre;
+}
+.msr-CodeBlock[data-wrap] .msr-CodeBlock__content {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.msr-CodeBlock[data-wrap] .msr-CodeBlock__pre {
+  overflow-x: hidden;
+}

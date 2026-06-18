@@ -1,0 +1,98 @@
+.msr-StatusBadge {
+  --bdg-bg: var(--msr-tone-muted-bg);
+  --bdg-fg: var(--msr-tone-muted-fg);
+  --bdg-border: var(--msr-tone-muted-border);
+
+  display: inline-flex;
+  align-items: center;
+  gap: var(--msr-space-1);
+  font-weight: var(--msr-weight-medium);
+  line-height: 1;
+  border-radius: var(--msr-radius-full);
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.msr-StatusBadge[data-tone="success"] {
+  --bdg-bg: var(--msr-tone-success-bg);
+  --bdg-fg: var(--msr-tone-success-fg);
+  --bdg-border: var(--msr-tone-success-border);
+}
+.msr-StatusBadge[data-tone="warning"] {
+  --bdg-bg: var(--msr-tone-warning-bg);
+  --bdg-fg: var(--msr-tone-warning-fg);
+  --bdg-border: var(--msr-tone-warning-border);
+}
+.msr-StatusBadge[data-tone="danger"] {
+  --bdg-bg: var(--msr-tone-danger-bg);
+  --bdg-fg: var(--msr-tone-danger-fg);
+  --bdg-border: var(--msr-tone-danger-border);
+}
+.msr-StatusBadge[data-tone="info"] {
+  --bdg-bg: var(--msr-tone-info-bg);
+  --bdg-fg: var(--msr-tone-info-fg);
+  --bdg-border: var(--msr-tone-info-border);
+}
+.msr-StatusBadge[data-tone="muted"] {
+  --bdg-bg: var(--msr-tone-muted-bg);
+  --bdg-fg: var(--msr-tone-muted-fg);
+  --bdg-border: var(--msr-tone-muted-border);
+}
+.msr-StatusBadge[data-tone="processing"] {
+  --bdg-bg: var(--msr-tone-processing-bg);
+  --bdg-fg: var(--msr-tone-processing-fg);
+  --bdg-border: var(--msr-tone-processing-border);
+}
+.msr-StatusBadge[data-tone="new"] {
+  --bdg-bg: var(--msr-tone-new-bg);
+  --bdg-fg: var(--msr-tone-new-fg);
+  --bdg-border: var(--msr-tone-new-border);
+}
+
+.msr-StatusBadge[data-variant="soft"] {
+  background-color: var(--bdg-bg);
+  color: var(--bdg-fg);
+}
+.msr-StatusBadge[data-variant="solid"] {
+  background-color: var(--bdg-fg);
+  color: var(--msr-color-bg);
+}
+.msr-StatusBadge[data-variant="outline"] {
+  background-color: transparent;
+  color: var(--bdg-fg);
+  border-color: var(--bdg-border);
+}
+
+.msr-StatusBadge[data-size="sm"] {
+  font-size: var(--msr-text-xs);
+  padding: 2px var(--msr-space-2);
+}
+.msr-StatusBadge[data-size="md"] {
+  font-size: var(--msr-text-sm);
+  padding: var(--msr-space-1) var(--msr-space-3);
+}
+
+.msr-StatusBadge__dot {
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: var(--msr-radius-full);
+  background-color: currentColor;
+  flex: none;
+}
+.msr-StatusBadge__dot[data-pulse] {
+  animation: msr-badge-pulse 1.4s ease-in-out infinite;
+}
+@keyframes msr-badge-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.msr-StatusBadge__icon {
+  display: inline-flex;
+  font-size: 1em;
+}

@@ -1,0 +1,92 @@
+{
+  "name": "msr-components",
+  "version": "0.1.0",
+  "description": "A themeable, highly customizable React component library with 15 built-in themes, powered by msr-hooks and msr-icons.",
+  "license": "MIT",
+  "author": "minka1902",
+  "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./dashboard": {
+      "types": "./dist/dashboard/index.d.ts",
+      "import": "./dist/dashboard/index.js",
+      "require": "./dist/dashboard/index.cjs"
+    },
+    "./firmware": {
+      "types": "./dist/firmware/index.d.ts",
+      "import": "./dist/firmware/index.js",
+      "require": "./dist/firmware/index.cjs"
+    },
+    "./business": {
+      "types": "./dist/business/index.d.ts",
+      "import": "./dist/business/index.js",
+      "require": "./dist/business/index.cjs"
+    },
+    "./pets": {
+      "types": "./dist/pets/index.d.ts",
+      "import": "./dist/pets/index.js",
+      "require": "./dist/pets/index.cjs"
+    },
+    "./game": {
+      "types": "./dist/game/index.d.ts",
+      "import": "./dist/game/index.js",
+      "require": "./dist/game/index.cjs"
+    },
+    "./styles.css": "./dist/styles.css"
+  },
+  "scripts": {
+    "build": "tsup && node scripts/use-client.mjs && npm run build:css",
+    "build:css": "node scripts/build-css.mjs",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "msr-hooks": "^1.1.0",
+    "msr-icons": "^1.1.0"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.4.0",
+    "@testing-library/react": "^16.0.0",
+    "@testing-library/user-event": "^14.5.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "jest-axe": "^9.0.0",
+    "jsdom": "^25.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  },
+  "keywords": [
+    "react",
+    "components",
+    "ui",
+    "component-library",
+    "themes",
+    "design-system",
+    "msr"
+  ]
+}

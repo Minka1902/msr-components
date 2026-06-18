@@ -1,0 +1,13 @@
+/* Base typography/colors applied to any themed root. Components inherit these. */
+.msr-root {
+  font-family: var(--msr-font-sans);
+  font-size: var(--msr-text-md);
+  line-height: var(--msr-leading-normal);
+  color: var(--msr-color-fg);
+  background-color: var(--msr-color-bg);
+}
+
+.msr-root :focus-visible {
+  outline: 2px solid var(--msr-color-ring);
+  outline-offset: 2px;
+}

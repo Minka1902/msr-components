@@ -1,0 +1,89 @@
+.msr-Cve {
+  --sev-critical: #b91c1c;
+  --sev-high: #ea580c;
+  --sev-medium: #d97706;
+  --sev-low: #2563eb;
+  --sev-none: var(--msr-color-border-strong);
+
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  padding: var(--msr-space-4);
+}
+.msr-Cve__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: var(--msr-space-3);
+}
+.msr-Cve__title {
+  font-weight: var(--msr-weight-semibold);
+  color: var(--msr-color-fg);
+}
+.msr-Cve__total {
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg-muted);
+}
+
+.msr-Cve__rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-2);
+}
+.msr-Cve__row {
+  display: grid;
+  grid-template-columns: 10px 64px 1fr 28px;
+  align-items: center;
+  gap: var(--msr-space-2);
+  font-size: var(--msr-text-sm);
+}
+.msr-Cve__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--msr-radius-full);
+}
+.msr-Cve__row[data-severity="critical"] .msr-Cve__dot { background: var(--sev-critical); }
+.msr-Cve__row[data-severity="high"] .msr-Cve__dot { background: var(--sev-high); }
+.msr-Cve__row[data-severity="medium"] .msr-Cve__dot { background: var(--sev-medium); }
+.msr-Cve__row[data-severity="low"] .msr-Cve__dot { background: var(--sev-low); }
+.msr-Cve__label {
+  color: var(--msr-color-fg-muted);
+}
+.msr-Cve__track {
+  height: 6px;
+  background-color: var(--msr-color-surface-2);
+  border-radius: var(--msr-radius-full);
+  overflow: hidden;
+}
+.msr-Cve__fill {
+  display: block;
+  height: 100%;
+  border-radius: var(--msr-radius-full);
+  background-color: var(--msr-color-border-strong);
+}
+.msr-Cve__row[data-severity="critical"] .msr-Cve__fill { background: var(--sev-critical); }
+.msr-Cve__row[data-severity="high"] .msr-Cve__fill { background: var(--sev-high); }
+.msr-Cve__row[data-severity="medium"] .msr-Cve__fill { background: var(--sev-medium); }
+.msr-Cve__row[data-severity="low"] .msr-Cve__fill { background: var(--sev-low); }
+.msr-Cve__count {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--msr-color-fg);
+  font-weight: var(--msr-weight-medium);
+}
+
+.msr-Cve__bar {
+  display: flex;
+  height: 10px;
+  border-radius: var(--msr-radius-full);
+  overflow: hidden;
+  background-color: var(--msr-color-surface-2);
+}
+.msr-Cve__bar-seg[data-severity="critical"] { background: var(--sev-critical); }
+.msr-Cve__bar-seg[data-severity="high"] { background: var(--sev-high); }
+.msr-Cve__bar-seg[data-severity="medium"] { background: var(--sev-medium); }
+.msr-Cve__bar-seg[data-severity="low"] { background: var(--sev-low); }
+.msr-Cve__bar-seg[data-severity="none"] { background: var(--sev-none); }

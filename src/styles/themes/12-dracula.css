@@ -1,0 +1,26 @@
+/* Theme: dracula (dark purple) */
+[data-theme="dracula"] {
+  --msr-color-bg: #282a36;
+  --msr-color-surface: #343746;
+  --msr-color-surface-2: #424458;
+  --msr-color-overlay: rgba(16, 17, 23, 0.6);
+  --msr-color-fg: #f8f8f2;
+  --msr-color-fg-muted: #b9bcce;
+  --msr-color-fg-subtle: #6272a4;
+  --msr-color-border: #44475a;
+  --msr-color-border-strong: #565a72;
+  --msr-color-primary: #bd93f9;
+  --msr-color-primary-hover: #d0aefb;
+  --msr-color-primary-fg: #282a36;
+  --msr-color-ring: rgba(189, 147, 249, 0.55);
+  --msr-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --msr-shadow-2: 0 4px 10px rgba(0, 0, 0, 0.5);
+  --msr-shadow-3: 0 14px 28px rgba(0, 0, 0, 0.6);
+  --msr-tone-success-bg: #1e3b2e; --msr-tone-success-fg: #50fa7b; --msr-tone-success-border: #2f5e47;
+  --msr-tone-warning-bg: #3e3520; --msr-tone-warning-fg: #f1fa8c; --msr-tone-warning-border: #5e5232;
+  --msr-tone-danger-bg: #3e2230; --msr-tone-danger-fg: #ff79c6; --msr-tone-danger-border: #5e3349;
+  --msr-tone-info-bg: #233a44; --msr-tone-info-fg: #8be9fd; --msr-tone-info-border: #355863;
+  --msr-tone-muted-bg: #424458; --msr-tone-muted-fg: #b9bcce; --msr-tone-muted-border: #44475a;
+  --msr-tone-processing-bg: #322a4a; --msr-tone-processing-fg: #bd93f9; --msr-tone-processing-border: #4a3f6e;
+  --msr-tone-new-bg: #233a44; --msr-tone-new-fg: #8be9fd; --msr-tone-new-border: #355863;
+}

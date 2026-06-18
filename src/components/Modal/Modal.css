@@ -1,0 +1,100 @@
+.msr-Modal__overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--msr-z-modal);
+  background-color: var(--msr-color-overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--msr-space-4);
+  animation: msr-overlay-in var(--msr-transition-fast);
+}
+
+.msr-Modal {
+  background-color: var(--msr-color-surface);
+  color: var(--msr-color-fg);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  box-shadow: var(--msr-shadow-3);
+  width: 100%;
+  max-height: calc(100vh - var(--msr-space-8));
+  display: flex;
+  flex-direction: column;
+  outline: none;
+  animation: msr-modal-in var(--msr-transition-base);
+}
+.msr-Modal[data-size="sm"] {
+  max-width: 400px;
+}
+.msr-Modal[data-size="md"] {
+  max-width: 540px;
+}
+.msr-Modal[data-size="lg"] {
+  max-width: 760px;
+}
+
+.msr-Modal__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--msr-space-3);
+  padding: var(--msr-space-5) var(--msr-space-5) var(--msr-space-3);
+}
+.msr-Modal__title {
+  margin: 0;
+  font-size: var(--msr-text-xl);
+  font-weight: var(--msr-weight-semibold);
+}
+.msr-Modal__close {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--msr-color-fg-subtle);
+  cursor: pointer;
+  padding: var(--msr-space-1);
+  border-radius: var(--msr-radius-sm);
+  display: inline-flex;
+}
+.msr-Modal__close:hover {
+  color: var(--msr-color-fg);
+  background-color: var(--msr-color-surface-2);
+}
+
+.msr-Modal__body {
+  padding: 0 var(--msr-space-5) var(--msr-space-5);
+  overflow-y: auto;
+  color: var(--msr-color-fg-muted);
+}
+.msr-Modal__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--msr-space-2);
+  padding: var(--msr-space-4) var(--msr-space-5);
+  border-top: 1px solid var(--msr-color-border);
+}
+
+@keyframes msr-overlay-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes msr-modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .msr-Modal__overlay,
+  .msr-Modal {
+    animation: none;
+  }
+}
