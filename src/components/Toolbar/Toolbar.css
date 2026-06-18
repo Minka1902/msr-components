@@ -1,0 +1,23 @@
+.msr-Toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-2);
+  padding: var(--msr-space-1) var(--msr-space-2);
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-md);
+}
+.msr-Toolbar__group {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-1);
+}
+.msr-Toolbar__separator {
+  width: 1px;
+  align-self: stretch;
+  margin: var(--msr-space-1) var(--msr-space-1);
+  background-color: var(--msr-color-border);
+}
+.msr-Toolbar__spacer {
+  flex: 1;
+}

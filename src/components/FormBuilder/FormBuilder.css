@@ -1,0 +1,15 @@
+.msr-FormBuilder {
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-5);
+}
+.msr-FormBuilder__grid {
+  display: grid;
+  grid-template-columns: repeat(var(--fb-cols, 1), minmax(0, 1fr));
+  gap: var(--msr-space-4);
+}
+.msr-FormBuilder__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--msr-space-2);
+}

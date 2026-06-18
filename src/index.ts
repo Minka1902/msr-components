@@ -113,3 +113,9 @@ export * from "./components/GeoPrompt";
 // ---- Components: AI / agent UI ----
 export * from "./components/Chat";
 export * from "./components/MarkdownRenderer";
+
+// ---- Components: app-building blocks ----
+export * from "./components/AppShell";
+export * from "./components/Toolbar";
+export * from "./components/InlineEdit";
+export * from "./components/FormBuilder";
