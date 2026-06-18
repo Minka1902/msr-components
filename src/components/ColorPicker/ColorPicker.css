@@ -1,0 +1,59 @@
+.msr-ColorPicker {
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-3);
+  max-width: 240px;
+}
+.msr-ColorPicker[data-disabled] {
+  opacity: 0.6;
+  pointer-events: none;
+}
+.msr-ColorPicker__swatches {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--msr-space-2);
+}
+.msr-ColorPicker__swatch {
+  appearance: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: var(--msr-radius-md);
+  cursor: pointer;
+  transition: transform var(--msr-transition-fast), box-shadow var(--msr-transition-fast);
+}
+.msr-ColorPicker__swatch:hover {
+  transform: scale(1.08);
+}
+.msr-ColorPicker__swatch[data-selected] {
+  box-shadow: 0 0 0 2px var(--msr-color-surface), 0 0 0 4px var(--msr-color-primary);
+}
+.msr-ColorPicker__custom {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-2);
+}
+.msr-ColorPicker__native {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-md);
+  background: none;
+  cursor: pointer;
+}
+.msr-ColorPicker__hex {
+  flex: 1;
+  font-family: var(--msr-font-mono);
+  font-size: var(--msr-text-sm);
+  padding: var(--msr-space-2);
+  border: 1px solid var(--msr-color-border-strong);
+  border-radius: var(--msr-radius-md);
+  background-color: var(--msr-color-surface);
+  color: var(--msr-color-fg);
+  outline: none;
+}
+.msr-ColorPicker__hex:focus {
+  border-color: var(--msr-color-primary);
+  box-shadow: 0 0 0 3px var(--msr-color-ring);
+}

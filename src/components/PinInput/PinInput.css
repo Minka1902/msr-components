@@ -1,0 +1,26 @@
+.msr-PinInput {
+  display: inline-flex;
+  gap: var(--msr-space-2);
+}
+.msr-PinInput[data-disabled] {
+  opacity: 0.6;
+  pointer-events: none;
+}
+.msr-PinInput__cell {
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  font-weight: var(--msr-weight-semibold);
+  border: 1px solid var(--msr-color-border-strong);
+  border-radius: var(--msr-radius-md);
+  background-color: var(--msr-color-surface);
+  color: var(--msr-color-fg);
+  outline: none;
+  transition: border-color var(--msr-transition-fast), box-shadow var(--msr-transition-fast);
+}
+.msr-PinInput[data-size="sm"] .msr-PinInput__cell { width: 32px; height: 38px; font-size: var(--msr-text-lg); }
+.msr-PinInput[data-size="md"] .msr-PinInput__cell { width: 40px; height: 48px; font-size: var(--msr-text-xl); }
+.msr-PinInput[data-size="lg"] .msr-PinInput__cell { width: 48px; height: 56px; font-size: var(--msr-text-2xl); }
+.msr-PinInput__cell:focus {
+  border-color: var(--msr-color-primary);
+  box-shadow: 0 0 0 3px var(--msr-color-ring);
+}

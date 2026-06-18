@@ -88,6 +88,10 @@ Every component also accepts `className` / `style` and renders stable
 | `msr-components/charts` | Sparkline, LineChart, BarChart, DonutChart, RadialProgress, Gauge, Heatmap, ProgressBar (dependency-free SVG/CSS) |
 | `msr-components/styles.css` | The full stylesheet (tokens + 15 themes + all components) |
 
+**Advanced inputs** (in core `msr-components`): Combobox/Autocomplete (single +
+multi), Slider, RangeSlider, NumberStepper, PinInput, RatingStars, ToggleGroup,
+TagInput, FileDropzone, ColorPicker, DatePicker (+ standalone Calendar).
+
 **Composable building blocks** (in core `msr-components`): layout primitives
 (Stack, Inline, Grid, Container, Center, AspectRatio, Spacer), Alert/Banner,
 Field, Tag, SegmentedControl, Breadcrumbs, Pagination, CopyButton, Highlight,

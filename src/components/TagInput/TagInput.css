@@ -1,0 +1,35 @@
+.msr-TagInput {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--msr-space-1);
+  min-height: var(--msr-control-md);
+  padding: 4px var(--msr-space-2);
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border-strong);
+  border-radius: var(--msr-radius-md);
+  cursor: text;
+  transition: border-color var(--msr-transition-fast), box-shadow var(--msr-transition-fast);
+}
+.msr-TagInput:focus-within {
+  border-color: var(--msr-color-primary);
+  box-shadow: 0 0 0 3px var(--msr-color-ring);
+}
+.msr-TagInput[data-disabled] {
+  opacity: 0.6;
+  pointer-events: none;
+}
+.msr-TagInput__input {
+  flex: 1;
+  min-width: 80px;
+  appearance: none;
+  border: none;
+  background: transparent;
+  font: inherit;
+  font-size: var(--msr-text-md);
+  color: var(--msr-color-fg);
+  outline: none;
+}
+.msr-TagInput__input::placeholder {
+  color: var(--msr-color-fg-subtle);
+}

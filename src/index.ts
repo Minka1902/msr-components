@@ -77,3 +77,15 @@ export * from "./components/AvatarGroup";
 export * from "./components/DataDisplay";
 export * from "./components/Collapsible";
 export * from "./components/ScrollArea";
+
+// ---- Components: advanced inputs ----
+export * from "./components/Combobox";
+export * from "./components/Slider";
+export * from "./components/NumberStepper";
+export * from "./components/PinInput";
+export * from "./components/RatingStars";
+export * from "./components/ToggleGroup";
+export * from "./components/TagInput";
+export * from "./components/FileDropzone";
+export * from "./components/ColorPicker";
+export * from "./components/DatePicker";

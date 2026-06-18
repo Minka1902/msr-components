@@ -1,0 +1,40 @@
+.msr-ToggleGroup {
+  display: inline-flex;
+  border: 1px solid var(--msr-color-border-strong);
+  border-radius: var(--msr-radius-md);
+  overflow: hidden;
+}
+.msr-ToggleGroup__btn {
+  appearance: none;
+  border: none;
+  background: var(--msr-color-surface);
+  color: var(--msr-color-fg-muted);
+  font: inherit;
+  font-weight: var(--msr-weight-medium);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--msr-space-1);
+  white-space: nowrap;
+  transition: background-color var(--msr-transition-fast), color var(--msr-transition-fast);
+}
+.msr-ToggleGroup[data-size="sm"] .msr-ToggleGroup__btn { padding: var(--msr-space-1) var(--msr-space-3); font-size: var(--msr-text-sm); }
+.msr-ToggleGroup[data-size="md"] .msr-ToggleGroup__btn { padding: var(--msr-space-2) var(--msr-space-4); font-size: var(--msr-text-md); }
+.msr-ToggleGroup__btn + .msr-ToggleGroup__btn {
+  border-left: 1px solid var(--msr-color-border);
+}
+.msr-ToggleGroup__btn:hover:not(:disabled):not([data-on]) {
+  background-color: var(--msr-color-surface-2);
+  color: var(--msr-color-fg);
+}
+.msr-ToggleGroup__btn[data-on] {
+  background-color: var(--msr-color-primary);
+  color: var(--msr-color-primary-fg);
+}
+.msr-ToggleGroup__btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.msr-ToggleGroup__icon {
+  display: inline-flex;
+}
