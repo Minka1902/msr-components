@@ -1,0 +1,37 @@
+.msr-LineChart {
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-2);
+}
+.msr-LineChart__svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.msr-LineChart__grid {
+  stroke: var(--msr-color-border);
+  stroke-dasharray: 3 3;
+}
+.msr-LineChart__labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg-subtle);
+}
+.msr-LineChart__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--msr-space-3);
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg-muted);
+}
+.msr-LineChart__legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--msr-space-1);
+}
+.msr-LineChart__swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}

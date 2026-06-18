@@ -1,0 +1,81 @@
+.msr-BarChart {
+  display: flex;
+  gap: var(--msr-space-3);
+}
+.msr-BarChart[data-orientation="vertical"] {
+  align-items: flex-end;
+  height: var(--bar-area);
+}
+.msr-BarChart[data-orientation="vertical"] .msr-BarChart__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--msr-space-2);
+  height: 100%;
+  justify-content: flex-end;
+}
+.msr-BarChart[data-orientation="vertical"] .msr-BarChart__track {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.msr-BarChart[data-orientation="vertical"] .msr-BarChart__bar {
+  width: 70%;
+  height: var(--bar-size);
+  border-radius: var(--msr-radius-sm) var(--msr-radius-sm) 0 0;
+}
+
+.msr-BarChart[data-orientation="horizontal"] {
+  flex-direction: column;
+}
+.msr-BarChart[data-orientation="horizontal"] .msr-BarChart__item {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  align-items: center;
+  gap: var(--msr-space-2);
+}
+.msr-BarChart[data-orientation="horizontal"] .msr-BarChart__track {
+  width: 100%;
+}
+.msr-BarChart[data-orientation="horizontal"] .msr-BarChart__bar {
+  width: var(--bar-size);
+  height: 20px;
+  border-radius: 0 var(--msr-radius-sm) var(--msr-radius-sm) 0;
+}
+.msr-BarChart[data-orientation="horizontal"] .msr-BarChart__label {
+  order: -1;
+  text-align: right;
+}
+
+.msr-BarChart__bar {
+  background-color: var(--msr-color-primary);
+  position: relative;
+  transition: height var(--msr-transition-base), width var(--msr-transition-base);
+  min-height: 2px;
+  min-width: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.msr-BarChart__value {
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-primary-fg);
+  font-weight: var(--msr-weight-medium);
+  white-space: nowrap;
+}
+.msr-BarChart[data-orientation="vertical"] .msr-BarChart__value {
+  position: absolute;
+  top: -16px;
+  color: var(--msr-color-fg-muted);
+}
+.msr-BarChart__label {
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}

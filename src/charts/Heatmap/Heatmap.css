@@ -1,0 +1,17 @@
+.msr-Heatmap {
+  display: grid;
+  grid-template-rows: repeat(var(--hm-rows, 7), var(--hm-cell, 12px));
+  grid-auto-flow: column;
+  grid-auto-columns: var(--hm-cell, 12px);
+  gap: 3px;
+}
+.msr-Heatmap__cell {
+  width: var(--hm-cell, 12px);
+  height: var(--hm-cell, 12px);
+  border-radius: 2px;
+  background-color: var(--msr-color-surface-2);
+}
+.msr-Heatmap__cell[data-level="1"] { background-color: color-mix(in srgb, var(--msr-color-primary) 30%, var(--msr-color-surface-2)); }
+.msr-Heatmap__cell[data-level="2"] { background-color: color-mix(in srgb, var(--msr-color-primary) 55%, var(--msr-color-surface-2)); }
+.msr-Heatmap__cell[data-level="3"] { background-color: color-mix(in srgb, var(--msr-color-primary) 80%, var(--msr-color-surface-2)); }
+.msr-Heatmap__cell[data-level="4"] { background-color: var(--msr-color-primary); }

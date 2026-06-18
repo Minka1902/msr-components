@@ -1,0 +1,40 @@
+.msr-Field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-2);
+}
+.msr-Field[data-inline] {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--msr-space-4);
+}
+.msr-Field[data-inline] .msr-Field__label {
+  flex: none;
+  min-width: 120px;
+}
+.msr-Field__label {
+  font-size: var(--msr-text-sm);
+  font-weight: var(--msr-weight-medium);
+  color: var(--msr-color-fg);
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+.msr-Field__required {
+  color: var(--msr-tone-danger-fg);
+}
+.msr-Field__control {
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-1);
+  flex: 1;
+  min-width: 0;
+}
+.msr-Field__hint {
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg-subtle);
+}
+.msr-Field__error {
+  font-size: var(--msr-text-xs);
+  color: var(--msr-tone-danger-fg);
+}

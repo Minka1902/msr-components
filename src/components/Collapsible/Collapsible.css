@@ -1,0 +1,12 @@
+.msr-Collapsible__trigger {
+  cursor: pointer;
+}
+.msr-Collapsible__region {
+  overflow: hidden;
+  transition: height var(--msr-transition-base);
+}
+@media (prefers-reduced-motion: reduce) {
+  .msr-Collapsible__region {
+    transition: none;
+  }
+}

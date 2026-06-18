@@ -13,6 +13,7 @@ const entries = [
   "business/index",
   "pets/index",
   "game/index",
+  "charts/index",
 ];
 const directive = '"use client";\n';
 

@@ -85,7 +85,15 @@ Every component also accepts `className` / `style` and renders stable
 | `msr-components/business` | FeatureToggleCard, SetupChecklist |
 | `msr-components/pets` | DogProfileHeader, MedicalRecordCard |
 | `msr-components/game` | HotColdDistanceMeter, DistanceFeedbackCard |
+| `msr-components/charts` | Sparkline, LineChart, BarChart, DonutChart, RadialProgress, Gauge, Heatmap, ProgressBar (dependency-free SVG/CSS) |
 | `msr-components/styles.css` | The full stylesheet (tokens + 15 themes + all components) |
+
+**Composable building blocks** (in core `msr-components`): layout primitives
+(Stack, Inline, Grid, Container, Center, AspectRatio, Spacer), Alert/Banner,
+Field, Tag, SegmentedControl, Breadcrumbs, Pagination, CopyButton, Highlight,
+ClampText, RelativeTime, Stat, DescriptionList, AvatarGroup, Collapsible,
+ScrollArea — designed to be assembled (incl. from JSON by an AI agent) into
+larger UIs.
 
 Each subpath is independently tree-shakeable.
 

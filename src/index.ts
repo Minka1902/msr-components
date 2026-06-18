@@ -62,3 +62,18 @@ export * from "./components/ResizableSplitPanel";
 export * from "./components/DataTable";
 export * from "./components/JsonViewer";
 export * from "./components/FilePathViewer";
+
+// ---- Components: composable building blocks (layout / content / utility) ----
+export * from "./components/Layout";
+export * from "./components/Alert";
+export * from "./components/Field";
+export * from "./components/Tag";
+export * from "./components/SegmentedControl";
+export * from "./components/Breadcrumbs";
+export * from "./components/Pagination";
+export * from "./components/CopyButton";
+export * from "./components/Text";
+export * from "./components/AvatarGroup";
+export * from "./components/DataDisplay";
+export * from "./components/Collapsible";
+export * from "./components/ScrollArea";

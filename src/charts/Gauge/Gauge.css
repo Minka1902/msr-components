@@ -1,0 +1,24 @@
+.msr-Gauge {
+  position: relative;
+  display: inline-flex;
+}
+.msr-Gauge svg {
+  width: 100%;
+  height: 100%;
+}
+.msr-Gauge__track {
+  stroke: var(--msr-color-surface-2);
+}
+.msr-Gauge__value {
+  stroke: var(--msr-color-primary);
+}
+.msr-Gauge__label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  font-weight: var(--msr-weight-bold);
+  font-size: var(--msr-text-xl);
+  color: var(--msr-color-fg);
+}

@@ -1,0 +1,74 @@
+.msr-Alert {
+  --al-bg: var(--msr-tone-info-bg);
+  --al-fg: var(--msr-tone-info-fg);
+  --al-border: var(--msr-tone-info-border);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--msr-space-3);
+  padding: var(--msr-space-3) var(--msr-space-4);
+  border-radius: var(--msr-radius-md);
+  color: var(--msr-color-fg);
+}
+.msr-Alert[data-tone="info"] { --al-bg: var(--msr-tone-info-bg); --al-fg: var(--msr-tone-info-fg); --al-border: var(--msr-tone-info-border); }
+.msr-Alert[data-tone="success"] { --al-bg: var(--msr-tone-success-bg); --al-fg: var(--msr-tone-success-fg); --al-border: var(--msr-tone-success-border); }
+.msr-Alert[data-tone="warning"] { --al-bg: var(--msr-tone-warning-bg); --al-fg: var(--msr-tone-warning-fg); --al-border: var(--msr-tone-warning-border); }
+.msr-Alert[data-tone="danger"] { --al-bg: var(--msr-tone-danger-bg); --al-fg: var(--msr-tone-danger-fg); --al-border: var(--msr-tone-danger-border); }
+.msr-Alert[data-tone="neutral"] { --al-bg: var(--msr-color-surface-2); --al-fg: var(--msr-color-fg-muted); --al-border: var(--msr-color-border); }
+
+.msr-Alert[data-variant="soft"] {
+  background-color: var(--al-bg);
+  border: 1px solid transparent;
+}
+.msr-Alert[data-variant="outline"] {
+  background-color: transparent;
+  border: 1px solid var(--al-border);
+}
+.msr-Alert__icon {
+  display: inline-flex;
+  color: var(--al-fg);
+  margin-top: 1px;
+}
+.msr-Alert__body {
+  flex: 1;
+  min-width: 0;
+}
+.msr-Alert__title {
+  font-weight: var(--msr-weight-semibold);
+  color: var(--msr-color-fg);
+}
+.msr-Alert__text {
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg-muted);
+}
+.msr-Alert__title + .msr-Alert__text {
+  margin-top: 2px;
+}
+.msr-Alert__actions {
+  display: flex;
+  gap: var(--msr-space-2);
+  margin-top: var(--msr-space-3);
+}
+.msr-Alert__close {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--msr-color-fg-subtle);
+  cursor: pointer;
+  padding: 2px;
+  border-radius: var(--msr-radius-sm);
+  display: inline-flex;
+}
+.msr-Alert__close:hover {
+  color: var(--msr-color-fg);
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.msr-Banner {
+  border-radius: 0;
+  justify-content: center;
+}
+.msr-Banner--sticky {
+  position: sticky;
+  top: 0;
+  z-index: var(--msr-z-dropdown);
+}

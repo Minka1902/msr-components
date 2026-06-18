@@ -45,6 +45,11 @@
       "import": "./dist/game/index.js",
       "require": "./dist/game/index.cjs"
     },
+    "./charts": {
+      "types": "./dist/charts/index.d.ts",
+      "import": "./dist/charts/index.js",
+      "require": "./dist/charts/index.cjs"
+    },
     "./styles.css": "./dist/styles.css"
   },
   "scripts": {

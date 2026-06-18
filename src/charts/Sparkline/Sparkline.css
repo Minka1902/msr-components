@@ -1,0 +1,15 @@
+.msr-Sparkline {
+  width: 96px;
+  height: 28px;
+  overflow: visible;
+}
+.msr-Sparkline__line {
+  stroke: var(--msr-color-primary);
+}
+.msr-Sparkline__area {
+  fill: var(--msr-color-primary);
+  opacity: 0.12;
+}
+.msr-Sparkline__dot {
+  fill: var(--msr-color-primary);
+}

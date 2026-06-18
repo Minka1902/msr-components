@@ -1,0 +1,28 @@
+.msr-Highlight {
+  background-color: var(--msr-tone-warning-bg);
+  color: var(--msr-tone-warning-fg);
+  border-radius: 2px;
+  padding: 0 1px;
+}
+.msr-ClampText__content[data-clamped] {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--clamp-lines, 3);
+  line-clamp: var(--clamp-lines, 3);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.msr-ClampText__toggle {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--msr-color-primary);
+  font: inherit;
+  font-size: var(--msr-text-sm);
+  font-weight: var(--msr-weight-medium);
+  cursor: pointer;
+  padding: 0;
+  margin-top: var(--msr-space-1);
+}
+.msr-ClampText__toggle:hover {
+  text-decoration: underline;
+}
