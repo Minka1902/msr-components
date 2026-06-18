@@ -88,6 +88,10 @@ Every component also accepts `className` / `style` and renders stable
 | `msr-components/charts` | Sparkline, LineChart, BarChart, DonutChart, RadialProgress, Gauge, Heatmap, ProgressBar (dependency-free SVG/CSS) |
 | `msr-components/styles.css` | The full stylesheet (tokens + 15 themes + all components) |
 
+**AI / agent UI**: ChatThread, ChatMessage, StreamingText, PromptInput
+(⌘↵ to send), ToolCallCard, TokenUsageMeter, MarkdownRenderer (dependency-free,
+reuses CopyableCodeBlock).
+
 **Navigation & overlays**: Drawer/Sheet, Stepper, TreeView, HoverCard,
 ScrollToTop.
 

@@ -109,3 +109,7 @@ export * from "./components/NetworkStatusBanner";
 export * from "./components/CountdownTimer";
 export * from "./components/IdleDialog";
 export * from "./components/GeoPrompt";
+
+// ---- Components: AI / agent UI ----
+export * from "./components/Chat";
+export * from "./components/MarkdownRenderer";
