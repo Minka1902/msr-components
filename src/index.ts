@@ -119,3 +119,15 @@ export * from "./components/AppShell";
 export * from "./components/Toolbar";
 export * from "./components/InlineEdit";
 export * from "./components/FormBuilder";
+
+// ---- Components: interaction-rich ----
+export * from "./components/SortableList";
+export * from "./components/KanbanBoard";
+export * from "./components/Carousel";
+export * from "./components/ImageComparison";
+export * from "./components/PasswordInput";
+
+// ---- Components: dev tools / delight ----
+export * from "./components/DiffViewer";
+export * from "./components/Terminal";
+export * from "./components/Showcase";

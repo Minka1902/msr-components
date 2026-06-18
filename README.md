@@ -88,6 +88,13 @@ Every component also accepts `className` / `style` and renders stable
 | `msr-components/charts` | Sparkline, LineChart, BarChart, DonutChart, RadialProgress, Gauge, Heatmap, ProgressBar (dependency-free SVG/CSS) |
 | `msr-components/styles.css` | The full stylesheet (tokens + 15 themes + all components) |
 
+**Interaction-rich**: SortableList (drag-reorder), KanbanBoard (drag-drop
+columns), Carousel, ImageComparison (before/after slider), PasswordInput
+(show/hide + strength meter).
+
+**Dev tools / delight**: DiffViewer (LCS line diff, unified/split), Terminal
+(console output), BentoGrid + BentoItem, FlipCard, AuroraBackground.
+
 **App-building blocks**: AppShell (header + collapsible sidebar + content),
 Sidebar, Toolbar, InlineEdit, and **FormBuilder** — render a complete, validated
 form from a JSON field schema (great for AI-generated UIs).

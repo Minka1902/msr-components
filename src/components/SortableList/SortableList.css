@@ -1,0 +1,38 @@
+.msr-Sortable {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-2);
+}
+.msr-Sortable__item {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-2);
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-md);
+  padding: var(--msr-space-2) var(--msr-space-3);
+  transition: border-color var(--msr-transition-fast), opacity var(--msr-transition-fast);
+}
+.msr-Sortable__item[data-dragging] {
+  opacity: 0.4;
+}
+.msr-Sortable__item[data-over] {
+  border-color: var(--msr-color-primary);
+  border-style: dashed;
+}
+.msr-Sortable__handle {
+  display: inline-flex;
+  color: var(--msr-color-fg-subtle);
+  cursor: grab;
+  flex: none;
+}
+.msr-Sortable__handle:active {
+  cursor: grabbing;
+}
+.msr-Sortable__content {
+  flex: 1;
+  min-width: 0;
+}
