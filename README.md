@@ -147,10 +147,17 @@ Each subpath is independently tree-shakeable.
 ## Scripts
 
 ```bash
-npm run build      # tsup + "use client" + bundle styles.css
-npm run typecheck  # tsc --noEmit
-npm test           # vitest (unit + jest-axe a11y)
+npm run build           # tsup + "use client" + bundle styles.css
+npm run typecheck       # tsc --noEmit
+npm test                # vitest (unit + jest-axe a11y)
+npm run lint            # eslint (flat config)
+npm run format          # prettier --write
+npm run storybook       # dev: Storybook with a 15-theme + density toolbar
+npm run build-storybook # static Storybook build
 ```
+
+CI (`.github/workflows/ci.yml`) runs typecheck → lint → test → build on every
+push/PR. `prepublishOnly` rebuilds before `npm publish`.
 
 ## Roadmap
 

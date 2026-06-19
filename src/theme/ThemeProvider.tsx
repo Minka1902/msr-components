@@ -84,8 +84,10 @@ export function ThemeProvider({
     el.setAttribute("data-theme", theme);
     el.setAttribute("data-density", density);
     return () => {
-      prevTheme ? el.setAttribute("data-theme", prevTheme) : el.removeAttribute("data-theme");
-      prevDensity ? el.setAttribute("data-density", prevDensity) : el.removeAttribute("data-density");
+      if (prevTheme) el.setAttribute("data-theme", prevTheme);
+      else el.removeAttribute("data-theme");
+      if (prevDensity) el.setAttribute("data-density", prevDensity);
+      else el.removeAttribute("data-density");
     };
   }, [theme, density, target]);
 

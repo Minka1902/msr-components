@@ -113,7 +113,8 @@ export function DataTable<T>({
 
   return (
     <div className={cx("msr-DataTable", className)}>
-      {(searchable || exportable || true) && (
+      {/* toolbar always shows (column-visibility lives here) */}
+      {(
         <div className="msr-DataTable__toolbar">
           {searchable && (
             <Input
@@ -223,7 +224,8 @@ export function DataTable<T>({
                             onClick={() =>
                               setExpanded((prev) => {
                                 const next = new Set(prev);
-                                next.has(key) ? next.delete(key) : next.add(key);
+                                if (next.has(key)) next.delete(key);
+                                else next.add(key);
                                 return next;
                               })
                             }
