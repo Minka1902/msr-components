@@ -1,0 +1,15 @@
+.msr-Radar {
+  display: inline-block;
+}
+.msr-Radar__ring {
+  fill: none;
+  stroke: var(--msr-color-border);
+}
+.msr-Radar__spoke {
+  stroke: var(--msr-color-border);
+}
+.msr-Radar__label {
+  fill: var(--msr-color-fg-muted);
+  font-size: 10px;
+  font-family: var(--msr-font-sans);
+}

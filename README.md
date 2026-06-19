@@ -85,7 +85,7 @@ Every component also accepts `className` / `style` and renders stable
 | `msr-components/business` | ModuleMarketplace, ModuleSetupWizard, ModuleDependencyGraph, ClientAccessGate, FeatureToggleCard, SetupChecklist, RolePermissionMatrix, BusinessOnboardingDashboard |
 | `msr-components/pets` | DogProfileHeader, RoutineTimeline, TrainingSessionCard, MedicalRecordCard, QRCollarPreview, HumanAccessManager, DogTrackerMapCard |
 | `msr-components/game` | CountryGuessInput, DistanceFeedbackCard, WorldMapHint, CountryFactReveal, HotColdDistanceMeter, DailyCountryChallenge, EducationalResultSummary |
-| `msr-components/charts` | Sparkline, LineChart, BarChart, DonutChart, RadialProgress, Gauge, Heatmap, ProgressBar (dependency-free SVG/CSS) |
+| `msr-components/charts` | Sparkline, LineChart, BarChart, DonutChart, RadialProgress, Gauge, Heatmap, ProgressBar, RadarChart, ScatterPlot, FunnelChart, StackedBarChart (dependency-free SVG/CSS) |
 | `msr-components/styles.css` | The full stylesheet (tokens + 15 themes + all components) |
 
 **Interaction-rich**: SortableList (drag-reorder), KanbanBoard (drag-drop
@@ -93,7 +93,13 @@ columns), Carousel, ImageComparison (before/after slider), PasswordInput
 (show/hide + strength meter).
 
 **Dev tools / delight**: DiffViewer (LCS line diff, unified/split), Terminal
-(console output), BentoGrid + BentoItem, FlipCard, AuroraBackground.
+(console output), JsonEditor (live-validating), QRCode (real dependency-free
+encoder), BentoGrid + BentoItem, FlipCard, AuroraBackground.
+
+**More inputs & data**: VirtualizedList (windowed), RichTextEditor
+(contentEditable toolbar), MaskedInput + PhoneInput, MentionInput (@-mentions),
+plus charts RadarChart, ScatterPlot, FunnelChart, StackedBarChart
+(`msr-components/charts`).
 
 **App-building blocks**: AppShell (header + collapsible sidebar + content),
 Sidebar, Toolbar, InlineEdit, and **FormBuilder** — render a complete, validated

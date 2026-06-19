@@ -1,0 +1,11 @@
+.msr-Scatter {
+  width: 100%;
+}
+.msr-Scatter__svg {
+  height: auto;
+  overflow: visible;
+}
+.msr-Scatter__grid {
+  stroke: var(--msr-color-border);
+  stroke-dasharray: 3 3;
+}

@@ -131,3 +131,11 @@ export * from "./components/PasswordInput";
 export * from "./components/DiffViewer";
 export * from "./components/Terminal";
 export * from "./components/Showcase";
+export * from "./components/QRCode";
+
+// ---- Components: more inputs & data ----
+export * from "./components/VirtualizedList";
+export * from "./components/MaskedInput";
+export * from "./components/MentionInput";
+export * from "./components/JsonEditor";
+export * from "./components/RichTextEditor";

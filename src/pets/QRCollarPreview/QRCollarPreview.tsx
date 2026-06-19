@@ -2,6 +2,7 @@ import * as React from "react";
 import { cx } from "../../lib/cx";
 import { SegmentedControl } from "../../components/SegmentedControl/SegmentedControl";
 import { DescriptionList, type DescriptionItem } from "../../components/DataDisplay/DataDisplay";
+import { QRCode } from "../../components/QRCode/QRCode";
 
 export interface QRCollarPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Value encoded in the QR (e.g. a public profile URL). */
@@ -37,10 +38,7 @@ export const QRCollarPreview = React.forwardRef<HTMLDivElement, QRCollarPreviewP
 
     return (
       <div ref={ref} className={cx("msr-QRCollar", className)} {...rest}>
-        <div className="msr-QRCollar__qr" role="img" aria-label="Collar QR code" title={qrValue}>
-          <div className="msr-QRCollar__qr-pattern" aria-hidden="true" />
-          <span className="msr-QRCollar__qr-hint">QR</span>
-        </div>
+        <QRCode className="msr-QRCollar__qr" value={qrValue} size={104} title="Collar QR code" />
         <div className="msr-QRCollar__body">
           {ownerFields.length > 0 && (
             <SegmentedControl

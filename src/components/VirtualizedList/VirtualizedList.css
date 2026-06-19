@@ -1,0 +1,9 @@
+.msr-VList {
+  position: relative;
+  scrollbar-width: thin;
+}
+.msr-VList__row {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
