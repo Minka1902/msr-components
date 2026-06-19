@@ -1,0 +1,53 @@
+.msr-PermMatrix {
+  overflow-x: auto;
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  background-color: var(--msr-color-surface);
+}
+.msr-PermMatrix__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--msr-text-sm);
+}
+.msr-PermMatrix__table th,
+.msr-PermMatrix__table td {
+  padding: var(--msr-space-2) var(--msr-space-3);
+  border-bottom: 1px solid var(--msr-color-border);
+}
+.msr-PermMatrix__table thead th {
+  background-color: var(--msr-color-surface-2);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.msr-PermMatrix__corner {
+  text-align: left;
+  font-weight: var(--msr-weight-semibold);
+  color: var(--msr-color-fg);
+}
+.msr-PermMatrix__role {
+  text-align: center;
+  font-weight: var(--msr-weight-medium);
+  color: var(--msr-color-fg-muted);
+  white-space: nowrap;
+}
+.msr-PermMatrix__group td {
+  background-color: var(--msr-color-surface-2);
+  font-size: var(--msr-text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--msr-color-fg-subtle);
+  font-weight: var(--msr-weight-semibold);
+}
+.msr-PermMatrix__perm {
+  color: var(--msr-color-fg);
+}
+.msr-PermMatrix__cell {
+  text-align: center;
+}
+.msr-PermMatrix__cell .msr-Checkbox {
+  justify-content: center;
+}
+.msr-PermMatrix__table tbody tr:hover td {
+  background-color: var(--msr-color-surface-2);
+}

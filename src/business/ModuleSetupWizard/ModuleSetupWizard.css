@@ -1,0 +1,19 @@
+.msr-Wizard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-5);
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  padding: var(--msr-space-5);
+}
+.msr-Wizard__content {
+  min-height: 80px;
+}
+.msr-Wizard__actions {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--msr-space-2);
+  border-top: 1px solid var(--msr-color-border);
+  padding-top: var(--msr-space-4);
+}

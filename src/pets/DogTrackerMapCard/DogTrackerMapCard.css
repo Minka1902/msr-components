@@ -1,0 +1,71 @@
+.msr-Tracker {
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  overflow: hidden;
+  max-width: 360px;
+}
+.msr-Tracker__map {
+  position: relative;
+  height: 160px;
+  background-color: var(--msr-color-surface-2);
+}
+.msr-Tracker__map img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.msr-Tracker__map-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--msr-color-fg-subtle);
+  background-image: radial-gradient(var(--msr-color-border) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+.msr-Tracker__pin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  color: var(--msr-tone-success-fg);
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.3));
+}
+.msr-Tracker__pin[data-status="offline"] { color: var(--msr-color-fg-subtle); }
+.msr-Tracker__pin[data-status="lost"] { color: var(--msr-tone-danger-fg); }
+.msr-Tracker__body {
+  padding: var(--msr-space-3) var(--msr-space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-2);
+}
+.msr-Tracker__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.msr-Tracker__battery {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--msr-space-1);
+  font-size: var(--msr-text-sm);
+  font-variant-numeric: tabular-nums;
+}
+.msr-Tracker__battery[data-tone="success"] { color: var(--msr-tone-success-fg); }
+.msr-Tracker__battery[data-tone="warning"] { color: var(--msr-tone-warning-fg); }
+.msr-Tracker__battery[data-tone="danger"] { color: var(--msr-tone-danger-fg); }
+.msr-Tracker__battery[data-tone="muted"] { color: var(--msr-color-fg-subtle); }
+.msr-Tracker__loc,
+.msr-Tracker__seen {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--msr-space-1);
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg-muted);
+}
+.msr-Tracker__loc code {
+  font-family: var(--msr-font-mono);
+  font-size: var(--msr-text-xs);
+}

@@ -6,3 +6,9 @@ export type {
   SetupChecklistProps,
   ChecklistStep,
 } from "./SetupChecklist/SetupChecklist";
+export * from "./ModuleMarketplace";
+export * from "./ModuleSetupWizard";
+export * from "./ModuleDependencyGraph";
+export * from "./ClientAccessGate";
+export * from "./RolePermissionMatrix";
+export * from "./BusinessOnboardingDashboard";

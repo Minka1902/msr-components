@@ -1,0 +1,38 @@
+.msr-HashMatch {
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-3);
+}
+.msr-HashMatch__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--msr-space-3);
+}
+.msr-HashMatch__hash {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-2);
+  min-width: 0;
+}
+.msr-HashMatch__hash-label {
+  font-size: var(--msr-text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--msr-color-fg-subtle);
+  flex: none;
+}
+.msr-HashMatch__hash-value {
+  font-family: var(--msr-font-mono);
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 360px;
+}
+.msr-HashMatch__stats {
+  display: inline-flex;
+  gap: var(--msr-space-2);
+}

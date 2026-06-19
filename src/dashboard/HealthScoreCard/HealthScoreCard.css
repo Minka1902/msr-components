@@ -1,0 +1,66 @@
+.msr-Health {
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  box-shadow: var(--msr-shadow-1);
+  padding: var(--msr-space-5);
+}
+.msr-Health__main {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-4);
+}
+.msr-Health__head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-1);
+}
+.msr-Health__title {
+  font-size: var(--msr-text-md);
+  color: var(--msr-color-fg-muted);
+}
+.msr-Health__grade {
+  font-size: var(--msr-text-lg);
+  font-weight: var(--msr-weight-bold);
+}
+.msr-Health__grade[data-tone="success"] { color: var(--msr-tone-success-fg); }
+.msr-Health__grade[data-tone="warning"] { color: var(--msr-tone-warning-fg); }
+.msr-Health__grade[data-tone="danger"] { color: var(--msr-tone-danger-fg); }
+.msr-Health__breakdown {
+  list-style: none;
+  margin: var(--msr-space-4) 0 0;
+  padding: var(--msr-space-4) 0 0;
+  border-top: 1px solid var(--msr-color-border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-2);
+}
+.msr-Health__row {
+  display: grid;
+  grid-template-columns: 120px 1fr 32px;
+  align-items: center;
+  gap: var(--msr-space-3);
+  font-size: var(--msr-text-sm);
+}
+.msr-Health__label { color: var(--msr-color-fg-muted); }
+.msr-Health__track {
+  height: 6px;
+  background-color: var(--msr-color-surface-2);
+  border-radius: var(--msr-radius-full);
+  overflow: hidden;
+}
+.msr-Health__fill {
+  display: block;
+  height: 100%;
+  border-radius: var(--msr-radius-full);
+  background-color: var(--msr-color-primary);
+}
+.msr-Health__fill[data-tone="success"] { background-color: var(--msr-tone-success-fg); }
+.msr-Health__fill[data-tone="warning"] { background-color: var(--msr-tone-warning-fg); }
+.msr-Health__fill[data-tone="danger"] { background-color: var(--msr-tone-danger-fg); }
+.msr-Health__value {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--msr-color-fg);
+  font-weight: var(--msr-weight-medium);
+}

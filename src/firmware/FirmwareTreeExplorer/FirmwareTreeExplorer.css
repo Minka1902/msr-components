@@ -1,0 +1,23 @@
+.msr-FwTree {
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  padding: var(--msr-space-2);
+}
+.msr-FwTree__row {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--msr-space-2);
+  width: 100%;
+}
+.msr-FwTree__name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.msr-FwTree__meta {
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg-subtle);
+  font-variant-numeric: tabular-nums;
+}

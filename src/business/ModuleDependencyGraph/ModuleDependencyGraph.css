@@ -1,0 +1,54 @@
+.msr-DepGraph {
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-2);
+}
+.msr-DepGraph__node {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--msr-space-3);
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-md);
+  padding: var(--msr-space-3) var(--msr-space-4);
+}
+.msr-DepGraph__node[data-enabled] {
+  border-left: 3px solid var(--msr-color-primary);
+}
+.msr-DepGraph__name {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--msr-space-2);
+  font-weight: var(--msr-weight-medium);
+  color: var(--msr-color-fg);
+  min-width: 160px;
+}
+.msr-DepGraph__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--msr-radius-full);
+  background-color: var(--msr-color-border-strong);
+}
+.msr-DepGraph__dot[data-on] { background-color: var(--msr-tone-success-fg); }
+.msr-DepGraph__requires {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--msr-space-2);
+  color: var(--msr-color-fg-subtle);
+  flex-wrap: wrap;
+}
+.msr-DepGraph__dep {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--msr-space-1);
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg-muted);
+  background-color: var(--msr-color-surface-2);
+  border-radius: var(--msr-radius-full);
+  padding: 2px var(--msr-space-2);
+}
+.msr-DepGraph__dep[data-unmet] {
+  color: var(--msr-tone-warning-fg);
+  background-color: var(--msr-tone-warning-bg);
+}

@@ -5,3 +5,12 @@ export { AnalysisConfidenceBadge } from "./AnalysisConfidenceBadge/AnalysisConfi
 export type { AnalysisConfidenceBadgeProps } from "./AnalysisConfidenceBadge/AnalysisConfidenceBadge";
 export { FileMetadataCard } from "./FileMetadataCard/FileMetadataCard";
 export type { FileMetadataCardProps, FileMetadata } from "./FileMetadataCard/FileMetadataCard";
+export * from "./FirmwareTreeExplorer";
+export * from "./VendorGroupAccordion";
+export * from "./HashMatchExplorer";
+export * from "./CommonNameDetector";
+export * from "./FirmwareDiffViewer";
+export * from "./PluginResultCard";
+export * from "./ReportExportToolbar";
+export * from "./PathGroupSummaryRow";
+export * from "./BinaryFilePreviewPanel";

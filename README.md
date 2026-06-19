@@ -80,11 +80,11 @@ Every component also accepts `className` / `style` and renders stable
 | Import | Contents |
 | --- | --- |
 | `msr-components` | **Primitives:** Button, Input, Textarea, Select, Checkbox, RadioGroup, Switch, Avatar, Spinner, Divider, Popover, Menu, Accordion, Card, StatusBadge, Skeleton. **Polish:** AnimatedTabs, CopyableCodeBlock, PopoverHelp, Toast, Modal, ConfirmDialog, ContextMenu, FloatingActionButton, KeyboardShortcutOverlay, ThemePreviewCard, EmptyState. **General UI:** CommandPalette, SmartSearchInput, ResizableSplitPanel, DataTable, JsonViewer, FilePathViewer. Plus theme + hooks. |
-| `msr-components/dashboard` | MetricCard, ActivityTimeline |
-| `msr-components/firmware` | CveSeverityPanel, AnalysisConfidenceBadge, FileMetadataCard |
-| `msr-components/business` | FeatureToggleCard, SetupChecklist |
-| `msr-components/pets` | DogProfileHeader, MedicalRecordCard |
-| `msr-components/game` | HotColdDistanceMeter, DistanceFeedbackCard |
+| `msr-components/dashboard` | MetricCard, ActivityTimeline, HealthScoreCard, ModuleSetupProgress, InsightCards, NotificationCenter, QuickActionsPanel, RecentItemsPanel |
+| `msr-components/firmware` | FirmwareTreeExplorer, HashMatchExplorer, VendorGroupAccordion, CommonNameDetector, FirmwareDiffViewer, PluginResultCard, CveSeverityPanel, FileMetadataCard, ReportExportToolbar, PathGroupSummaryRow, AnalysisConfidenceBadge, BinaryFilePreviewPanel |
+| `msr-components/business` | ModuleMarketplace, ModuleSetupWizard, ModuleDependencyGraph, ClientAccessGate, FeatureToggleCard, SetupChecklist, RolePermissionMatrix, BusinessOnboardingDashboard |
+| `msr-components/pets` | DogProfileHeader, RoutineTimeline, TrainingSessionCard, MedicalRecordCard, QRCollarPreview, HumanAccessManager, DogTrackerMapCard |
+| `msr-components/game` | CountryGuessInput, DistanceFeedbackCard, WorldMapHint, CountryFactReveal, HotColdDistanceMeter, DailyCountryChallenge, EducationalResultSummary |
 | `msr-components/charts` | Sparkline, LineChart, BarChart, DonutChart, RadialProgress, Gauge, Heatmap, ProgressBar (dependency-free SVG/CSS) |
 | `msr-components/styles.css` | The full stylesheet (tokens + 15 themes + all components) |
 

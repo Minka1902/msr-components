@@ -1,0 +1,49 @@
+.msr-QRCollar {
+  display: flex;
+  gap: var(--msr-space-4);
+  align-items: flex-start;
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  padding: var(--msr-space-4);
+}
+.msr-QRCollar__qr {
+  position: relative;
+  width: 104px;
+  height: 104px;
+  flex: none;
+  border-radius: var(--msr-radius-md);
+  border: 1px solid var(--msr-color-border);
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.msr-QRCollar__qr-pattern {
+  position: absolute;
+  inset: 10px;
+  background-image:
+    linear-gradient(45deg, #111 25%, transparent 25%, transparent 75%, #111 75%),
+    linear-gradient(45deg, #111 25%, transparent 25%, transparent 75%, #111 75%);
+  background-size: 12px 12px;
+  background-position: 0 0, 6px 6px;
+  opacity: 0.85;
+  border-radius: 2px;
+}
+.msr-QRCollar__qr-hint {
+  position: relative;
+  font-size: var(--msr-text-xs);
+  font-weight: var(--msr-weight-bold);
+  color: #fff;
+  background-color: #111;
+  padding: 2px 6px;
+  border-radius: var(--msr-radius-sm);
+}
+.msr-QRCollar__body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-3);
+}

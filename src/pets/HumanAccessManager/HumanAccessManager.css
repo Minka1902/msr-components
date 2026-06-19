@@ -1,0 +1,50 @@
+.msr-HumanAccess {
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  padding: var(--msr-space-4);
+}
+.msr-HumanAccess__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--msr-space-3);
+}
+.msr-HumanAccess__title {
+  font-weight: var(--msr-weight-semibold);
+  color: var(--msr-color-fg);
+}
+.msr-HumanAccess__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.msr-HumanAccess__row {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-3);
+  padding: var(--msr-space-2) 0;
+  border-bottom: 1px solid var(--msr-color-border);
+}
+.msr-HumanAccess__row:last-child { border-bottom: none; }
+.msr-HumanAccess__info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.msr-HumanAccess__name {
+  font-weight: var(--msr-weight-medium);
+  color: var(--msr-color-fg);
+}
+.msr-HumanAccess__role {
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg-subtle);
+  text-transform: capitalize;
+}
+.msr-HumanAccess__actions {
+  display: inline-flex;
+  gap: var(--msr-space-1);
+}

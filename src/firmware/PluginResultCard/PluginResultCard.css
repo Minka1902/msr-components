@@ -1,0 +1,84 @@
+.msr-Plugin {
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  padding: var(--msr-space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-3);
+}
+.msr-Plugin__header {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-3);
+}
+.msr-Plugin__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--msr-radius-md);
+  flex: none;
+  background-color: var(--msr-tone-info-bg);
+  color: var(--msr-tone-info-fg);
+}
+.msr-Plugin__icon[data-tone="success"] { background-color: var(--msr-tone-success-bg); color: var(--msr-tone-success-fg); }
+.msr-Plugin__icon[data-tone="warning"] { background-color: var(--msr-tone-warning-bg); color: var(--msr-tone-warning-fg); }
+.msr-Plugin__icon[data-tone="danger"] { background-color: var(--msr-tone-danger-bg); color: var(--msr-tone-danger-fg); }
+.msr-Plugin__title-wrap {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.msr-Plugin__name {
+  font-weight: var(--msr-weight-semibold);
+  color: var(--msr-color-fg);
+}
+.msr-Plugin__summary {
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg-muted);
+}
+.msr-Plugin__result {
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg);
+  background-color: var(--msr-color-surface-2);
+  border-radius: var(--msr-radius-md);
+  padding: var(--msr-space-3);
+}
+.msr-Plugin__warnings {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-1);
+}
+.msr-Plugin__warning {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-1);
+  font-size: var(--msr-text-sm);
+  color: var(--msr-tone-warning-fg);
+}
+.msr-Plugin__files-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--msr-space-1);
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg-muted);
+}
+.msr-Plugin__file-list {
+  list-style: none;
+  margin: var(--msr-space-2) 0 0;
+  padding: 0 0 0 var(--msr-space-4);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.msr-Plugin__file-list code {
+  font-family: var(--msr-font-mono);
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg-muted);
+}

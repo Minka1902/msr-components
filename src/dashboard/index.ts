@@ -6,3 +6,9 @@ export type {
   ActivityTimelineProps,
   ActivityItem,
 } from "./ActivityTimeline/ActivityTimeline";
+export * from "./HealthScoreCard";
+export * from "./ModuleSetupProgress";
+export * from "./InsightCards";
+export * from "./QuickActionsPanel";
+export * from "./RecentItemsPanel";
+export * from "./NotificationCenter";
