@@ -1,0 +1,61 @@
+.msr-ShimmerButton {
+  position: relative;
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--msr-space-2);
+  padding: var(--msr-space-2) var(--msr-space-5);
+  border: none;
+  border-radius: var(--msr-radius-full);
+  background-color: var(--msr-shimmer-bg);
+  color: var(--msr-color-bg);
+  font: inherit;
+  font-weight: var(--msr-weight-semibold);
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  isolation: isolate;
+}
+.msr-ShimmerButton__spark {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 1px;
+  z-index: 0;
+}
+.msr-ShimmerButton__sparkInner {
+  position: absolute;
+  inset: -100%;
+  background: conic-gradient(from 0deg, transparent 0 320deg, var(--msr-shimmer) 360deg);
+  animation: msr-shimmer-spin var(--msr-shimmer-dur, 3s) linear infinite;
+}
+.msr-ShimmerButton__label {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--msr-space-2);
+}
+.msr-ShimmerButton__highlight {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 -6px 12px rgba(255, 255, 255, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  pointer-events: none;
+}
+.msr-ShimmerButton:hover {
+  transform: translateY(-1px);
+}
+@keyframes msr-shimmer-spin {
+  to { transform: rotate(360deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .msr-ShimmerButton__sparkInner { animation: none; }
+}

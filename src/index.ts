@@ -204,6 +204,31 @@ export * from "./components/BottomNavigation";
 export * from "./components/Dock";
 export * from "./components/Barcode";
 
+// ---- Components: unique & delight (wave 8) ----
+export * from "./components/MagneticButton";
+export * from "./components/ScratchCard";
+export * from "./components/SwipeCards";
+export * from "./components/WheelPicker";
+export * from "./components/TextScramble";
+export * from "./components/Typewriter";
+export * from "./components/BorderBeam";
+export * from "./components/Meteors";
+export * from "./components/Sparkles";
+export * from "./components/AnimatedBeam";
+export * from "./components/OrbitingIcons";
+export * from "./components/LiquidProgress";
+export * from "./components/SplitFlapDisplay";
+export * from "./components/RippleButton";
+export * from "./components/Odometer";
+export * from "./components/GradientText";
+export * from "./components/ShimmerButton";
+export * from "./components/MorphingText";
+export * from "./components/RetroGrid";
+export * from "./components/Spotlight";
+export * from "./components/HoldToConfirm";
+export * from "./components/GlitchText";
+export * from "./components/CardStack";
+
 // ---- Components: more inputs & data ----
 export * from "./components/VirtualizedList";
 export * from "./components/MaskedInput";

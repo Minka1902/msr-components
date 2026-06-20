@@ -1,0 +1,45 @@
+.msr-ScratchCard {
+  position: relative;
+  border-radius: var(--msr-radius-lg);
+  overflow: hidden;
+  user-select: none;
+  background-color: var(--msr-color-surface);
+}
+.msr-ScratchCard__content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--msr-color-fg);
+}
+.msr-ScratchCard__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  touch-action: none;
+  transition: opacity 0.4s ease;
+}
+.msr-ScratchCard__canvas:active {
+  cursor: grabbing;
+}
+.msr-ScratchCard[data-revealed] .msr-ScratchCard__canvas {
+  opacity: 0;
+  pointer-events: none;
+}
+.msr-ScratchCard__label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--msr-text-sm);
+  font-weight: var(--msr-weight-semibold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  pointer-events: none;
+}

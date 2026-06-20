@@ -1,0 +1,20 @@
+.msr-GradientText {
+  display: inline-block;
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-weight: var(--msr-weight-bold);
+}
+.msr-GradientText[data-animate] {
+  animation: msr-gradient-pan var(--msr-gt-dur, 6s) linear infinite;
+}
+@keyframes msr-gradient-pan {
+  to {
+    background-position: 200% center;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .msr-GradientText[data-animate] { animation: none; }
+}

@@ -1,0 +1,47 @@
+.msr-GlitchText {
+  position: relative;
+  display: inline-block;
+  font-weight: var(--msr-weight-bold);
+  color: var(--msr-color-fg);
+}
+.msr-GlitchText::before,
+.msr-GlitchText::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+  pointer-events: none;
+  clip-path: inset(0 0 0 0);
+}
+.msr-GlitchText[data-trigger="always"]::before,
+.msr-GlitchText[data-trigger="hover"]:hover::before {
+  color: var(--msr-glitch-a);
+  animation: msr-glitch-a 2.4s infinite linear alternate;
+}
+.msr-GlitchText[data-trigger="always"]::after,
+.msr-GlitchText[data-trigger="hover"]:hover::after {
+  color: var(--msr-glitch-b);
+  animation: msr-glitch-b 2.9s infinite linear alternate;
+}
+@keyframes msr-glitch-a {
+  0% { transform: translate(0); clip-path: inset(0 0 70% 0); }
+  20% { transform: translate(-2px, 1px); clip-path: inset(40% 0 20% 0); }
+  40% { transform: translate(-1px, -1px); clip-path: inset(10% 0 60% 0); }
+  60% { transform: translate(2px, 1px); clip-path: inset(60% 0 10% 0); }
+  80% { transform: translate(1px, -1px); clip-path: inset(20% 0 50% 0); }
+  100% { transform: translate(0); clip-path: inset(0 0 80% 0); }
+}
+@keyframes msr-glitch-b {
+  0% { transform: translate(0); clip-path: inset(60% 0 10% 0); }
+  25% { transform: translate(2px, -1px); clip-path: inset(20% 0 50% 0); }
+  50% { transform: translate(1px, 1px); clip-path: inset(50% 0 30% 0); }
+  75% { transform: translate(-2px, -1px); clip-path: inset(10% 0 70% 0); }
+  100% { transform: translate(0); clip-path: inset(40% 0 30% 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .msr-GlitchText::before,
+  .msr-GlitchText::after { animation: none; display: none; }
+}

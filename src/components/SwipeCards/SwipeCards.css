@@ -1,0 +1,65 @@
+.msr-SwipeCards {
+  position: relative;
+  width: 280px;
+  height: 380px;
+  user-select: none;
+}
+.msr-SwipeCards__card {
+  position: absolute;
+  inset: 0;
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-xl);
+  box-shadow: var(--msr-shadow-3);
+  overflow: hidden;
+  transform-origin: center bottom;
+  transition: transform 0.22s ease;
+  color: var(--msr-color-fg);
+}
+.msr-SwipeCards__card[data-top] {
+  cursor: grab;
+  touch-action: none;
+}
+.msr-SwipeCards__card[data-top]:active {
+  cursor: grabbing;
+}
+.msr-SwipeCards__card[data-dragging] {
+  transition: none;
+}
+.msr-SwipeCards__stamp {
+  position: absolute;
+  top: var(--msr-space-4);
+  z-index: 2;
+  padding: 4px var(--msr-space-3);
+  font-size: var(--msr-text-lg);
+  font-weight: var(--msr-weight-bold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 3px solid currentColor;
+  border-radius: var(--msr-radius-md);
+  pointer-events: none;
+}
+.msr-SwipeCards__stamp--like {
+  right: var(--msr-space-4);
+  color: var(--msr-tone-success-fg);
+  transform: rotate(14deg);
+}
+.msr-SwipeCards__stamp--nope {
+  left: var(--msr-space-4);
+  color: var(--msr-tone-danger-fg);
+  transform: rotate(-14deg);
+}
+.msr-SwipeCards__empty {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--msr-color-fg-subtle);
+  font-size: var(--msr-text-sm);
+  border: 2px dashed var(--msr-color-border);
+  border-radius: var(--msr-radius-xl);
+}
+@media (prefers-reduced-motion: reduce) {
+  .msr-SwipeCards__card { transition: none; }
+}

@@ -1,0 +1,7 @@
+.msr-TextScramble {
+  font-variant-ligatures: none;
+  white-space: pre-wrap;
+}
+.msr-TextScramble[data-running] {
+  font-family: var(--msr-font-mono, ui-monospace, monospace);
+}

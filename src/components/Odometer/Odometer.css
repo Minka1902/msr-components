@@ -1,0 +1,39 @@
+.msr-Odometer {
+  display: inline-flex;
+  align-items: center;
+  font-variant-numeric: tabular-nums;
+  font-weight: var(--msr-weight-bold);
+  font-size: var(--msr-text-2xl);
+  line-height: 1;
+  color: var(--msr-color-fg);
+}
+.msr-Odometer__digit {
+  display: inline-block;
+  height: 1em;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+.msr-Odometer__reel {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.msr-Odometer__num {
+  height: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.msr-Odometer__sep,
+.msr-Odometer__affix {
+  display: inline-flex;
+  align-items: center;
+  height: 1em;
+}
+.msr-Odometer__affix {
+  color: var(--msr-color-fg-muted);
+  font-weight: var(--msr-weight-semibold);
+}
+@media (prefers-reduced-motion: reduce) {
+  .msr-Odometer__reel { transition: none; }
+}

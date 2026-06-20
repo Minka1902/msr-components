@@ -1,0 +1,22 @@
+.msr-Typewriter {
+  display: inline-flex;
+  align-items: baseline;
+  white-space: pre;
+}
+.msr-Typewriter__cursor {
+  display: inline-block;
+  margin-inline-start: 1px;
+  color: var(--msr-color-primary);
+  font-weight: var(--msr-weight-normal);
+  animation: msr-caret-blink 1s step-end infinite;
+}
+.msr-Typewriter__cursor[data-done] {
+  animation: msr-caret-blink 1.2s step-end infinite;
+}
+@keyframes msr-caret-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .msr-Typewriter__cursor { animation: none; }
+}

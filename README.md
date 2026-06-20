@@ -143,6 +143,14 @@ tab bar), **Dock** (macOS-style magnifying dock).
 **Motion & delight**: AnimatedCounter, ScrollProgressBar, ScrollReveal, Confetti,
 TiltCard, SpotlightCard, Marquee, ShimmerText, AnimatedThemeToggle.
 
+**Unique & cool**: MagneticButton (cursor pull), ScratchCard (scratch-to-reveal),
+SwipeCards (Tinder-style deck), WheelPicker (iOS wheel), TextScramble, Typewriter,
+BorderBeam (traveling border), Meteors, Sparkles (canvas particles), AnimatedBeam
+(connect two refs), OrbitingIcons, LiquidProgress (wavy fill), SplitFlapDisplay
+(Solari board), RippleButton, Odometer (rolling digits), GradientText,
+ShimmerButton, MorphingText (gooey morph), RetroGrid, Spotlight (cursor light),
+HoldToConfirm, GlitchText, CardStack.
+
 **Powered by `msr-hooks`** (showcase components): NetworkStatusBanner,
 CountdownTimer, IdleDialog, GeoPrompt.
 

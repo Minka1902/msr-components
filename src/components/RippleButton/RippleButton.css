@@ -1,0 +1,51 @@
+.msr-RippleButton {
+  position: relative;
+  appearance: none;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--msr-space-2);
+  padding: var(--msr-space-2) var(--msr-space-5);
+  border: none;
+  border-radius: var(--msr-radius-md);
+  font: inherit;
+  font-weight: var(--msr-weight-semibold);
+  cursor: pointer;
+  --msr-ripple: rgba(255, 255, 255, 0.55);
+}
+.msr-RippleButton[data-tone="primary"] {
+  background-color: var(--msr-color-primary);
+  color: var(--msr-color-primary-fg);
+}
+.msr-RippleButton[data-tone="neutral"] {
+  background-color: var(--msr-color-surface-2);
+  color: var(--msr-color-fg);
+  --msr-ripple: color-mix(in srgb, var(--msr-color-fg) 22%, transparent);
+}
+.msr-RippleButton__label {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--msr-space-2);
+}
+.msr-RippleButton__ripple {
+  position: absolute;
+  z-index: 0;
+  border-radius: var(--msr-radius-full);
+  background-color: var(--msr-ripple);
+  transform: scale(0);
+  opacity: 0.7;
+  animation: msr-ripple-out 0.6s ease-out forwards;
+  pointer-events: none;
+}
+@keyframes msr-ripple-out {
+  to {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .msr-RippleButton__ripple { animation-duration: 0.01s; }
+}

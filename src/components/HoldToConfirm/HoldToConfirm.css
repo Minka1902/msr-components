@@ -1,0 +1,53 @@
+.msr-HoldToConfirm {
+  position: relative;
+  appearance: none;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--msr-space-2) var(--msr-space-5);
+  border: 1px solid var(--msr-color-border-strong);
+  border-radius: var(--msr-radius-md);
+  background-color: var(--msr-color-surface);
+  color: var(--msr-color-fg);
+  font: inherit;
+  font-weight: var(--msr-weight-semibold);
+  cursor: pointer;
+  user-select: none;
+  touch-action: none;
+  --msr-hold-tone: var(--msr-tone-danger-fg);
+}
+.msr-HoldToConfirm[data-tone="primary"] { --msr-hold-tone: var(--msr-color-primary); }
+.msr-HoldToConfirm__fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  background-color: var(--msr-hold-tone);
+  z-index: 0;
+}
+.msr-HoldToConfirm[data-holding] .msr-HoldToConfirm__fill {
+  width: 100%;
+  transition: width var(--msr-hold-dur, 1200ms) linear;
+}
+.msr-HoldToConfirm[data-done] {
+  border-color: var(--msr-hold-tone);
+  color: #fff;
+}
+.msr-HoldToConfirm[data-done] .msr-HoldToConfirm__fill {
+  width: 100%;
+}
+.msr-HoldToConfirm[data-holding] .msr-HoldToConfirm__label,
+.msr-HoldToConfirm[data-done] .msr-HoldToConfirm__label {
+  color: #fff;
+}
+.msr-HoldToConfirm__label {
+  position: relative;
+  z-index: 1;
+  transition: color 0.15s ease;
+}
+.msr-HoldToConfirm:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

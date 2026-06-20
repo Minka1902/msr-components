@@ -1,0 +1,63 @@
+.msr-OrbitingIcons {
+  position: relative;
+  display: inline-block;
+}
+.msr-OrbitingIcons__ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px dashed var(--msr-color-border);
+  border-radius: var(--msr-radius-full);
+  pointer-events: none;
+}
+.msr-OrbitingIcons__center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.msr-OrbitingIcons__orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  animation-name: msr-orbit-spin;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.msr-OrbitingIcons__arm {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.msr-OrbitingIcons__item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  animation-name: msr-orbit-spin;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes msr-orbit-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.msr-OrbitingIcons__item {
+  animation-name: msr-orbit-counter;
+}
+@keyframes msr-orbit-counter {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .msr-OrbitingIcons__orbit,
+  .msr-OrbitingIcons__item {
+    animation: none;
+  }
+}

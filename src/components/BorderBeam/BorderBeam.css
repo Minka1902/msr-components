@@ -1,0 +1,54 @@
+@property --msr-bb-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.msr-BorderBeam {
+  position: relative;
+  border-radius: var(--msr-bb-radius, 12px);
+  isolation: isolate;
+}
+.msr-BorderBeam__beam {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  padding: var(--msr-bb-w, 2px);
+  background: conic-gradient(
+    from var(--msr-bb-angle),
+    transparent 0%,
+    var(--msr-bb-c2) 8%,
+    var(--msr-bb-c1) 18%,
+    var(--msr-bb-c2) 28%,
+    transparent 36%
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  animation: msr-bb-spin var(--msr-bb-dur, 4s) linear infinite;
+  pointer-events: none;
+}
+.msr-BorderBeam__content {
+  position: relative;
+  z-index: 1;
+  border-radius: inherit;
+  height: 100%;
+}
+@keyframes msr-bb-spin {
+  to {
+    --msr-bb-angle: 360deg;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .msr-BorderBeam__beam {
+    animation: none;
+    background: var(--msr-bb-c1);
+    opacity: 0.5;
+  }
+}

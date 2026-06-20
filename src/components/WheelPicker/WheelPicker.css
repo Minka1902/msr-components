@@ -1,0 +1,53 @@
+.msr-WheelPicker {
+  position: relative;
+  width: 140px;
+  overflow: hidden;
+  border-radius: var(--msr-radius-md);
+  background-color: var(--msr-color-surface);
+  color: var(--msr-color-fg);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 22%, #000 78%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 22%, #000 78%, transparent);
+}
+.msr-WheelPicker__selection {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: var(--msr-wheel-h);
+  transform: translateY(-50%);
+  border-top: 1px solid var(--msr-color-border-strong);
+  border-bottom: 1px solid var(--msr-color-border-strong);
+  pointer-events: none;
+  z-index: 1;
+}
+.msr-WheelPicker__scroll {
+  height: 100%;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  perspective: 700px;
+  scrollbar-width: none;
+  outline: none;
+}
+.msr-WheelPicker__scroll::-webkit-scrollbar {
+  display: none;
+}
+.msr-WheelPicker__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: center;
+  font-size: var(--msr-text-md);
+  font-variant-numeric: tabular-nums;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+.msr-WheelPicker__suffix {
+  position: absolute;
+  right: var(--msr-space-3);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  color: var(--msr-color-fg-muted);
+  font-size: var(--msr-text-sm);
+  pointer-events: none;
+}

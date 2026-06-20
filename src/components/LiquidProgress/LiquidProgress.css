@@ -1,0 +1,54 @@
+.msr-LiquidProgress {
+  position: relative;
+  display: inline-block;
+}
+.msr-LiquidProgress__svg {
+  display: block;
+  overflow: visible;
+}
+.msr-LiquidProgress__bg {
+  fill: var(--msr-color-surface-2);
+}
+.msr-LiquidProgress__wave {
+  fill: var(--msr-liquid-color);
+  animation-name: msr-liquid-flow;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.msr-LiquidProgress__wave--back {
+  opacity: 0.45;
+  animation-duration: 3.4s;
+}
+.msr-LiquidProgress__wave--front {
+  opacity: 0.9;
+  animation-duration: 2.1s;
+}
+.msr-LiquidProgress__outline {
+  fill: none;
+  stroke: var(--msr-color-border-strong);
+  stroke-width: 2;
+}
+.msr-LiquidProgress__label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--msr-weight-bold);
+  font-size: var(--msr-text-lg);
+  font-variant-numeric: tabular-nums;
+  color: var(--msr-color-fg);
+}
+.msr-LiquidProgress__label[data-filled] {
+  color: var(--msr-color-primary-fg);
+}
+@keyframes msr-liquid-flow {
+  to {
+    transform: translateX(-25px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .msr-LiquidProgress__wave {
+    animation: none;
+  }
+}

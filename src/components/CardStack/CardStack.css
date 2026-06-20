@@ -1,0 +1,24 @@
+.msr-CardStack {
+  position: relative;
+  width: 320px;
+  height: 200px;
+}
+.msr-CardStack__card {
+  position: absolute;
+  inset: 0;
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  box-shadow: var(--msr-shadow-2);
+  padding: var(--msr-space-5);
+  color: var(--msr-color-fg);
+  transform-origin: top center;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.45s ease;
+}
+.msr-CardStack__card[data-top] {
+  cursor: pointer;
+  box-shadow: var(--msr-shadow-3);
+}
+@media (prefers-reduced-motion: reduce) {
+  .msr-CardStack__card { transition: none; }
+}

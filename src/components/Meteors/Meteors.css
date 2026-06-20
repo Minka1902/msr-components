@@ -1,0 +1,47 @@
+.msr-Meteors {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.msr-Meteors__meteor {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: var(--msr-radius-full);
+  background-color: var(--msr-meteor-color);
+  box-shadow: 0 0 6px 1px var(--msr-meteor-color);
+  transform: rotate(215deg);
+  animation-name: msr-meteor-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.msr-Meteors__meteor::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 60px;
+  height: 1px;
+  transform: translateY(-50%);
+  background: linear-gradient(90deg, var(--msr-meteor-color), transparent);
+}
+@keyframes msr-meteor-fall {
+  0% {
+    transform: rotate(215deg) translateX(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(215deg) translateX(-800px);
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .msr-Meteors__meteor {
+    animation: none;
+    display: none;
+  }
+}

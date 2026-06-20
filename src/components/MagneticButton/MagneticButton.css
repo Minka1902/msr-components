@@ -1,0 +1,39 @@
+.msr-MagneticButton {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--msr-space-2);
+  padding: var(--msr-space-2) var(--msr-space-5);
+  font: inherit;
+  font-weight: var(--msr-weight-semibold);
+  color: var(--msr-color-primary-fg);
+  background-color: var(--msr-color-primary);
+  border: none;
+  border-radius: var(--msr-radius-full);
+  cursor: pointer;
+  transition: transform 0.25s cubic-bezier(0.18, 0.9, 0.32, 1.1), background-color var(--msr-transition-fast);
+  will-change: transform;
+}
+.msr-MagneticButton:hover {
+  background-color: var(--msr-color-primary-hover);
+}
+.msr-MagneticButton[data-active] {
+  transition: transform 0.08s linear;
+}
+.msr-MagneticButton__content {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--msr-space-2);
+  transition: inherit;
+}
+@media (prefers-reduced-motion: reduce) {
+  .msr-MagneticButton,
+  .msr-MagneticButton[data-active] {
+    transform: none !important;
+    transition: background-color var(--msr-transition-fast);
+  }
+  .msr-MagneticButton__content {
+    transform: none !important;
+  }
+}
