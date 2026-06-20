@@ -135,6 +135,34 @@ export * from "./components/VoteButtons";
 export * from "./components/UserCard";
 export * from "./components/ShareSheet";
 
+// ---- Components: auth ----
+export * from "./components/AuthLayout";
+export * from "./components/SocialAuthButtons";
+export * from "./components/LoginForm";
+export * from "./components/SignupForm";
+
+// ---- Components: states / resilience ----
+export * from "./components/ErrorBoundary";
+export * from "./components/ResultPage";
+export * from "./components/LoadingOverlay";
+export * from "./components/MaintenancePage";
+
+// ---- Components: media ----
+export * from "./components/AudioPlayer";
+export * from "./components/VideoPlayer";
+export * from "./components/Waveform";
+export * from "./components/ImageCropper";
+export * from "./components/EmojiPicker";
+export * from "./components/AvatarUploader";
+
+// ---- Components: commerce ----
+export * from "./components/PricingTable";
+export * from "./components/ProductCard";
+export * from "./components/CartLineItem";
+export * from "./components/CheckoutSummary";
+export * from "./components/CouponInput";
+export * from "./components/PaymentMethodCard";
+
 // ---- Components: AI / agent UI ----
 export * from "./components/Chat";
 export * from "./components/MarkdownRenderer";

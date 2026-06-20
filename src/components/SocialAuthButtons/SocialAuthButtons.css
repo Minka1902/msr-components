@@ -1,0 +1,43 @@
+.msr-SocialAuthButtons {
+  display: grid;
+  gap: var(--msr-space-2);
+}
+.msr-SocialAuthButtons[data-layout="stack"] {
+  grid-template-columns: 1fr;
+}
+.msr-SocialAuthButtons[data-layout="grid"] {
+  grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+}
+.msr-SocialAuthButtons__btn {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--msr-space-2);
+  height: var(--msr-control-md);
+  padding: 0 var(--msr-space-4);
+  border-radius: var(--msr-radius-md);
+  border: 1px solid var(--msr-color-border-strong);
+  background-color: var(--msr-color-surface);
+  color: var(--msr-color-fg);
+  font: inherit;
+  font-size: var(--msr-text-sm);
+  font-weight: var(--msr-weight-medium);
+  cursor: pointer;
+}
+.msr-SocialAuthButtons__btn:hover:not(:disabled) {
+  background-color: var(--msr-color-surface-2);
+}
+.msr-SocialAuthButtons__btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.msr-SocialAuthButtons__icon {
+  display: inline-flex;
+  align-items: center;
+}
+.msr-SocialAuthButtons__glyph {
+  font-weight: var(--msr-weight-bold);
+  font-size: var(--msr-text-md);
+  line-height: 1;
+}

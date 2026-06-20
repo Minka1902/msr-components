@@ -1,0 +1,14 @@
+.msr-Waveform {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.msr-Waveform__bar {
+  flex: none;
+  border-radius: var(--msr-radius-full);
+  background-color: var(--msr-color-border-strong);
+  transition: background-color 0.1s linear;
+}
+.msr-Waveform__bar[data-played] {
+  background-color: var(--msr-color-primary);
+}

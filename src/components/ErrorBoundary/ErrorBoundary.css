@@ -1,0 +1,40 @@
+.msr-ErrorBoundary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--msr-space-2);
+  padding: var(--msr-space-6);
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  color: var(--msr-color-fg);
+}
+.msr-ErrorBoundary__icon {
+  color: var(--msr-tone-danger-fg);
+}
+.msr-ErrorBoundary__title {
+  font-weight: var(--msr-weight-semibold);
+  font-size: var(--msr-text-lg);
+}
+.msr-ErrorBoundary__message {
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg-muted);
+  max-width: 40ch;
+}
+.msr-ErrorBoundary__retry {
+  appearance: none;
+  margin-top: var(--msr-space-2);
+  font: inherit;
+  font-size: var(--msr-text-sm);
+  font-weight: var(--msr-weight-medium);
+  padding: var(--msr-space-2) var(--msr-space-4);
+  border-radius: var(--msr-radius-md);
+  border: none;
+  background-color: var(--msr-color-primary);
+  color: var(--msr-color-primary-fg);
+  cursor: pointer;
+}
+.msr-ErrorBoundary__retry:hover {
+  background-color: var(--msr-color-primary-hover);
+}

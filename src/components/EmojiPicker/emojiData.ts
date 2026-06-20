@@ -1,0 +1,108 @@
+export interface EmojiDatum {
+  char: string;
+  name: string;
+  group: string;
+}
+
+/** Compact built-in emoji set grouped by category (not exhaustive). */
+export const EMOJI_GROUPS = [
+  "Smileys",
+  "Gestures",
+  "Animals",
+  "Food",
+  "Activities",
+  "Travel",
+  "Objects",
+  "Symbols",
+] as const;
+
+export const EMOJIS: EmojiDatum[] = [
+  // Smileys
+  { char: "😀", name: "grinning", group: "Smileys" },
+  { char: "😄", name: "smile happy", group: "Smileys" },
+  { char: "😁", name: "beaming grin", group: "Smileys" },
+  { char: "😂", name: "laughing tears joy", group: "Smileys" },
+  { char: "🙂", name: "slight smile", group: "Smileys" },
+  { char: "😉", name: "wink", group: "Smileys" },
+  { char: "😍", name: "heart eyes love", group: "Smileys" },
+  { char: "😘", name: "kiss", group: "Smileys" },
+  { char: "😎", name: "cool sunglasses", group: "Smileys" },
+  { char: "🤔", name: "thinking", group: "Smileys" },
+  { char: "😅", name: "sweat smile", group: "Smileys" },
+  { char: "😢", name: "cry sad", group: "Smileys" },
+  { char: "😭", name: "sob crying", group: "Smileys" },
+  { char: "😡", name: "angry mad", group: "Smileys" },
+  { char: "🥳", name: "party celebrate", group: "Smileys" },
+  { char: "😴", name: "sleep tired", group: "Smileys" },
+  // Gestures
+  { char: "👍", name: "thumbs up like", group: "Gestures" },
+  { char: "👎", name: "thumbs down dislike", group: "Gestures" },
+  { char: "👌", name: "ok perfect", group: "Gestures" },
+  { char: "✌️", name: "victory peace", group: "Gestures" },
+  { char: "🤞", name: "fingers crossed luck", group: "Gestures" },
+  { char: "👏", name: "clap applause", group: "Gestures" },
+  { char: "🙏", name: "pray thanks please", group: "Gestures" },
+  { char: "💪", name: "muscle strong", group: "Gestures" },
+  { char: "👋", name: "wave hello hi", group: "Gestures" },
+  { char: "🤝", name: "handshake deal", group: "Gestures" },
+  // Animals
+  { char: "🐶", name: "dog puppy", group: "Animals" },
+  { char: "🐱", name: "cat kitten", group: "Animals" },
+  { char: "🦊", name: "fox", group: "Animals" },
+  { char: "🐻", name: "bear", group: "Animals" },
+  { char: "🐼", name: "panda", group: "Animals" },
+  { char: "🦁", name: "lion", group: "Animals" },
+  { char: "🐸", name: "frog", group: "Animals" },
+  { char: "🐧", name: "penguin", group: "Animals" },
+  { char: "🦄", name: "unicorn", group: "Animals" },
+  { char: "🐢", name: "turtle", group: "Animals" },
+  // Food
+  { char: "🍎", name: "apple fruit", group: "Food" },
+  { char: "🍌", name: "banana", group: "Food" },
+  { char: "🍕", name: "pizza", group: "Food" },
+  { char: "🍔", name: "burger", group: "Food" },
+  { char: "🍟", name: "fries", group: "Food" },
+  { char: "🌮", name: "taco", group: "Food" },
+  { char: "🍣", name: "sushi", group: "Food" },
+  { char: "🍩", name: "donut", group: "Food" },
+  { char: "🍪", name: "cookie", group: "Food" },
+  { char: "☕", name: "coffee tea", group: "Food" },
+  { char: "🍺", name: "beer drink", group: "Food" },
+  { char: "🎂", name: "cake birthday", group: "Food" },
+  // Activities
+  { char: "⚽", name: "soccer football", group: "Activities" },
+  { char: "🏀", name: "basketball", group: "Activities" },
+  { char: "🎮", name: "game controller", group: "Activities" },
+  { char: "🎯", name: "target dart", group: "Activities" },
+  { char: "🎸", name: "guitar music", group: "Activities" },
+  { char: "🎨", name: "art paint", group: "Activities" },
+  { char: "🏆", name: "trophy win", group: "Activities" },
+  { char: "🎉", name: "party tada celebrate", group: "Activities" },
+  // Travel
+  { char: "🚗", name: "car", group: "Travel" },
+  { char: "✈️", name: "plane flight travel", group: "Travel" },
+  { char: "🚀", name: "rocket launch", group: "Travel" },
+  { char: "🏠", name: "house home", group: "Travel" },
+  { char: "🌍", name: "earth globe world", group: "Travel" },
+  { char: "🏖️", name: "beach vacation", group: "Travel" },
+  { char: "🗺️", name: "map", group: "Travel" },
+  { char: "⛰️", name: "mountain", group: "Travel" },
+  // Objects
+  { char: "💻", name: "laptop computer", group: "Objects" },
+  { char: "📱", name: "phone mobile", group: "Objects" },
+  { char: "💡", name: "idea bulb light", group: "Objects" },
+  { char: "📷", name: "camera photo", group: "Objects" },
+  { char: "🔑", name: "key", group: "Objects" },
+  { char: "📦", name: "package box", group: "Objects" },
+  { char: "💰", name: "money bag", group: "Objects" },
+  { char: "📝", name: "memo note write", group: "Objects" },
+  // Symbols
+  { char: "❤️", name: "red heart love", group: "Symbols" },
+  { char: "🔥", name: "fire lit hot", group: "Symbols" },
+  { char: "⭐", name: "star", group: "Symbols" },
+  { char: "✅", name: "check done", group: "Symbols" },
+  { char: "❌", name: "cross no wrong", group: "Symbols" },
+  { char: "❓", name: "question", group: "Symbols" },
+  { char: "💯", name: "hundred perfect", group: "Symbols" },
+  { char: "⚡", name: "lightning bolt fast", group: "Symbols" },
+];

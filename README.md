@@ -106,6 +106,19 @@ plus charts RadarChart, ScatterPlot, FunnelChart, StackedBarChart
 Sidebar, Toolbar, InlineEdit, and **FormBuilder** — render a complete, validated
 form from a JSON field schema (great for AI-generated UIs).
 
+**Auth**: LoginForm, SignupForm (password strength), AuthLayout (branding side
+panel), SocialAuthButtons.
+
+**States & resilience**: ErrorBoundary (recoverable fallback), ResultPage
+(success/404/500), LoadingOverlay (inline/fullscreen), MaintenancePage.
+
+**Media**: AudioPlayer (waveform scrubber), VideoPlayer (custom controls),
+Waveform, ImageCropper (pan/zoom → canvas export), EmojiPicker (searchable,
+grouped), AvatarUploader.
+
+**Commerce**: PricingTable, ProductCard, CartLineItem, CheckoutSummary,
+CouponInput, PaymentMethodCard.
+
 **Onboarding**: ProductTour (spotlight coachmarks with step popovers),
 FeatureSpotlight (pulsing highlight), WhatsNewModal (changelog dialog),
 HintBubble (anchored callout), OnboardingChecklist (progress + tasks).

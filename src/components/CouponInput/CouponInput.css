@@ -1,0 +1,89 @@
+.msr-CouponInput {
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-1);
+}
+.msr-CouponInput__label {
+  font-size: var(--msr-text-sm);
+  font-weight: var(--msr-weight-medium);
+  color: var(--msr-color-fg);
+}
+.msr-CouponInput__row {
+  display: flex;
+  gap: var(--msr-space-2);
+}
+.msr-CouponInput__input {
+  flex: 1;
+  height: var(--msr-control-md);
+  padding: 0 var(--msr-space-3);
+  font: inherit;
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg);
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border-strong);
+  border-radius: var(--msr-radius-md);
+  letter-spacing: 0.03em;
+}
+.msr-CouponInput__input:focus-visible {
+  outline: none;
+  border-color: var(--msr-color-primary);
+  box-shadow: 0 0 0 3px var(--msr-color-ring);
+}
+.msr-CouponInput__row[data-error] .msr-CouponInput__input {
+  border-color: var(--msr-tone-danger-fg);
+}
+.msr-CouponInput__apply {
+  appearance: none;
+  flex: none;
+  height: var(--msr-control-md);
+  padding: 0 var(--msr-space-4);
+  border-radius: var(--msr-radius-md);
+  border: 1px solid var(--msr-color-border-strong);
+  background-color: var(--msr-color-surface);
+  color: var(--msr-color-fg);
+  font: inherit;
+  font-size: var(--msr-text-sm);
+  font-weight: var(--msr-weight-medium);
+  cursor: pointer;
+}
+.msr-CouponInput__apply:hover:not(:disabled) {
+  background-color: var(--msr-color-surface-2);
+}
+.msr-CouponInput__apply:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.msr-CouponInput__applied {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--msr-space-2);
+}
+.msr-CouponInput__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--msr-space-1);
+  font-size: var(--msr-text-sm);
+  font-weight: var(--msr-weight-medium);
+  color: var(--msr-tone-success-fg);
+  background-color: var(--msr-tone-success-bg);
+  padding: var(--msr-space-1) var(--msr-space-3);
+  border-radius: var(--msr-radius-full);
+  letter-spacing: 0.03em;
+}
+.msr-CouponInput__remove {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--msr-color-fg-muted);
+  font: inherit;
+  font-size: var(--msr-text-sm);
+  cursor: pointer;
+}
+.msr-CouponInput__remove:hover {
+  color: var(--msr-tone-danger-fg);
+}
+.msr-CouponInput__error {
+  font-size: var(--msr-text-xs);
+  color: var(--msr-tone-danger-fg);
+}

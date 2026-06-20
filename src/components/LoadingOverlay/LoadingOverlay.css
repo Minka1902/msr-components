@@ -1,0 +1,32 @@
+.msr-LoadingOverlay {
+  position: relative;
+}
+.msr-LoadingOverlay__veil {
+  position: absolute;
+  inset: 0;
+  z-index: var(--msr-z-overlay, 50);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--msr-space-2);
+  background-color: color-mix(in srgb, var(--msr-color-bg) 60%, transparent);
+  color: var(--msr-color-fg);
+  border-radius: inherit;
+}
+.msr-LoadingOverlay__veil[data-blur] {
+  backdrop-filter: blur(2px);
+}
+.msr-LoadingOverlay--fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: var(--msr-z-modal, 1000);
+}
+.msr-LoadingOverlay--fullscreen .msr-LoadingOverlay__veil {
+  position: fixed;
+  background-color: color-mix(in srgb, var(--msr-color-bg) 75%, transparent);
+}
+.msr-LoadingOverlay__label {
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg-muted);
+}

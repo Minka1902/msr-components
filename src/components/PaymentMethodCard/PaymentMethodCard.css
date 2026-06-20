@@ -1,0 +1,102 @@
+.msr-PaymentMethodCard {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-3);
+  padding: var(--msr-space-3);
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-md);
+  color: var(--msr-color-fg);
+}
+.msr-PaymentMethodCard[data-selectable] {
+  cursor: pointer;
+}
+.msr-PaymentMethodCard[data-selectable]:hover {
+  border-color: var(--msr-color-border-strong);
+}
+.msr-PaymentMethodCard[data-selected] {
+  border-color: var(--msr-color-primary);
+  box-shadow: 0 0 0 1px var(--msr-color-primary);
+}
+.msr-PaymentMethodCard[data-expired] {
+  opacity: 0.7;
+}
+.msr-PaymentMethodCard__brand {
+  flex: none;
+  width: 48px;
+  height: 32px;
+  border-radius: var(--msr-radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: var(--msr-weight-bold);
+  letter-spacing: 0.04em;
+  color: #fff;
+  background: linear-gradient(135deg, #555, #222);
+}
+.msr-PaymentMethodCard__brand[data-brand="visa"] { background: linear-gradient(135deg, #1a1f71, #2b3a9e); }
+.msr-PaymentMethodCard__brand[data-brand="mastercard"] { background: linear-gradient(135deg, #eb001b, #f79e1b); }
+.msr-PaymentMethodCard__brand[data-brand="amex"] { background: linear-gradient(135deg, #2e77bb, #1f5e99); }
+.msr-PaymentMethodCard__brand[data-brand="discover"] { background: linear-gradient(135deg, #f76b1c, #ff9a44); }
+.msr-PaymentMethodCard__info {
+  flex: 1;
+  min-width: 0;
+}
+.msr-PaymentMethodCard__number {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-2);
+  font-size: var(--msr-text-sm);
+  font-weight: var(--msr-weight-medium);
+  font-variant-numeric: tabular-nums;
+}
+.msr-PaymentMethodCard__default {
+  font-size: var(--msr-text-xs);
+  font-weight: var(--msr-weight-medium);
+  color: var(--msr-color-primary);
+  background-color: color-mix(in srgb, var(--msr-color-primary) 14%, transparent);
+  padding: 1px var(--msr-space-2);
+  border-radius: var(--msr-radius-full);
+}
+.msr-PaymentMethodCard__meta {
+  display: flex;
+  gap: var(--msr-space-3);
+  margin-top: 2px;
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg-subtle);
+}
+.msr-PaymentMethodCard__expired {
+  color: var(--msr-tone-danger-fg);
+  font-weight: var(--msr-weight-medium);
+}
+.msr-PaymentMethodCard__radio {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--msr-radius-full);
+  border: 2px solid var(--msr-color-border-strong);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--msr-color-primary-fg);
+}
+.msr-PaymentMethodCard[data-selected] .msr-PaymentMethodCard__radio {
+  background-color: var(--msr-color-primary);
+  border-color: var(--msr-color-primary);
+}
+.msr-PaymentMethodCard__remove {
+  flex: none;
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--msr-color-fg-subtle);
+  cursor: pointer;
+  display: inline-flex;
+  padding: var(--msr-space-1);
+  border-radius: var(--msr-radius-sm);
+}
+.msr-PaymentMethodCard__remove:hover {
+  color: var(--msr-tone-danger-fg);
+  background-color: var(--msr-color-surface-2);
+}

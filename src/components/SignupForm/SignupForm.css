@@ -1,0 +1,4 @@
+/* SignupForm reuses .msr-LoginForm styles; this file scopes any tweaks. */
+.msr-SignupForm .msr-LoginForm__remember {
+  align-items: flex-start;
+}

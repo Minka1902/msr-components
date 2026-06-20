@@ -1,0 +1,103 @@
+.msr-LoginForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-4);
+  width: 100%;
+}
+.msr-LoginForm__social { display: grid; }
+.msr-LoginForm__divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--msr-color-fg-subtle);
+  font-size: var(--msr-text-xs);
+  gap: var(--msr-space-2);
+}
+.msr-LoginForm__divider::before,
+.msr-LoginForm__divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: var(--msr-color-border);
+}
+.msr-LoginForm__error {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-2);
+  font-size: var(--msr-text-sm);
+  color: var(--msr-tone-danger-fg);
+  background-color: var(--msr-tone-danger-bg);
+  border-radius: var(--msr-radius-md);
+  padding: var(--msr-space-2) var(--msr-space-3);
+}
+.msr-LoginForm__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-1);
+}
+.msr-LoginForm__label {
+  font-size: var(--msr-text-sm);
+  font-weight: var(--msr-weight-medium);
+  color: var(--msr-color-fg);
+}
+.msr-LoginForm__field .msr-Input,
+.msr-LoginForm__field .msr-PasswordInput {
+  width: 100%;
+}
+.msr-LoginForm__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--msr-space-2);
+  margin-top: calc(-1 * var(--msr-space-1));
+}
+.msr-LoginForm__remember {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--msr-space-2);
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg-muted);
+  cursor: pointer;
+}
+.msr-LoginForm__link {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--msr-color-primary);
+  font: inherit;
+  font-size: var(--msr-text-sm);
+  cursor: pointer;
+  padding: 0;
+}
+.msr-LoginForm__link:hover {
+  text-decoration: underline;
+}
+.msr-LoginForm__submit {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--msr-space-2);
+  height: var(--msr-control-lg, 44px);
+  border-radius: var(--msr-radius-md);
+  border: none;
+  background-color: var(--msr-color-primary);
+  color: var(--msr-color-primary-fg);
+  font: inherit;
+  font-size: var(--msr-text-md);
+  font-weight: var(--msr-weight-semibold);
+  cursor: pointer;
+}
+.msr-LoginForm__submit:hover:not(:disabled) {
+  background-color: var(--msr-color-primary-hover);
+}
+.msr-LoginForm__submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+.msr-LoginForm__spin {
+  animation: msr-spin 0.8s linear infinite;
+}
+@keyframes msr-spin {
+  to { transform: rotate(360deg); }
+}
