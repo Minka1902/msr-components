@@ -1,0 +1,51 @@
+.msr-Choropleth {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--msr-space-3);
+  color: var(--msr-color-fg);
+}
+.msr-Choropleth__svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.msr-Choropleth__region {
+  stroke: var(--msr-color-surface);
+  stroke-width: 0.5;
+  transition: opacity var(--msr-transition-fast), filter var(--msr-transition-fast);
+  cursor: inherit;
+  outline: none;
+}
+.msr-Choropleth__region[role="button"] {
+  cursor: pointer;
+}
+.msr-Choropleth__region:hover,
+.msr-Choropleth__region[data-active] {
+  filter: brightness(1.08);
+  stroke: var(--msr-color-fg);
+  stroke-width: 1;
+}
+.msr-Choropleth__region:focus-visible {
+  stroke: var(--msr-color-primary);
+  stroke-width: 1.5;
+}
+.msr-Choropleth__footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--msr-space-4);
+  flex-wrap: wrap;
+}
+.msr-Choropleth__readout {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--msr-space-2);
+}
+.msr-Choropleth__readoutName {
+  font-weight: var(--msr-weight-semibold);
+  font-size: var(--msr-text-sm);
+}
+.msr-Choropleth__readoutValue {
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg-muted);
+}

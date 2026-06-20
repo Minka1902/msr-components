@@ -50,6 +50,11 @@
       "import": "./dist/charts/index.js",
       "require": "./dist/charts/index.cjs"
     },
+    "./geo": {
+      "types": "./dist/geo/index.d.ts",
+      "import": "./dist/geo/index.js",
+      "require": "./dist/geo/index.cjs"
+    },
     "./styles.css": "./dist/styles.css"
   },
   "scripts": {

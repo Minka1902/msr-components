@@ -1,0 +1,19 @@
+.msr-CountryFlag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--msr-space-1);
+  line-height: 1;
+}
+.msr-CountryFlag__glyph {
+  font-family: "Twemoji Mozilla", "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+}
+.msr-CountryFlag[data-size="sm"] .msr-CountryFlag__glyph { font-size: var(--msr-text-sm); }
+.msr-CountryFlag[data-size="md"] .msr-CountryFlag__glyph { font-size: var(--msr-text-lg); }
+.msr-CountryFlag[data-size="lg"] .msr-CountryFlag__glyph { font-size: var(--msr-text-2xl); }
+.msr-CountryFlag[data-size="xl"] .msr-CountryFlag__glyph { font-size: var(--msr-text-3xl); }
+.msr-CountryFlag__code {
+  font-size: var(--msr-text-sm);
+  font-weight: var(--msr-weight-medium);
+  color: var(--msr-color-fg-muted);
+  letter-spacing: 0.04em;
+}

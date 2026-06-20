@@ -9,6 +9,7 @@ export default defineConfig({
     "pets/index": "src/pets/index.ts",
     "game/index": "src/game/index.ts",
     "charts/index": "src/charts/index.ts",
+    "geo/index": "src/geo/index.ts",
   },
   format: ["esm", "cjs"],
   dts: true,

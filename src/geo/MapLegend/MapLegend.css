@@ -1,0 +1,42 @@
+.msr-MapLegend {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--msr-space-1);
+  color: var(--msr-color-fg);
+  font-size: var(--msr-text-xs);
+}
+.msr-MapLegend__label {
+  font-size: var(--msr-text-sm);
+  font-weight: var(--msr-weight-medium);
+  color: var(--msr-color-fg);
+}
+.msr-MapLegend__bar {
+  height: 10px;
+  min-width: 160px;
+  border-radius: var(--msr-radius-full);
+  border: 1px solid var(--msr-color-border);
+}
+.msr-MapLegend__ticks {
+  display: flex;
+  justify-content: space-between;
+  color: var(--msr-color-fg-subtle);
+}
+.msr-MapLegend__steps {
+  display: flex;
+  gap: var(--msr-space-3);
+  flex-wrap: wrap;
+}
+.msr-MapLegend__step {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--msr-space-1);
+}
+.msr-MapLegend__swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--msr-radius-sm);
+  border: 1px solid var(--msr-color-border);
+}
+.msr-MapLegend__stepLabel {
+  color: var(--msr-color-fg-muted);
+}

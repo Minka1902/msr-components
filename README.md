@@ -86,6 +86,7 @@ Every component also accepts `className` / `style` and renders stable
 | `msr-components/pets` | DogProfileHeader, RoutineTimeline, TrainingSessionCard, MedicalRecordCard, QRCollarPreview, HumanAccessManager, DogTrackerMapCard |
 | `msr-components/game` | CountryGuessInput, DistanceFeedbackCard, WorldMapHint, CountryFactReveal, HotColdDistanceMeter, DailyCountryChallenge, EducationalResultSummary |
 | `msr-components/charts` | Sparkline, LineChart, BarChart, DonutChart, RadialProgress, Gauge, Heatmap, ProgressBar, RadarChart, ScatterPlot, FunnelChart, StackedBarChart (dependency-free SVG/CSS) |
+| `msr-components/geo` | CountryFlag (code→emoji), MapLegend (color scale), Choropleth (consumer-supplied region paths), TileGridMap (built-in compact world tile grid) — dependency-free SVG/CSS |
 | `msr-components/styles.css` | The full stylesheet (tokens + 15 themes + all components) |
 
 **Interaction-rich**: SortableList (drag-reorder), KanbanBoard (drag-drop

@@ -14,6 +14,7 @@ const entries = [
   "pets/index",
   "game/index",
   "charts/index",
+  "geo/index",
 ];
 const directive = '"use client";\n';
 
