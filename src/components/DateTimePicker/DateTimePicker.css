@@ -1,0 +1,10 @@
+.msr-DateTimePicker {
+  display: inline-flex;
+  gap: var(--msr-space-2);
+  align-items: center;
+  flex-wrap: wrap;
+}
+.msr-DateTimePicker[data-disabled] {
+  opacity: 0.6;
+  pointer-events: none;
+}

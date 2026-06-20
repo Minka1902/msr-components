@@ -90,6 +90,14 @@ export * from "./components/FileDropzone";
 export * from "./components/ColorPicker";
 export * from "./components/DatePicker";
 
+// ---- Components: calendar & scheduling ----
+export * from "./components/EventCalendar";
+export * from "./components/MiniCalendar";
+export * from "./components/DateRangePicker";
+export * from "./components/TimePicker";
+export * from "./components/DateTimePicker";
+export * from "./components/Scheduler";
+
 // ---- Components: navigation & overlays ----
 export * from "./components/Drawer";
 export * from "./components/Stepper";

@@ -1,0 +1,146 @@
+.msr-EventCalendar {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  overflow: hidden;
+  color: var(--msr-color-fg);
+}
+.msr-EventCalendar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--msr-space-3) var(--msr-space-4);
+  border-bottom: 1px solid var(--msr-color-border);
+}
+.msr-EventCalendar__title {
+  font-weight: var(--msr-weight-semibold);
+  font-size: var(--msr-text-lg);
+}
+.msr-EventCalendar__nav {
+  appearance: none;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--msr-color-fg-muted);
+  cursor: pointer;
+  display: inline-flex;
+  padding: var(--msr-space-1);
+  border-radius: var(--msr-radius-sm);
+}
+.msr-EventCalendar__nav:hover {
+  background-color: var(--msr-color-surface-2);
+  color: var(--msr-color-fg);
+}
+.msr-EventCalendar__dows {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border-bottom: 1px solid var(--msr-color-border);
+}
+.msr-EventCalendar__dow {
+  text-align: center;
+  font-size: var(--msr-text-xs);
+  font-weight: var(--msr-weight-medium);
+  color: var(--msr-color-fg-subtle);
+  padding: var(--msr-space-2) 0;
+}
+.msr-EventCalendar__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: minmax(92px, 1fr);
+}
+.msr-EventCalendar__cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--msr-space-1);
+  border-right: 1px solid var(--msr-color-border);
+  border-bottom: 1px solid var(--msr-color-border);
+  min-width: 0;
+}
+.msr-EventCalendar__cell:nth-child(7n) {
+  border-right: none;
+}
+.msr-EventCalendar__cell[data-outside] {
+  background-color: var(--msr-color-surface-2);
+}
+.msr-EventCalendar__cell[data-outside] .msr-EventCalendar__date {
+  color: var(--msr-color-fg-subtle);
+}
+.msr-EventCalendar__cell[data-selected] {
+  background-color: color-mix(in srgb, var(--msr-color-primary) 12%, transparent);
+}
+.msr-EventCalendar__date {
+  appearance: none;
+  border: none;
+  background: transparent;
+  font: inherit;
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg);
+  cursor: pointer;
+  align-self: flex-end;
+  width: 26px;
+  height: 26px;
+  border-radius: var(--msr-radius-full);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.msr-EventCalendar__date:hover {
+  background-color: var(--msr-color-surface-2);
+}
+.msr-EventCalendar__cell[data-today] .msr-EventCalendar__date {
+  background-color: var(--msr-color-primary);
+  color: var(--msr-color-primary-fg);
+  font-weight: var(--msr-weight-bold);
+}
+.msr-EventCalendar__events {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overflow: hidden;
+}
+.msr-EventCalendar__event {
+  --msr-ec-bg: var(--msr-color-primary);
+  --msr-ec-fg: var(--msr-color-primary-fg);
+  appearance: none;
+  border: none;
+  background-color: color-mix(in srgb, var(--msr-ec-bg) 16%, transparent);
+  color: var(--msr-ec-bg);
+  font: inherit;
+  font-size: var(--msr-text-xs);
+  text-align: left;
+  padding: 1px var(--msr-space-1);
+  border-radius: var(--msr-radius-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-1);
+  min-width: 0;
+}
+.msr-EventCalendar__event:hover {
+  background-color: color-mix(in srgb, var(--msr-ec-bg) 28%, transparent);
+}
+.msr-EventCalendar__event[data-tone="primary"] { --msr-ec-bg: var(--msr-color-primary); }
+.msr-EventCalendar__event[data-tone="success"] { --msr-ec-bg: var(--msr-tone-success-fg); }
+.msr-EventCalendar__event[data-tone="warning"] { --msr-ec-bg: var(--msr-tone-warning-fg); }
+.msr-EventCalendar__event[data-tone="danger"] { --msr-ec-bg: var(--msr-tone-danger-fg); }
+.msr-EventCalendar__event[data-tone="info"] { --msr-ec-bg: var(--msr-tone-info-fg); }
+.msr-EventCalendar__event[data-tone="neutral"] { --msr-ec-bg: var(--msr-color-fg-muted); }
+.msr-EventCalendar__eventDot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--msr-radius-full);
+  background-color: var(--msr-ec-bg);
+  flex: none;
+}
+.msr-EventCalendar__eventLabel {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.msr-EventCalendar__more {
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg-subtle);
+  padding: 0 var(--msr-space-1);
+}

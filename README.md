@@ -122,6 +122,11 @@ CountdownTimer, IdleDialog, GeoPrompt.
 multi), Slider, RangeSlider, NumberStepper, PinInput, RatingStars, ToggleGroup,
 TagInput, FileDropzone, ColorPicker, DatePicker (+ standalone Calendar).
 
+**Calendar & scheduling** (in core `msr-components`): EventCalendar (month grid
+with event pills), MiniCalendar (compact, marked days), DateRangePicker
+(two-month range with hover preview), TimePicker (stepped time list),
+DateTimePicker (DatePicker + TimePicker), Scheduler (day/week timeline of events).
+
 **Composable building blocks** (in core `msr-components`): layout primitives
 (Stack, Inline, Grid, Container, Center, AspectRatio, Spacer), Alert/Banner,
 Field, Tag, SegmentedControl, Breadcrumbs, Pagination, CopyButton, Highlight,

@@ -1,0 +1,88 @@
+.msr-MiniCalendar {
+  width: 224px;
+  user-select: none;
+  color: var(--msr-color-fg);
+}
+.msr-MiniCalendar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--msr-space-1);
+}
+.msr-MiniCalendar__title {
+  font-weight: var(--msr-weight-semibold);
+  font-size: var(--msr-text-sm);
+}
+.msr-MiniCalendar__nav {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--msr-color-fg-muted);
+  cursor: pointer;
+  display: inline-flex;
+  padding: 2px;
+  border-radius: var(--msr-radius-sm);
+}
+.msr-MiniCalendar__nav:hover {
+  background-color: var(--msr-color-surface-2);
+  color: var(--msr-color-fg);
+}
+.msr-MiniCalendar__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+}
+.msr-MiniCalendar__dow {
+  text-align: center;
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg-subtle);
+  padding-bottom: 2px;
+}
+.msr-MiniCalendar__day {
+  appearance: none;
+  border: none;
+  background: transparent;
+  font: inherit;
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg);
+  aspect-ratio: 1;
+  border-radius: var(--msr-radius-sm);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.msr-MiniCalendar__day:hover:not(:disabled) {
+  background-color: var(--msr-color-surface-2);
+}
+.msr-MiniCalendar__day[data-outside] {
+  color: var(--msr-color-fg-subtle);
+}
+.msr-MiniCalendar__day[data-today] {
+  font-weight: var(--msr-weight-bold);
+  color: var(--msr-color-primary);
+}
+.msr-MiniCalendar__day[data-selected] {
+  background-color: var(--msr-color-primary);
+  color: var(--msr-color-primary-fg);
+  font-weight: var(--msr-weight-semibold);
+}
+.msr-MiniCalendar__day[data-marked]::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: var(--msr-radius-full);
+  background-color: var(--msr-color-primary);
+}
+.msr-MiniCalendar__day[data-selected][data-marked]::after {
+  background-color: var(--msr-color-primary-fg);
+}
+.msr-MiniCalendar__day:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
