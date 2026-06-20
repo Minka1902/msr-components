@@ -9,10 +9,10 @@ const dist = join(dirname(fileURLToPath(import.meta.url)), "..", "dist");
 const entries = [
   "index",
   "dashboard/index",
-  "firmware/index",
-  "business/index",
-  "pets/index",
-  "game/index",
+  "inspector/index",
+  "modules/index",
+  "profile/index",
+  "quiz/index",
   "charts/index",
   "geo/index",
 ];

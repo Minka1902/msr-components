@@ -25,25 +25,25 @@
       "import": "./dist/dashboard/index.js",
       "require": "./dist/dashboard/index.cjs"
     },
-    "./firmware": {
-      "types": "./dist/firmware/index.d.ts",
-      "import": "./dist/firmware/index.js",
-      "require": "./dist/firmware/index.cjs"
+    "./inspector": {
+      "types": "./dist/inspector/index.d.ts",
+      "import": "./dist/inspector/index.js",
+      "require": "./dist/inspector/index.cjs"
     },
-    "./business": {
-      "types": "./dist/business/index.d.ts",
-      "import": "./dist/business/index.js",
-      "require": "./dist/business/index.cjs"
+    "./modules": {
+      "types": "./dist/modules/index.d.ts",
+      "import": "./dist/modules/index.js",
+      "require": "./dist/modules/index.cjs"
     },
-    "./pets": {
-      "types": "./dist/pets/index.d.ts",
-      "import": "./dist/pets/index.js",
-      "require": "./dist/pets/index.cjs"
+    "./profile": {
+      "types": "./dist/profile/index.d.ts",
+      "import": "./dist/profile/index.js",
+      "require": "./dist/profile/index.cjs"
     },
-    "./game": {
-      "types": "./dist/game/index.d.ts",
-      "import": "./dist/game/index.js",
-      "require": "./dist/game/index.cjs"
+    "./quiz": {
+      "types": "./dist/quiz/index.d.ts",
+      "import": "./dist/quiz/index.js",
+      "require": "./dist/quiz/index.cjs"
     },
     "./charts": {
       "types": "./dist/charts/index.d.ts",

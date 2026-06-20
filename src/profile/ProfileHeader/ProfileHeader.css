@@ -1,0 +1,89 @@
+.msr-ProfileHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-4);
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  padding: var(--msr-space-5);
+}
+.msr-ProfileHeader__avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--msr-radius-full);
+  background-color: var(--msr-color-surface-2);
+  color: var(--msr-color-fg-subtle);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex: none;
+}
+.msr-ProfileHeader__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.msr-ProfileHeader__info {
+  flex: 1;
+  min-width: 0;
+}
+.msr-ProfileHeader__name-row {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-3);
+}
+.msr-ProfileHeader__name {
+  margin: 0;
+  font-size: var(--msr-text-2xl);
+  font-weight: var(--msr-weight-bold);
+  color: var(--msr-color-fg);
+}
+.msr-ProfileHeader__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-2);
+  color: var(--msr-color-fg-muted);
+  font-size: var(--msr-text-md);
+  margin-top: 2px;
+}
+.msr-ProfileHeader__sep {
+  color: var(--msr-color-fg-subtle);
+}
+.msr-ProfileHeader__humans {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-3);
+  margin-top: var(--msr-space-3);
+}
+.msr-ProfileHeader__humans-label {
+  font-size: var(--msr-text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--msr-color-fg-subtle);
+}
+.msr-ProfileHeader__avatars {
+  display: flex;
+}
+.msr-ProfileHeader__human {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--msr-radius-full);
+  background-color: var(--msr-color-primary);
+  color: var(--msr-color-primary-fg);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--msr-text-xs);
+  font-weight: var(--msr-weight-semibold);
+  border: 2px solid var(--msr-color-surface);
+  overflow: hidden;
+}
+.msr-ProfileHeader__human:not(:first-child) {
+  margin-left: -8px;
+}
+.msr-ProfileHeader__human img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

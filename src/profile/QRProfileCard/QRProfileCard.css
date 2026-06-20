@@ -1,0 +1,23 @@
+.msr-QRProfileCard {
+  display: flex;
+  gap: var(--msr-space-4);
+  align-items: flex-start;
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  padding: var(--msr-space-4);
+}
+.msr-QRProfileCard__qr {
+  flex: none;
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-md);
+  padding: var(--msr-space-1);
+  background-color: #fff;
+}
+.msr-QRProfileCard__body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-3);
+}

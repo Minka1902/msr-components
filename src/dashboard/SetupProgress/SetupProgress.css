@@ -1,0 +1,26 @@
+.msr-SetupProgress {
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  padding: var(--msr-space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-3);
+}
+.msr-SetupProgress__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.msr-SetupProgress__title {
+  font-weight: var(--msr-weight-semibold);
+  color: var(--msr-color-fg);
+}
+.msr-SetupProgress__count {
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg-muted);
+  font-variant-numeric: tabular-nums;
+}
+.msr-SetupProgress__steps {
+  margin-top: var(--msr-space-2);
+}

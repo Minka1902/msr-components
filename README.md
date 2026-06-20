@@ -80,11 +80,11 @@ Every component also accepts `className` / `style` and renders stable
 | Import | Contents |
 | --- | --- |
 | `msr-components` | **Primitives:** Button, Input, Textarea, Select, Checkbox, RadioGroup, Switch, Avatar, Spinner, Divider, Popover, Menu, Accordion, Card, StatusBadge, Skeleton. **Polish:** AnimatedTabs, CopyableCodeBlock, PopoverHelp, Toast, Modal, ConfirmDialog, ContextMenu, FloatingActionButton, KeyboardShortcutOverlay, ThemePreviewCard, EmptyState. **General UI:** CommandPalette, SmartSearchInput, ResizableSplitPanel, DataTable, JsonViewer, FilePathViewer. Plus theme + hooks. |
-| `msr-components/dashboard` | MetricCard, ActivityTimeline, HealthScoreCard, ModuleSetupProgress, InsightCards, NotificationCenter, QuickActionsPanel, RecentItemsPanel |
-| `msr-components/firmware` | FirmwareTreeExplorer, HashMatchExplorer, VendorGroupAccordion, CommonNameDetector, FirmwareDiffViewer, PluginResultCard, CveSeverityPanel, FileMetadataCard, ReportExportToolbar, PathGroupSummaryRow, AnalysisConfidenceBadge, BinaryFilePreviewPanel |
-| `msr-components/business` | ModuleMarketplace, ModuleSetupWizard, ModuleDependencyGraph, ClientAccessGate, FeatureToggleCard, SetupChecklist, RolePermissionMatrix, BusinessOnboardingDashboard |
-| `msr-components/pets` | DogProfileHeader, RoutineTimeline, TrainingSessionCard, MedicalRecordCard, QRCollarPreview, HumanAccessManager, DogTrackerMapCard |
-| `msr-components/game` | CountryGuessInput, DistanceFeedbackCard, WorldMapHint, CountryFactReveal, HotColdDistanceMeter, DailyCountryChallenge, EducationalResultSummary |
+| `msr-components/dashboard` | MetricCard, ActivityTimeline, HealthScoreCard, SetupProgress, InsightCards, NotificationCenter, QuickActionsPanel, RecentItemsPanel |
+| `msr-components/inspector` | FileTreeExplorer, HashMatchExplorer, GroupAccordion, CommonNameDetector, FileDiffViewer, ResultCard, SeverityPanel, FileMetadataCard, ExportToolbar, GroupSummaryRow, ConfidenceBadge, BinaryFilePreviewPanel |
+| `msr-components/modules` | Marketplace, SetupWizard, DependencyGraph, AccessGate, FeatureToggleCard, SetupChecklist, RolePermissionMatrix, OnboardingDashboard |
+| `msr-components/profile` | ProfileHeader, RoutineTimeline, TrainingSessionCard, MedicalRecordCard, QRProfileCard, AccessManager, TrackerMapCard |
+| `msr-components/quiz` | GuessInput, DistanceFeedbackCard, MapHint, FactReveal, ProximityMeter, DailyChallenge, ResultSummary |
 | `msr-components/charts` | Sparkline, LineChart, BarChart, DonutChart, RadialProgress, Gauge, Heatmap, ProgressBar, RadarChart, ScatterPlot, FunnelChart, StackedBarChart, Candlestick, Treemap (squarified), Waterfall, BulletChart, Sankey (dependency-free SVG/CSS) |
 | `msr-components/geo` | CountryFlag (code→emoji), MapLegend (color scale), Choropleth (consumer-supplied region paths), TileGridMap (built-in compact world tile grid) — dependency-free SVG/CSS |
 | `msr-components/styles.css` | The full stylesheet (tokens + 15 themes + all components) |
@@ -192,8 +192,8 @@ push/PR. `prepublishOnly` rebuilds before `npm publish`.
 
 ## Roadmap
 
-The full catalog (~60 components across general UI, dashboard, firmware, business,
-pets, and game domains) is being built on the established pattern. See the project
+The full catalog (~60 components across general UI, dashboard, inspector, modules,
+profile, and quiz domains) is being built on the established pattern. See the project
 plan for the complete list. Contributions follow the per-component structure:
 `Component.tsx` + `Component.css` + `index.ts` (+ tests), variants via `data-*`
 attributes, behavior via `msr-hooks`.

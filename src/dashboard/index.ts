@@ -7,7 +7,7 @@ export type {
   ActivityItem,
 } from "./ActivityTimeline/ActivityTimeline";
 export * from "./HealthScoreCard";
-export * from "./ModuleSetupProgress";
+export * from "./SetupProgress";
 export * from "./InsightCards";
 export * from "./QuickActionsPanel";
 export * from "./RecentItemsPanel";

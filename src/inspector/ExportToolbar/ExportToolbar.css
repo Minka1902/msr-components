@@ -1,0 +1,54 @@
+.msr-ExportToolbar {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--msr-space-2);
+  padding: var(--msr-space-2) var(--msr-space-3);
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-md);
+}
+.msr-ExportToolbar__label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--msr-space-1);
+  font-size: var(--msr-text-sm);
+  font-weight: var(--msr-weight-medium);
+  color: var(--msr-color-fg-muted);
+}
+.msr-ExportToolbar__group {
+  display: inline-flex;
+  gap: var(--msr-space-1);
+}
+.msr-ExportToolbar__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--msr-space-1);
+  appearance: none;
+  border: 1px solid var(--msr-color-border);
+  background-color: var(--msr-color-surface);
+  color: var(--msr-color-fg);
+  font: inherit;
+  font-size: var(--msr-text-sm);
+  border-radius: var(--msr-radius-sm);
+  padding: var(--msr-space-1) var(--msr-space-2);
+  cursor: pointer;
+  transition: border-color var(--msr-transition-fast), background-color var(--msr-transition-fast);
+}
+.msr-ExportToolbar__btn:hover:not(:disabled) {
+  border-color: var(--msr-color-primary);
+  background-color: var(--msr-tone-info-bg);
+}
+.msr-ExportToolbar__btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+.msr-ExportToolbar__btn [data-spin] {
+  animation: msr-spin 0.7s linear infinite;
+}
+.msr-ExportToolbar__divider {
+  width: 1px;
+  align-self: stretch;
+  background-color: var(--msr-color-border);
+  margin: 0 var(--msr-space-1);
+}
