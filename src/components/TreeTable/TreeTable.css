@@ -1,0 +1,73 @@
+.msr-TreeTable {
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  overflow: hidden;
+  background-color: var(--msr-color-surface);
+  color: var(--msr-color-fg);
+}
+.msr-TreeTable__scroll {
+  overflow: auto;
+  max-height: 100%;
+}
+.msr-TreeTable__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--msr-text-sm);
+}
+.msr-TreeTable__table th {
+  text-align: left;
+  font-weight: var(--msr-weight-semibold);
+  color: var(--msr-color-fg-muted);
+  padding: var(--msr-space-2) var(--msr-space-3);
+  background-color: var(--msr-color-surface-2);
+  border-bottom: 1px solid var(--msr-color-border);
+  white-space: nowrap;
+}
+.msr-TreeTable[data-sticky] thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.msr-TreeTable__table td {
+  padding: var(--msr-space-2) var(--msr-space-3);
+  border-bottom: 1px solid var(--msr-color-border);
+}
+.msr-TreeTable__row:hover td {
+  background-color: var(--msr-color-surface-2);
+}
+.msr-TreeTable__tree {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--msr-space-1);
+}
+.msr-TreeTable__toggle {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--msr-color-fg-muted);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--msr-radius-sm);
+  flex: none;
+}
+.msr-TreeTable__toggle:hover {
+  background-color: var(--msr-color-surface-3, var(--msr-color-surface));
+  color: var(--msr-color-fg);
+}
+.msr-TreeTable__leaf {
+  display: inline-block;
+  width: 20px;
+  flex: none;
+}
+.msr-TreeTable__cell {
+  min-width: 0;
+}
+.msr-TreeTable__empty {
+  text-align: center;
+  padding: var(--msr-space-5);
+  color: var(--msr-color-fg-subtle);
+}

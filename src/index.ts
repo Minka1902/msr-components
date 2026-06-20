@@ -186,6 +186,10 @@ export * from "./components/Terminal";
 export * from "./components/Showcase";
 export * from "./components/QRCode";
 
+// ---- Components: table power-ups ----
+export * from "./components/EditableDataGrid";
+export * from "./components/TreeTable";
+
 // ---- Components: more inputs & data ----
 export * from "./components/VirtualizedList";
 export * from "./components/MaskedInput";

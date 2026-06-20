@@ -1,0 +1,59 @@
+.msr-BulletChart {
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-1);
+  width: 100%;
+  color: var(--msr-color-fg);
+}
+.msr-BulletChart__labels {
+  display: flex;
+  align-items: baseline;
+  gap: var(--msr-space-2);
+}
+.msr-BulletChart__title {
+  font-size: var(--msr-text-sm);
+  font-weight: var(--msr-weight-medium);
+}
+.msr-BulletChart__subtitle {
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg-subtle);
+}
+.msr-BulletChart__graph {
+  position: relative;
+  width: 100%;
+  background-color: var(--msr-color-surface-2);
+  border-radius: var(--msr-radius-sm);
+  overflow: hidden;
+}
+.msr-BulletChart__band {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--msr-color-fg-muted);
+}
+.msr-BulletChart__measure {
+  position: absolute;
+  left: 0;
+  top: 25%;
+  height: 50%;
+  border-radius: 0 var(--msr-radius-sm) var(--msr-radius-sm) 0;
+}
+.msr-BulletChart__target {
+  position: absolute;
+  top: 15%;
+  bottom: 15%;
+  width: 3px;
+  transform: translateX(-1.5px);
+  background-color: var(--msr-color-fg);
+  border-radius: var(--msr-radius-full);
+}
+.msr-BulletChart__value {
+  position: absolute;
+  right: var(--msr-space-2);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: var(--msr-text-xs);
+  font-weight: var(--msr-weight-semibold);
+  color: var(--msr-color-fg);
+}

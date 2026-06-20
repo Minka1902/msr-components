@@ -85,7 +85,7 @@ Every component also accepts `className` / `style` and renders stable
 | `msr-components/business` | ModuleMarketplace, ModuleSetupWizard, ModuleDependencyGraph, ClientAccessGate, FeatureToggleCard, SetupChecklist, RolePermissionMatrix, BusinessOnboardingDashboard |
 | `msr-components/pets` | DogProfileHeader, RoutineTimeline, TrainingSessionCard, MedicalRecordCard, QRCollarPreview, HumanAccessManager, DogTrackerMapCard |
 | `msr-components/game` | CountryGuessInput, DistanceFeedbackCard, WorldMapHint, CountryFactReveal, HotColdDistanceMeter, DailyCountryChallenge, EducationalResultSummary |
-| `msr-components/charts` | Sparkline, LineChart, BarChart, DonutChart, RadialProgress, Gauge, Heatmap, ProgressBar, RadarChart, ScatterPlot, FunnelChart, StackedBarChart (dependency-free SVG/CSS) |
+| `msr-components/charts` | Sparkline, LineChart, BarChart, DonutChart, RadialProgress, Gauge, Heatmap, ProgressBar, RadarChart, ScatterPlot, FunnelChart, StackedBarChart, Candlestick, Treemap (squarified), Waterfall, BulletChart, Sankey (dependency-free SVG/CSS) |
 | `msr-components/geo` | CountryFlag (code→emoji), MapLegend (color scale), Choropleth (consumer-supplied region paths), TileGridMap (built-in compact world tile grid) — dependency-free SVG/CSS |
 | `msr-components/styles.css` | The full stylesheet (tokens + 15 themes + all components) |
 
@@ -143,6 +143,10 @@ CountdownTimer, IdleDialog, GeoPrompt.
 **Advanced inputs** (in core `msr-components`): Combobox/Autocomplete (single +
 multi), Slider, RangeSlider, NumberStepper, PinInput, RatingStars, ToggleGroup,
 TagInput, FileDropzone, ColorPicker, DatePicker (+ standalone Calendar).
+
+**Table power-ups** (in core `msr-components`): EditableDataGrid (inline
+text/number/select cell editing) and TreeTable (expandable hierarchical rows),
+alongside the existing DataTable.
 
 **Calendar & scheduling** (in core `msr-components`): EventCalendar (month grid
 with event pills), MiniCalendar (compact, marked days), DateRangePicker

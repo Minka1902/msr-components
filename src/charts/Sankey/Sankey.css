@@ -1,0 +1,31 @@
+.msr-Sankey {
+  width: 100%;
+  color: var(--msr-color-fg);
+}
+.msr-Sankey__svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+.msr-Sankey__link {
+  opacity: 0.32;
+  transition: opacity var(--msr-transition-fast);
+}
+.msr-Sankey__link:hover {
+  opacity: 0.55;
+}
+.msr-Sankey__node[data-interactive] {
+  cursor: pointer;
+}
+.msr-Sankey__node rect {
+  transition: filter var(--msr-transition-fast);
+}
+.msr-Sankey__node:hover rect {
+  filter: brightness(1.1);
+}
+.msr-Sankey__label {
+  font-size: var(--msr-text-xs);
+  fill: var(--msr-color-fg);
+  pointer-events: none;
+}

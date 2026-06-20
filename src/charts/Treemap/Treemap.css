@@ -1,0 +1,25 @@
+.msr-Treemap {
+  width: 100%;
+  color: var(--msr-color-fg);
+}
+.msr-Treemap__svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.msr-Treemap__cell[data-interactive] {
+  cursor: pointer;
+}
+.msr-Treemap__cell rect {
+  transition: filter var(--msr-transition-fast);
+}
+.msr-Treemap__cell:hover rect {
+  filter: brightness(1.08);
+}
+.msr-Treemap__label {
+  font-size: var(--msr-text-xs);
+  font-weight: var(--msr-weight-medium);
+  fill: #fff;
+  pointer-events: none;
+  mix-blend-mode: luminosity;
+}

@@ -1,0 +1,44 @@
+.msr-Waterfall {
+  width: 100%;
+  color: var(--msr-color-fg);
+}
+.msr-Waterfall__plot {
+  display: flex;
+  align-items: stretch;
+  gap: var(--msr-space-2);
+  height: 100%;
+}
+.msr-Waterfall__col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.msr-Waterfall__bars {
+  position: relative;
+  flex: 1;
+}
+.msr-Waterfall__bar {
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  border-radius: var(--msr-radius-sm);
+}
+.msr-Waterfall__value {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: var(--msr-text-xs);
+  font-variant-numeric: tabular-nums;
+  color: var(--msr-color-fg-muted);
+}
+.msr-Waterfall__label {
+  margin-top: var(--msr-space-1);
+  text-align: center;
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg-subtle);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

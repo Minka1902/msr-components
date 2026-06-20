@@ -1,0 +1,23 @@
+.msr-Candlestick {
+  width: 100%;
+  color: var(--msr-color-fg);
+}
+.msr-Candlestick__svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.msr-Candlestick__grid {
+  stroke: var(--msr-color-border);
+  stroke-width: 1;
+  stroke-dasharray: 2 4;
+  vector-effect: non-scaling-stroke;
+}
+.msr-Candlestick__wick {
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+.msr-Candlestick__body {
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}

@@ -11,3 +11,8 @@ export * from "./RadarChart";
 export * from "./ScatterPlot";
 export * from "./FunnelChart";
 export * from "./StackedBarChart";
+export * from "./Candlestick";
+export * from "./Treemap";
+export * from "./Waterfall";
+export * from "./BulletChart";
+export * from "./Sankey";
