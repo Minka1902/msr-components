@@ -1,0 +1,59 @@
+.msr-Dock {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: var(--msr-space-2);
+  padding: var(--msr-space-2) var(--msr-space-3);
+  background-color: color-mix(in srgb, var(--msr-color-surface) 80%, transparent);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-xl);
+  box-shadow: var(--msr-shadow-3);
+}
+.msr-Dock__item {
+  position: relative;
+  flex: none;
+  appearance: none;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--msr-color-surface-2);
+  color: var(--msr-color-fg);
+  border-radius: var(--msr-radius-md);
+  cursor: pointer;
+  transition: width 0.08s ease, height 0.08s ease;
+}
+.msr-Dock__item:hover {
+  background-color: var(--msr-color-primary);
+  color: var(--msr-color-primary-fg);
+}
+.msr-Dock__item[data-active]::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: var(--msr-radius-full);
+  background-color: var(--msr-color-fg-muted);
+}
+.msr-Dock__tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  padding: 2px var(--msr-space-2);
+  font-size: var(--msr-text-xs);
+  white-space: nowrap;
+  color: var(--msr-color-bg);
+  background-color: var(--msr-color-fg);
+  border-radius: var(--msr-radius-sm);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.12s ease, transform 0.12s ease;
+}
+.msr-Dock__item:hover .msr-Dock__tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}

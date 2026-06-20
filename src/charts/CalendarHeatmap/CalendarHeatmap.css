@@ -1,0 +1,22 @@
+.msr-CalendarHeatmap {
+  width: 100%;
+  color: var(--msr-color-fg);
+}
+.msr-CalendarHeatmap__svg {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+.msr-CalendarHeatmap__cell {
+  fill: var(--msr-color-surface-2);
+  stroke: var(--msr-color-border);
+  stroke-width: 0.5;
+}
+.msr-CalendarHeatmap__cell[data-level="1"] { fill: color-mix(in srgb, var(--msr-color-primary) 28%, var(--msr-color-surface-2)); }
+.msr-CalendarHeatmap__cell[data-level="2"] { fill: color-mix(in srgb, var(--msr-color-primary) 50%, var(--msr-color-surface-2)); }
+.msr-CalendarHeatmap__cell[data-level="3"] { fill: color-mix(in srgb, var(--msr-color-primary) 74%, var(--msr-color-surface-2)); }
+.msr-CalendarHeatmap__cell[data-level="4"] { fill: var(--msr-color-primary); }
+.msr-CalendarHeatmap__label {
+  fill: var(--msr-color-fg-subtle);
+  font-size: 9px;
+}

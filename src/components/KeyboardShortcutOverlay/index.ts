@@ -1,6 +1,5 @@
 export {
   KeyboardShortcutOverlay,
-  Kbd,
   useShortcutOverlay,
 } from "./KeyboardShortcutOverlay";
 export type {

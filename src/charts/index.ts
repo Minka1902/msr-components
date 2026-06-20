@@ -16,3 +16,5 @@ export * from "./Treemap";
 export * from "./Waterfall";
 export * from "./BulletChart";
 export * from "./Sankey";
+export * from "./CalendarHeatmap";
+export * from "./Gantt";

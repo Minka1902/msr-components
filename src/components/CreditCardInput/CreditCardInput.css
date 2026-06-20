@@ -1,0 +1,66 @@
+.msr-CreditCardInput {
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-2);
+  width: 280px;
+  max-width: 100%;
+}
+.msr-CreditCardInput[data-disabled] {
+  opacity: 0.6;
+  pointer-events: none;
+}
+.msr-CreditCardInput__numberRow {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.msr-CreditCardInput__brand {
+  position: absolute;
+  right: var(--msr-space-2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 24px;
+  font-size: 10px;
+  font-weight: var(--msr-weight-bold);
+  letter-spacing: 0.03em;
+  color: #fff;
+  border-radius: var(--msr-radius-sm);
+  background: linear-gradient(135deg, #555, #222);
+  pointer-events: none;
+}
+.msr-CreditCardInput__brand[data-brand="visa"] { background: linear-gradient(135deg, #1a1f71, #2b3a9e); }
+.msr-CreditCardInput__brand[data-brand="mastercard"] { background: linear-gradient(135deg, #eb001b, #f79e1b); }
+.msr-CreditCardInput__brand[data-brand="amex"] { background: linear-gradient(135deg, #2e77bb, #1f5e99); }
+.msr-CreditCardInput__brand[data-brand="discover"] { background: linear-gradient(135deg, #f76b1c, #ff9a44); }
+.msr-CreditCardInput__row {
+  display: flex;
+  gap: var(--msr-space-2);
+}
+.msr-CreditCardInput__row .msr-CreditCardInput__input {
+  flex: 1;
+  min-width: 0;
+}
+.msr-CreditCardInput__input {
+  height: var(--msr-control-md);
+  padding: 0 var(--msr-space-3);
+  font: inherit;
+  font-size: var(--msr-text-md);
+  color: var(--msr-color-fg);
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border-strong);
+  border-radius: var(--msr-radius-md);
+  width: 100%;
+  box-sizing: border-box;
+  font-variant-numeric: tabular-nums;
+}
+.msr-CreditCardInput__number {
+  padding-right: 56px;
+  letter-spacing: 0.04em;
+}
+.msr-CreditCardInput__input:focus-visible {
+  outline: none;
+  border-color: var(--msr-color-primary);
+  box-shadow: 0 0 0 3px var(--msr-color-ring);
+}

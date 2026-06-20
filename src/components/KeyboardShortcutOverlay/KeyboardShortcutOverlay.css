@@ -1,19 +1,4 @@
-.msr-Kbd {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 1.6em;
-  height: 1.6em;
-  padding: 0 var(--msr-space-2);
-  font-family: var(--msr-font-sans);
-  font-size: var(--msr-text-xs);
-  font-weight: var(--msr-weight-medium);
-  color: var(--msr-color-fg);
-  background-color: var(--msr-color-surface-2);
-  border: 1px solid var(--msr-color-border-strong);
-  border-bottom-width: 2px;
-  border-radius: var(--msr-radius-sm);
-}
+/* .msr-Kbd is defined by the standalone Kbd component (src/components/Kbd). */
 
 .msr-Shortcuts {
   display: flex;

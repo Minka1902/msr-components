@@ -1,0 +1,18 @@
+.msr-Barcode {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--msr-space-1);
+}
+.msr-Barcode__svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.msr-Barcode__text {
+  font-family: var(--msr-font-mono, monospace);
+  font-size: var(--msr-text-sm);
+  letter-spacing: 0.18em;
+  color: var(--msr-color-fg);
+  text-transform: uppercase;
+}

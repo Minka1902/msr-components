@@ -1,0 +1,30 @@
+.msr-Tooltip__anchor {
+  display: inline-flex;
+}
+.msr-Tooltip {
+  z-index: var(--msr-z-tooltip, 1100);
+  padding: var(--msr-space-1) var(--msr-space-2);
+  font-size: var(--msr-text-xs);
+  line-height: 1.4;
+  color: var(--msr-color-bg);
+  background-color: var(--msr-color-fg);
+  border-radius: var(--msr-radius-sm);
+  box-shadow: var(--msr-shadow-2);
+  pointer-events: none;
+  animation: msr-tooltip-in 0.12s ease;
+}
+@keyframes msr-tooltip-in {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+.msr-Tooltip__arrow {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background-color: var(--msr-color-fg);
+  transform: rotate(45deg);
+}
+.msr-Tooltip[data-placement="top"] .msr-Tooltip__arrow { bottom: -3px; left: calc(50% - 3.5px); }
+.msr-Tooltip[data-placement="bottom"] .msr-Tooltip__arrow { top: -3px; left: calc(50% - 3.5px); }
+.msr-Tooltip[data-placement="left"] .msr-Tooltip__arrow { right: -3px; top: calc(50% - 3.5px); }
+.msr-Tooltip[data-placement="right"] .msr-Tooltip__arrow { left: -3px; top: calc(50% - 3.5px); }

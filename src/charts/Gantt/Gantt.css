@@ -1,0 +1,108 @@
+.msr-Gantt {
+  width: 100%;
+  color: var(--msr-color-fg);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  overflow: hidden;
+  background-color: var(--msr-color-surface);
+}
+.msr-Gantt__header {
+  display: flex;
+  border-bottom: 1px solid var(--msr-color-border);
+  height: 28px;
+}
+.msr-Gantt__corner {
+  width: var(--msr-gantt-label);
+  flex: none;
+  border-right: 1px solid var(--msr-color-border);
+}
+.msr-Gantt__axis {
+  position: relative;
+  flex: 1;
+}
+.msr-Gantt__month {
+  position: absolute;
+  top: 6px;
+  transform: translateX(2px);
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg-subtle);
+  white-space: nowrap;
+}
+.msr-Gantt__body {
+  position: relative;
+}
+.msr-Gantt__overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--msr-gantt-label);
+  right: 0;
+  pointer-events: none;
+}
+.msr-Gantt__gridline {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: var(--msr-color-border);
+}
+.msr-Gantt__today {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--msr-tone-danger-fg);
+  opacity: 0.7;
+}
+.msr-Gantt__row {
+  display: flex;
+  align-items: center;
+  height: var(--msr-gantt-row);
+  border-bottom: 1px solid var(--msr-color-border);
+}
+.msr-Gantt__row:last-child {
+  border-bottom: none;
+}
+.msr-Gantt__label {
+  width: var(--msr-gantt-label);
+  flex: none;
+  padding: 0 var(--msr-space-3);
+  font-size: var(--msr-text-sm);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-right: 1px solid var(--msr-color-border);
+  box-sizing: border-box;
+}
+.msr-Gantt__track {
+  position: relative;
+  flex: 1;
+  height: 100%;
+}
+.msr-Gantt__bar {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: calc(var(--msr-gantt-row) - 14px);
+  min-height: 14px;
+  appearance: none;
+  border: none;
+  background-color: var(--msr-color-primary);
+  border-radius: var(--msr-radius-sm);
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0;
+}
+.msr-Gantt__bar:disabled {
+  cursor: default;
+}
+.msr-Gantt__bar:not(:disabled):hover {
+  filter: brightness(1.08);
+}
+.msr-Gantt__progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.28);
+}

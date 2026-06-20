@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useEventListener } from "msr-hooks";
-import { cx } from "../../lib/cx";
 import { Modal } from "../Modal/Modal";
+import { Kbd } from "../Kbd/Kbd";
 
 export interface Shortcut {
   /** Key combo parts, e.g. ["Ctrl", "K"] or ["Esc"]. */
@@ -19,11 +19,6 @@ export interface KeyboardShortcutOverlayProps {
   onClose: () => void;
   groups: ShortcutGroup[];
   title?: React.ReactNode;
-}
-
-/** Renders a single key as a styled keycap. */
-export function Kbd({ children, className }: { children: React.ReactNode; className?: string }) {
-  return <kbd className={cx("msr-Kbd", className)}>{children}</kbd>;
 }
 
 /** Modal overlay listing available keyboard shortcuts, grouped by section. */

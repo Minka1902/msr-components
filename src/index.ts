@@ -190,6 +190,20 @@ export * from "./components/QRCode";
 export * from "./components/EditableDataGrid";
 export * from "./components/TreeTable";
 
+// ---- Components: overlays & feedback (wave 7) ----
+export * from "./components/Tooltip";
+export * from "./components/Popconfirm";
+export * from "./components/Kbd";
+export * from "./components/NotificationBadge";
+export * from "./components/Lightbox";
+
+// ---- Components: inputs, navigation & delight (wave 7) ----
+export * from "./components/SignaturePad";
+export * from "./components/CreditCardInput";
+export * from "./components/BottomNavigation";
+export * from "./components/Dock";
+export * from "./components/Barcode";
+
 // ---- Components: more inputs & data ----
 export * from "./components/VirtualizedList";
 export * from "./components/MaskedInput";

@@ -85,7 +85,7 @@ Every component also accepts `className` / `style` and renders stable
 | `msr-components/modules` | Marketplace, SetupWizard, DependencyGraph, AccessGate, FeatureToggleCard, SetupChecklist, RolePermissionMatrix, OnboardingDashboard |
 | `msr-components/profile` | ProfileHeader, RoutineTimeline, TrainingSessionCard, MedicalRecordCard, QRProfileCard, AccessManager, TrackerMapCard |
 | `msr-components/quiz` | GuessInput, DistanceFeedbackCard, MapHint, FactReveal, ProximityMeter, DailyChallenge, ResultSummary |
-| `msr-components/charts` | Sparkline, LineChart, BarChart, DonutChart, RadialProgress, Gauge, Heatmap, ProgressBar, RadarChart, ScatterPlot, FunnelChart, StackedBarChart, Candlestick, Treemap (squarified), Waterfall, BulletChart, Sankey (dependency-free SVG/CSS) |
+| `msr-components/charts` | Sparkline, LineChart, BarChart, DonutChart, RadialProgress, Gauge, Heatmap, ProgressBar, RadarChart, ScatterPlot, FunnelChart, StackedBarChart, Candlestick, Treemap (squarified), Waterfall, BulletChart, Sankey, CalendarHeatmap (contribution grid), Gantt (project timeline) (dependency-free SVG/CSS) |
 | `msr-components/geo` | CountryFlag (code→emoji), MapLegend (color scale), Choropleth (consumer-supplied region paths), TileGridMap (built-in compact world tile grid) — dependency-free SVG/CSS |
 | `msr-components/styles.css` | The full stylesheet (tokens + 15 themes + all components) |
 
@@ -132,7 +132,13 @@ CommentThread (nested replies), VoteButtons, UserCard, ShareSheet.
 reuses CopyableCodeBlock).
 
 **Navigation & overlays**: Drawer/Sheet, Stepper, TreeView, HoverCard,
-ScrollToTop.
+ScrollToTop, **Tooltip** (hover/focus, anchored), **Popconfirm** (inline confirm
+popover), **Lightbox** (fullscreen image gallery), **BottomNavigation** (mobile
+tab bar), **Dock** (macOS-style magnifying dock).
+
+**Inputs & utilities**: **SignaturePad** (canvas signature → PNG), **CreditCardInput**
+(brand detection + Luhn), **Kbd** (keycap/shortcut display), **NotificationBadge**
+(count/dot overlay), **Barcode** (Code 39, dependency-free SVG).
 
 **Motion & delight**: AnimatedCounter, ScrollProgressBar, ScrollReveal, Confetti,
 TiltCard, SpotlightCard, Marquee, ShimmerText, AnimatedThemeToggle.
