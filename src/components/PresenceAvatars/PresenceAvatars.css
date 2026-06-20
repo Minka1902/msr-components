@@ -1,0 +1,54 @@
+.msr-PresenceAvatars {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--msr-space-2);
+  --msr-presence-ring: var(--msr-color-primary);
+}
+.msr-PresenceAvatars__stack {
+  display: inline-flex;
+}
+.msr-PresenceAvatars__item {
+  position: relative;
+  display: inline-flex;
+  border-radius: var(--msr-radius-full);
+  margin-inline-start: -8px;
+  box-shadow: 0 0 0 2px var(--msr-color-surface);
+}
+.msr-PresenceAvatars__item:first-child {
+  margin-inline-start: 0;
+}
+.msr-PresenceAvatars__item[role="button"] {
+  cursor: pointer;
+}
+.msr-PresenceAvatars__item[role="button"]:hover {
+  z-index: 1;
+}
+.msr-PresenceAvatars__dot {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: var(--msr-radius-full);
+  border: 2px solid var(--msr-color-surface);
+  background-color: var(--msr-color-fg-subtle);
+}
+.msr-PresenceAvatars__item[data-status="online"] .msr-PresenceAvatars__dot { background-color: var(--msr-tone-success-fg); }
+.msr-PresenceAvatars__item[data-status="away"] .msr-PresenceAvatars__dot { background-color: var(--msr-tone-warning-fg); }
+.msr-PresenceAvatars__item[data-status="offline"] .msr-PresenceAvatars__dot { background-color: var(--msr-color-fg-subtle); }
+.msr-PresenceAvatars__overflow {
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 32px;
+  padding: 0 var(--msr-space-1);
+  border-radius: var(--msr-radius-full);
+  background-color: var(--msr-color-surface-2);
+  color: var(--msr-color-fg-muted);
+  font-size: var(--msr-text-xs);
+  font-weight: var(--msr-weight-medium);
+}
+.msr-PresenceAvatars__count {
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg-muted);
+}

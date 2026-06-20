@@ -1,0 +1,104 @@
+.msr-CommentThread {
+  color: var(--msr-color-fg);
+  width: 100%;
+}
+.msr-CommentThread__list,
+.msr-CommentThread__children {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msr-CommentThread__children {
+  margin-inline-start: var(--msr-space-5);
+  border-inline-start: 1px solid var(--msr-color-border);
+  padding-inline-start: var(--msr-space-3);
+}
+.msr-CommentThread__node {
+  padding: var(--msr-space-2) 0;
+}
+.msr-CommentThread__row {
+  display: flex;
+  gap: var(--msr-space-2);
+}
+.msr-CommentThread__main {
+  flex: 1;
+  min-width: 0;
+}
+.msr-CommentThread__meta {
+  display: flex;
+  align-items: baseline;
+  gap: var(--msr-space-2);
+}
+.msr-CommentThread__author {
+  font-weight: var(--msr-weight-semibold);
+  font-size: var(--msr-text-sm);
+}
+.msr-CommentThread__time {
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg-subtle);
+}
+.msr-CommentThread__body {
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg);
+  line-height: 1.5;
+  margin-top: 2px;
+}
+.msr-CommentThread__reply {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--msr-color-fg-muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: var(--msr-text-xs);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: var(--msr-space-1) 0;
+  margin-top: 2px;
+}
+.msr-CommentThread__reply:hover {
+  color: var(--msr-color-primary);
+}
+.msr-CommentThread__composer {
+  display: flex;
+  gap: var(--msr-space-2);
+  align-items: flex-end;
+  margin-top: var(--msr-space-2);
+}
+.msr-CommentThread__composer--root {
+  margin-bottom: var(--msr-space-3);
+}
+.msr-CommentThread__input {
+  flex: 1;
+  resize: vertical;
+  font: inherit;
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg);
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border-strong);
+  border-radius: var(--msr-radius-md);
+  padding: var(--msr-space-2);
+}
+.msr-CommentThread__input:focus-visible {
+  outline: none;
+  border-color: var(--msr-color-primary);
+  box-shadow: 0 0 0 3px var(--msr-color-ring);
+}
+.msr-CommentThread__send {
+  appearance: none;
+  flex: none;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--msr-radius-md);
+  border: none;
+  background-color: var(--msr-color-primary);
+  color: var(--msr-color-primary-fg);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.msr-CommentThread__send:hover {
+  background-color: var(--msr-color-primary-hover);
+}

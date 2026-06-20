@@ -1,0 +1,85 @@
+.msr-ReactionBar {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--msr-space-1);
+  flex-wrap: wrap;
+}
+.msr-ReactionBar__chip {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--msr-space-1);
+  height: 26px;
+  padding: 0 var(--msr-space-2);
+  border-radius: var(--msr-radius-full);
+  border: 1px solid var(--msr-color-border);
+  background-color: var(--msr-color-surface);
+  color: var(--msr-color-fg);
+  cursor: pointer;
+  font: inherit;
+  font-size: var(--msr-text-sm);
+}
+.msr-ReactionBar[data-size="sm"] .msr-ReactionBar__chip {
+  height: 22px;
+  font-size: var(--msr-text-xs);
+}
+.msr-ReactionBar__chip:hover {
+  background-color: var(--msr-color-surface-2);
+}
+.msr-ReactionBar__chip[data-reacted] {
+  border-color: var(--msr-color-primary);
+  background-color: color-mix(in srgb, var(--msr-color-primary) 14%, transparent);
+  color: var(--msr-color-primary);
+}
+.msr-ReactionBar__count {
+  font-variant-numeric: tabular-nums;
+  font-weight: var(--msr-weight-medium);
+}
+.msr-ReactionBar__add {
+  position: relative;
+  display: inline-flex;
+}
+.msr-ReactionBar__addBtn {
+  appearance: none;
+  width: 26px;
+  height: 26px;
+  border-radius: var(--msr-radius-full);
+  border: 1px dashed var(--msr-color-border-strong);
+  background-color: transparent;
+  color: var(--msr-color-fg-muted);
+  cursor: pointer;
+  font-size: var(--msr-text-md);
+  line-height: 1;
+}
+.msr-ReactionBar__addBtn:hover {
+  background-color: var(--msr-color-surface-2);
+  color: var(--msr-color-fg);
+}
+.msr-ReactionBar__picker {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 0;
+  z-index: var(--msr-z-popover);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  padding: var(--msr-space-1);
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-md);
+  box-shadow: var(--msr-shadow-3);
+  animation: msr-popover-in var(--msr-transition-fast);
+}
+.msr-ReactionBar__pick {
+  appearance: none;
+  border: none;
+  background: transparent;
+  font-size: var(--msr-text-lg);
+  width: 32px;
+  height: 32px;
+  border-radius: var(--msr-radius-sm);
+  cursor: pointer;
+}
+.msr-ReactionBar__pick:hover {
+  background-color: var(--msr-color-surface-2);
+}

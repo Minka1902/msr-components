@@ -19,3 +19,6 @@ had **no clean/plain export**, so a close alias is used today (see
 | `Command` | CommandPalette | `CommandMenu` | Plain `Command` absent. |
 | `MoreVertical` / `MoreHorizontal` | menus | `MoreVertical2` / `MoreHorizontal2` | Plain (non-`2`) names absent. |
 | `PlayCircle` | RoutineTimeline | `PlayCircle2` | Plain `PlayCircle` absent. |
+| `Share` | ShareSheet | `Send` | No plain `Share`/`ShareAlt` glyph; using `Send`. |
+| `Mail` | ShareSheet (email target) | _none_ | Only `Mail{Check,Plus,Search,X}` exist; no plain `Mail`. Consumers pass their own `icon`. |
+| `Smile` / `Mood` | ReactionBar (add-reaction) | _none_ | No emoji-face glyph; ReactionBar uses a `+` and unicode emoji instead. |

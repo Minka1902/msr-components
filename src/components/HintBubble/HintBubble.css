@@ -1,0 +1,64 @@
+.msr-HintBubble {
+  position: relative;
+  display: inline-flex;
+  --msr-hb-bg: var(--msr-color-primary);
+  --msr-hb-fg: var(--msr-color-primary-fg);
+}
+.msr-HintBubble[data-tone="neutral"] {
+  --msr-hb-bg: var(--msr-color-fg);
+  --msr-hb-fg: var(--msr-color-bg);
+}
+.msr-HintBubble__anchor {
+  display: inline-flex;
+}
+.msr-HintBubble__bubble {
+  position: absolute;
+  z-index: var(--msr-z-popover);
+  width: max-content;
+  max-width: 240px;
+  background-color: var(--msr-hb-bg);
+  color: var(--msr-hb-fg);
+  border-radius: var(--msr-radius-md);
+  padding: var(--msr-space-2) var(--msr-space-3);
+  box-shadow: var(--msr-shadow-3);
+  font-size: var(--msr-text-sm);
+  animation: msr-popover-in var(--msr-transition-fast);
+}
+.msr-HintBubble__bubble[data-placement="bottom"] { top: calc(100% + 8px); left: 50%; transform: translateX(-50%); }
+.msr-HintBubble__bubble[data-placement="top"] { bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%); }
+.msr-HintBubble__bubble[data-placement="right"] { left: calc(100% + 8px); top: 50%; transform: translateY(-50%); }
+.msr-HintBubble__bubble[data-placement="left"] { right: calc(100% + 8px); top: 50%; transform: translateY(-50%); }
+.msr-HintBubble__arrow {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: var(--msr-hb-bg);
+  transform: rotate(45deg);
+}
+.msr-HintBubble__bubble[data-placement="bottom"] .msr-HintBubble__arrow { top: -4px; left: calc(50% - 4px); }
+.msr-HintBubble__bubble[data-placement="top"] .msr-HintBubble__arrow { bottom: -4px; left: calc(50% - 4px); }
+.msr-HintBubble__bubble[data-placement="right"] .msr-HintBubble__arrow { left: -4px; top: calc(50% - 4px); }
+.msr-HintBubble__bubble[data-placement="left"] .msr-HintBubble__arrow { right: -4px; top: calc(50% - 4px); }
+.msr-HintBubble__close {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: inherit;
+  opacity: 0.7;
+  cursor: pointer;
+  display: inline-flex;
+  padding: 2px;
+  border-radius: var(--msr-radius-sm);
+}
+.msr-HintBubble__close:hover { opacity: 1; }
+.msr-HintBubble__title {
+  font-weight: var(--msr-weight-semibold);
+  margin-bottom: 2px;
+  padding-right: var(--msr-space-4);
+}
+.msr-HintBubble__content {
+  line-height: 1.45;
+}

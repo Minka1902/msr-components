@@ -1,0 +1,80 @@
+.msr-UserCard {
+  width: 280px;
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  box-shadow: var(--msr-shadow-2);
+  overflow: hidden;
+  color: var(--msr-color-fg);
+}
+.msr-UserCard__cover {
+  height: 64px;
+  background: linear-gradient(135deg, var(--msr-color-primary), color-mix(in srgb, var(--msr-color-primary) 50%, var(--msr-color-surface)));
+  margin-bottom: -24px;
+}
+.msr-UserCard__head {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-3);
+  padding: var(--msr-space-4) var(--msr-space-4) 0;
+}
+.msr-UserCard__avatar {
+  position: relative;
+  display: inline-flex;
+  border-radius: var(--msr-radius-full);
+  box-shadow: 0 0 0 3px var(--msr-color-surface);
+}
+.msr-UserCard__dot {
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: var(--msr-radius-full);
+  border: 2px solid var(--msr-color-surface);
+  background-color: var(--msr-color-fg-subtle);
+}
+.msr-UserCard__avatar[data-status="online"] .msr-UserCard__dot { background-color: var(--msr-tone-success-fg); }
+.msr-UserCard__avatar[data-status="away"] .msr-UserCard__dot { background-color: var(--msr-tone-warning-fg); }
+.msr-UserCard__identity {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.msr-UserCard__name {
+  font-weight: var(--msr-weight-semibold);
+  font-size: var(--msr-text-md);
+}
+.msr-UserCard__handle {
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg-muted);
+}
+.msr-UserCard__bio {
+  margin: var(--msr-space-3) 0 0;
+  padding: 0 var(--msr-space-4);
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg-muted);
+  line-height: 1.5;
+}
+.msr-UserCard__stats {
+  display: flex;
+  gap: var(--msr-space-4);
+  padding: var(--msr-space-3) var(--msr-space-4) 0;
+}
+.msr-UserCard__stat {
+  display: flex;
+  flex-direction: column;
+}
+.msr-UserCard__statValue {
+  font-weight: var(--msr-weight-semibold);
+  font-size: var(--msr-text-md);
+}
+.msr-UserCard__statLabel {
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg-subtle);
+}
+.msr-UserCard__actions {
+  display: flex;
+  gap: var(--msr-space-2);
+  padding: var(--msr-space-4);
+}

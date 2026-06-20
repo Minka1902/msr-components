@@ -65,6 +65,12 @@ import {
   Play,
   Keyboard,
   Gauge,
+  Send,
+  Comment,
+  MessageDots,
+  Reply,
+  ThumbsUp,
+  ThumbsDown,
 } from "msr-icons";
 import { cx } from "./cx";
 
@@ -144,6 +150,13 @@ export const glyphs = {
   playCircle: PlayCircle2, // alias
   keyboard: Keyboard,
   gauge: Gauge,
+  send: Send,
+  share: Send, // alias: no plain `Share` glyph in msr-icons
+  comment: Comment,
+  message: MessageDots,
+  reply: Reply,
+  thumbsUp: ThumbsUp,
+  thumbsDown: ThumbsDown,
 } satisfies Record<string, Glyph>;
 
 export type IconName = keyof typeof glyphs;

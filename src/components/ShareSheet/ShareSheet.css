@@ -1,0 +1,96 @@
+.msr-ShareSheet {
+  width: 320px;
+  max-width: 100%;
+  background-color: var(--msr-color-surface);
+  color: var(--msr-color-fg);
+  padding: var(--msr-space-4);
+  border-radius: var(--msr-radius-lg);
+}
+.msr-ShareSheet__title {
+  font-weight: var(--msr-weight-semibold);
+  font-size: var(--msr-text-md);
+  margin-bottom: var(--msr-space-3);
+}
+.msr-ShareSheet__targets {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--msr-space-2);
+}
+.msr-ShareSheet__target {
+  appearance: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--msr-space-1);
+  padding: var(--msr-space-2) 0;
+  border-radius: var(--msr-radius-md);
+  color: var(--msr-color-fg);
+  text-decoration: none;
+  font: inherit;
+}
+.msr-ShareSheet__target:hover {
+  background-color: var(--msr-color-surface-2);
+}
+.msr-ShareSheet__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--msr-radius-full);
+  background-color: var(--msr-color-surface-2);
+  color: var(--msr-color-fg);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.msr-ShareSheet__glyph {
+  font-weight: var(--msr-weight-bold);
+  font-size: var(--msr-text-md);
+}
+.msr-ShareSheet__label {
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg-muted);
+}
+.msr-ShareSheet__copyRow {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-2);
+  margin-top: var(--msr-space-4);
+  padding: var(--msr-space-1) var(--msr-space-1) var(--msr-space-1) var(--msr-space-3);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-md);
+}
+.msr-ShareSheet__url {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--msr-space-2);
+  flex: 1;
+  min-width: 0;
+  color: var(--msr-color-fg-muted);
+  font-size: var(--msr-text-sm);
+}
+.msr-ShareSheet__urlText {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.msr-ShareSheet__copyBtn {
+  appearance: none;
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--msr-space-1);
+  font: inherit;
+  font-size: var(--msr-text-sm);
+  font-weight: var(--msr-weight-medium);
+  padding: var(--msr-space-1) var(--msr-space-3);
+  border-radius: var(--msr-radius-sm);
+  border: none;
+  background-color: var(--msr-color-primary);
+  color: var(--msr-color-primary-fg);
+  cursor: pointer;
+}
+.msr-ShareSheet__copyBtn[data-copied] {
+  background-color: var(--msr-tone-success-fg);
+}

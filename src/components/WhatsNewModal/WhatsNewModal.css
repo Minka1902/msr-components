@@ -1,0 +1,71 @@
+.msr-WhatsNewModal__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-4);
+}
+.msr-WhatsNewModal__item {
+  display: flex;
+  gap: var(--msr-space-3);
+  align-items: flex-start;
+}
+.msr-WhatsNewModal__icon {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--msr-radius-md);
+  background-color: color-mix(in srgb, var(--msr-color-primary) 14%, transparent);
+  color: var(--msr-color-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.msr-WhatsNewModal__body {
+  min-width: 0;
+}
+.msr-WhatsNewModal__head {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-2);
+}
+.msr-WhatsNewModal__title {
+  font-weight: var(--msr-weight-semibold);
+  font-size: var(--msr-text-md);
+  color: var(--msr-color-fg);
+}
+.msr-WhatsNewModal__tag {
+  font-size: var(--msr-text-xs);
+  font-weight: var(--msr-weight-semibold);
+  padding: 1px var(--msr-space-2);
+  border-radius: var(--msr-radius-full);
+  --msr-wn-bg: var(--msr-tone-processing-bg);
+  --msr-wn-fg: var(--msr-tone-processing-fg);
+  background-color: var(--msr-wn-bg);
+  color: var(--msr-wn-fg);
+}
+.msr-WhatsNewModal__tag[data-tone="success"] { --msr-wn-bg: var(--msr-tone-success-bg); --msr-wn-fg: var(--msr-tone-success-fg); }
+.msr-WhatsNewModal__tag[data-tone="info"] { --msr-wn-bg: var(--msr-tone-info-bg); --msr-wn-fg: var(--msr-tone-info-fg); }
+.msr-WhatsNewModal__tag[data-tone="warning"] { --msr-wn-bg: var(--msr-tone-warning-bg); --msr-wn-fg: var(--msr-tone-warning-fg); }
+.msr-WhatsNewModal__desc {
+  margin: 2px 0 0;
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg-muted);
+  line-height: 1.5;
+}
+.msr-WhatsNewModal__cta {
+  appearance: none;
+  font: inherit;
+  font-size: var(--msr-text-sm);
+  font-weight: var(--msr-weight-medium);
+  padding: var(--msr-space-2) var(--msr-space-4);
+  border-radius: var(--msr-radius-md);
+  border: none;
+  background-color: var(--msr-color-primary);
+  color: var(--msr-color-primary-fg);
+  cursor: pointer;
+}
+.msr-WhatsNewModal__cta:hover {
+  background-color: var(--msr-color-primary-hover);
+}

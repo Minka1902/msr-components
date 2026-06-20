@@ -1,0 +1,22 @@
+.msr-LiveCursors {
+  position: relative;
+}
+.msr-LiveCursors__cursor {
+  position: absolute;
+  transform: translate(-2px, -2px);
+  pointer-events: none;
+  z-index: var(--msr-z-popover);
+  transition: left 0.08s linear, top 0.08s linear;
+  display: flex;
+  align-items: flex-start;
+}
+.msr-LiveCursors__label {
+  margin-left: 4px;
+  margin-top: 10px;
+  padding: 1px var(--msr-space-2);
+  border-radius: var(--msr-radius-full);
+  font-size: var(--msr-text-xs);
+  font-weight: var(--msr-weight-medium);
+  color: #fff;
+  white-space: nowrap;
+}

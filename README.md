@@ -106,6 +106,14 @@ plus charts RadarChart, ScatterPlot, FunnelChart, StackedBarChart
 Sidebar, Toolbar, InlineEdit, and **FormBuilder** — render a complete, validated
 form from a JSON field schema (great for AI-generated UIs).
 
+**Onboarding**: ProductTour (spotlight coachmarks with step popovers),
+FeatureSpotlight (pulsing highlight), WhatsNewModal (changelog dialog),
+HintBubble (anchored callout), OnboardingChecklist (progress + tasks).
+
+**Collaboration**: PresenceAvatars (status stack), LiveCursors
+(`useBroadcastChannel`), TypingIndicator, ReactionBar (emoji reactions),
+CommentThread (nested replies), VoteButtons, UserCard, ShareSheet.
+
 **AI / agent UI**: ChatThread, ChatMessage, StreamingText, PromptInput
 (⌘↵ to send), ToolCallCard, TokenUsageMeter, MarkdownRenderer (dependency-free,
 reuses CopyableCodeBlock).

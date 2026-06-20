@@ -118,6 +118,23 @@ export * from "./components/CountdownTimer";
 export * from "./components/IdleDialog";
 export * from "./components/GeoPrompt";
 
+// ---- Components: onboarding ----
+export * from "./components/ProductTour";
+export * from "./components/FeatureSpotlight";
+export * from "./components/WhatsNewModal";
+export * from "./components/HintBubble";
+export * from "./components/OnboardingChecklist";
+
+// ---- Components: collaboration ----
+export * from "./components/PresenceAvatars";
+export * from "./components/LiveCursors";
+export * from "./components/TypingIndicator";
+export * from "./components/ReactionBar";
+export * from "./components/CommentThread";
+export * from "./components/VoteButtons";
+export * from "./components/UserCard";
+export * from "./components/ShareSheet";
+
 // ---- Components: AI / agent UI ----
 export * from "./components/Chat";
 export * from "./components/MarkdownRenderer";

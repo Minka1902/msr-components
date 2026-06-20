@@ -1,0 +1,34 @@
+.msr-TypingIndicator {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--msr-space-2);
+  color: var(--msr-color-fg-muted);
+  font-size: var(--msr-text-sm);
+}
+.msr-TypingIndicator[data-size="sm"] {
+  font-size: var(--msr-text-xs);
+}
+.msr-TypingIndicator__dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  background-color: var(--msr-color-surface-2);
+  padding: 6px var(--msr-space-2);
+  border-radius: var(--msr-radius-full);
+}
+.msr-TypingIndicator__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--msr-radius-full);
+  background-color: var(--msr-color-fg-subtle);
+  animation: msr-typing-bounce 1.2s infinite ease-in-out;
+}
+.msr-TypingIndicator__dot:nth-child(2) { animation-delay: 0.18s; }
+.msr-TypingIndicator__dot:nth-child(3) { animation-delay: 0.36s; }
+@keyframes msr-typing-bounce {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.5; }
+  30% { transform: translateY(-4px); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .msr-TypingIndicator__dot { animation: none; }
+}
