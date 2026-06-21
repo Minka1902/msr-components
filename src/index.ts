@@ -230,6 +230,16 @@ export * from "./components/GlitchText";
 export * from "./components/CardStack";
 export * from "./components/Globe";
 
+// ---- Components: app-building scaffolding (agent-friendly) ----
+export * from "./components/PageScaffold";
+export * from "./components/SchemaTools";
+export * from "./components/ComponentCatalog";
+export * from "./components/Filtering";
+export * from "./components/TableViews";
+export * from "./components/DataImport";
+export * from "./components/Validation";
+export * from "./components/Guards";
+
 // ---- Components: more inputs & data ----
 export * from "./components/VirtualizedList";
 export * from "./components/MaskedInput";

@@ -1,0 +1,242 @@
+/* ---- DataPreviewTable ---- */
+.msr-DataPreview {
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  overflow: hidden;
+}
+.msr-DataPreview__caption {
+  padding: var(--msr-space-2) var(--msr-space-3);
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg-muted);
+  border-bottom: 1px solid var(--msr-color-border);
+  background-color: var(--msr-color-surface-2);
+}
+.msr-DataPreview__scroll {
+  overflow-x: auto;
+}
+.msr-DataPreview__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--msr-text-sm);
+}
+.msr-DataPreview__table th {
+  position: sticky;
+  top: 0;
+  text-align: left;
+  background-color: var(--msr-color-surface);
+  padding: var(--msr-space-2) var(--msr-space-3);
+  border-bottom: 1px solid var(--msr-color-border);
+  font-weight: var(--msr-weight-semibold);
+  white-space: nowrap;
+}
+.msr-DataPreview__table td {
+  padding: var(--msr-space-2) var(--msr-space-3);
+  border-bottom: 1px solid var(--msr-color-border);
+  white-space: nowrap;
+}
+.msr-DataPreview__table tbody tr:nth-child(even) {
+  background-color: var(--msr-color-surface-2);
+}
+.msr-DataPreview__null {
+  color: var(--msr-color-fg-subtle);
+  font-style: italic;
+}
+.msr-DataPreview__more {
+  padding: var(--msr-space-2) var(--msr-space-3);
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg-subtle);
+  text-align: center;
+}
+
+/* ---- DataSourcePicker ---- */
+.msr-DataSource {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--msr-space-3);
+}
+.msr-DataSource__option {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--msr-space-3);
+  text-align: left;
+  padding: var(--msr-space-3) var(--msr-space-4);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  background-color: var(--msr-color-surface);
+  cursor: pointer;
+  transition: border-color var(--msr-transition-fast);
+}
+.msr-DataSource__option:hover:not(:disabled) {
+  border-color: var(--msr-color-border-strong);
+}
+.msr-DataSource__option[data-selected] {
+  border-color: var(--msr-color-primary);
+  box-shadow: 0 0 0 1px var(--msr-color-primary);
+}
+.msr-DataSource__option:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.msr-DataSource__icon {
+  font-size: var(--msr-text-xl);
+  flex-shrink: 0;
+}
+.msr-DataSource__body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.msr-DataSource__label {
+  font-weight: var(--msr-weight-medium);
+  font-size: var(--msr-text-sm);
+}
+.msr-DataSource__desc {
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg-muted);
+}
+
+/* ---- FieldMappingWizard ---- */
+.msr-FieldMap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-2);
+}
+.msr-FieldMap__head {
+  display: grid;
+  grid-template-columns: 1fr 24px 1fr;
+  gap: var(--msr-space-3);
+  font-size: var(--msr-text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--msr-color-fg-subtle);
+}
+.msr-FieldMap__head span:last-child {
+  grid-column: 3;
+}
+.msr-FieldMap__row {
+  display: grid;
+  grid-template-columns: 1fr 24px 1fr;
+  align-items: center;
+  gap: var(--msr-space-3);
+  padding: var(--msr-space-2);
+  border-radius: var(--msr-radius-md);
+}
+.msr-FieldMap__row[data-error] {
+  background-color: var(--msr-tone-danger-bg);
+}
+.msr-FieldMap__target {
+  font-size: var(--msr-text-sm);
+  font-weight: var(--msr-weight-medium);
+}
+.msr-FieldMap__req {
+  color: var(--msr-tone-danger-fg);
+  margin-left: 2px;
+}
+.msr-FieldMap__arrow {
+  color: var(--msr-color-fg-subtle);
+  text-align: center;
+}
+.msr-FieldMap__row select {
+  font: inherit;
+  font-size: var(--msr-text-sm);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-md);
+  padding: var(--msr-space-1) var(--msr-space-2);
+  background-color: var(--msr-color-surface);
+  color: var(--msr-color-fg);
+}
+
+/* ---- ImportWizard ---- */
+.msr-ImportWizard {
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  background-color: var(--msr-color-surface);
+  overflow: hidden;
+}
+.msr-ImportWizard__steps {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid var(--msr-color-border);
+  background-color: var(--msr-color-surface-2);
+}
+.msr-ImportWizard__step {
+  flex: 1;
+}
+.msr-ImportWizard__step button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--msr-space-2);
+  background: none;
+  border: none;
+  padding: var(--msr-space-3);
+  cursor: pointer;
+  color: var(--msr-color-fg-muted);
+  font-size: var(--msr-text-sm);
+}
+.msr-ImportWizard__step button:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+.msr-ImportWizard__step[data-active] button {
+  color: var(--msr-color-fg);
+  font-weight: var(--msr-weight-semibold);
+}
+.msr-ImportWizard__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: var(--msr-radius-full);
+  background-color: var(--msr-color-border);
+  color: var(--msr-color-fg-muted);
+  font-size: var(--msr-text-xs);
+}
+.msr-ImportWizard__step[data-active] .msr-ImportWizard__num {
+  background-color: var(--msr-color-primary);
+  color: var(--msr-color-primary-fg);
+}
+.msr-ImportWizard__step[data-done] .msr-ImportWizard__num {
+  background-color: var(--msr-tone-success-fg);
+  color: #fff;
+}
+.msr-ImportWizard__body {
+  padding: var(--msr-space-5);
+  min-height: 120px;
+}
+.msr-ImportWizard__footer {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--msr-space-3) var(--msr-space-5);
+  border-top: 1px solid var(--msr-color-border);
+}
+.msr-ImportWizard__back {
+  border: 1px solid var(--msr-color-border);
+  background-color: var(--msr-color-surface);
+  color: var(--msr-color-fg);
+  border-radius: var(--msr-radius-md);
+  padding: var(--msr-space-2) var(--msr-space-4);
+  cursor: pointer;
+  font-size: var(--msr-text-sm);
+}
+.msr-ImportWizard__back:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.msr-ImportWizard__next {
+  border: 1px solid var(--msr-color-primary);
+  background-color: var(--msr-color-primary);
+  color: var(--msr-color-primary-fg);
+  border-radius: var(--msr-radius-md);
+  padding: var(--msr-space-2) var(--msr-space-4);
+  cursor: pointer;
+  font-size: var(--msr-text-sm);
+}
+.msr-ImportWizard__next:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

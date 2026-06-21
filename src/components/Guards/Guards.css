@@ -1,0 +1,27 @@
+/* ---- UnsavedChangesGuard ---- */
+.msr-UnsavedGuard {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-2);
+  padding: var(--msr-space-2) var(--msr-space-4);
+  background-color: var(--msr-tone-warning-bg);
+  color: var(--msr-tone-warning-fg);
+  border: 1px solid var(--msr-tone-warning-border);
+  border-radius: var(--msr-radius-md);
+  font-size: var(--msr-text-sm);
+  margin-bottom: var(--msr-space-3);
+}
+.msr-UnsavedGuard__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--msr-tone-warning-fg);
+}
+
+/* ---- PermissionGuard ---- */
+.msr-PermissionGuard--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  user-select: none;
+  filter: grayscale(0.4);
+}

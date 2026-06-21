@@ -1,0 +1,191 @@
+/* ---- SchemaPageRenderer ---- */
+.msr-SchemaPage {
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-6);
+}
+.msr-SchemaPage__title {
+  margin: 0;
+  font-size: var(--msr-text-2xl);
+  font-weight: var(--msr-weight-bold);
+}
+.msr-SchemaPage__desc {
+  margin: 0;
+  color: var(--msr-color-fg-muted);
+}
+.msr-SchemaPage__section {
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  padding: var(--msr-space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-4);
+}
+.msr-SchemaPage__sectionHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--msr-space-3);
+}
+.msr-SchemaPage__sectionTitle {
+  margin: 0;
+  font-size: var(--msr-text-lg);
+  font-weight: var(--msr-weight-semibold);
+}
+.msr-SchemaPage__sectionDesc {
+  margin: var(--msr-space-1) 0 0;
+  color: var(--msr-color-fg-muted);
+  font-size: var(--msr-text-sm);
+}
+.msr-SchemaPage__actions {
+  display: flex;
+  gap: var(--msr-space-2);
+}
+.msr-SchemaPage__action {
+  border: 1px solid var(--msr-color-border);
+  background-color: var(--msr-color-surface);
+  color: var(--msr-color-fg);
+  border-radius: var(--msr-radius-md);
+  padding: var(--msr-space-2) var(--msr-space-3);
+  font-size: var(--msr-text-sm);
+  cursor: pointer;
+}
+.msr-SchemaPage__action[data-variant="primary"] {
+  background-color: var(--msr-color-primary);
+  border-color: var(--msr-color-primary);
+  color: var(--msr-color-primary-fg);
+}
+.msr-SchemaPage__action[data-variant="danger"] {
+  background-color: var(--msr-tone-danger-bg);
+  border-color: var(--msr-tone-danger-border);
+  color: var(--msr-tone-danger-fg);
+}
+.msr-SchemaPage__grid {
+  display: grid;
+  gap: var(--msr-space-4);
+}
+.msr-SchemaPage__label {
+  font-size: var(--msr-text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--msr-color-fg-subtle);
+}
+.msr-SchemaPage__value {
+  font-size: var(--msr-text-md);
+  color: var(--msr-color-fg);
+  margin-top: 2px;
+}
+.msr-SchemaPage__hint {
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg-muted);
+  margin-top: 2px;
+}
+.msr-SchemaTools__nullish {
+  color: var(--msr-color-fg-subtle);
+  font-style: normal;
+}
+
+/* ---- SchemaViewer ---- */
+.msr-SchemaViewer {
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  overflow: hidden;
+}
+.msr-SchemaViewer__name {
+  padding: var(--msr-space-3) var(--msr-space-4);
+  font-weight: var(--msr-weight-semibold);
+  background-color: var(--msr-color-surface-2);
+  border-bottom: 1px solid var(--msr-color-border);
+}
+.msr-SchemaViewer__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--msr-text-sm);
+}
+.msr-SchemaViewer__table th {
+  text-align: left;
+  padding: var(--msr-space-2) var(--msr-space-4);
+  color: var(--msr-color-fg-muted);
+  font-weight: var(--msr-weight-medium);
+  border-bottom: 1px solid var(--msr-color-border);
+  font-size: var(--msr-text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.msr-SchemaViewer__table td {
+  padding: var(--msr-space-2) var(--msr-space-4);
+  border-bottom: 1px solid var(--msr-color-border);
+  vertical-align: top;
+}
+.msr-SchemaViewer__table tr:last-child td {
+  border-bottom: none;
+}
+.msr-SchemaViewer__field {
+  font-family: var(--msr-font-mono);
+  font-weight: var(--msr-weight-medium);
+}
+.msr-SchemaViewer__type {
+  font-family: var(--msr-font-mono);
+  color: var(--msr-color-primary);
+}
+.msr-SchemaViewer__enum {
+  display: block;
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg-subtle);
+}
+.msr-SchemaViewer__req {
+  color: var(--msr-tone-danger-fg);
+  font-size: var(--msr-text-xs);
+}
+.msr-SchemaViewer__opt {
+  color: var(--msr-color-fg-subtle);
+  font-size: var(--msr-text-xs);
+}
+.msr-SchemaViewer__example {
+  display: block;
+  margin-top: 2px;
+  color: var(--msr-color-fg-subtle);
+  font-size: var(--msr-text-xs);
+}
+
+/* ---- SchemaDiffViewer ---- */
+.msr-SchemaDiff {
+  font-family: var(--msr-font-mono);
+  font-size: var(--msr-text-sm);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-md);
+  overflow: hidden;
+}
+.msr-SchemaDiff__row {
+  display: flex;
+  align-items: baseline;
+  gap: var(--msr-space-2);
+  padding: var(--msr-space-1) var(--msr-space-3);
+}
+.msr-SchemaDiff__row[data-status="added"] {
+  background-color: var(--msr-tone-success-bg);
+  color: var(--msr-tone-success-fg);
+}
+.msr-SchemaDiff__row[data-status="removed"] {
+  background-color: var(--msr-tone-danger-bg);
+  color: var(--msr-tone-danger-fg);
+}
+.msr-SchemaDiff__row[data-status="changed"] {
+  background-color: var(--msr-tone-warning-bg);
+  color: var(--msr-tone-warning-fg);
+}
+.msr-SchemaDiff__marker {
+  width: 1ch;
+  font-weight: var(--msr-weight-bold);
+}
+.msr-SchemaDiff__name {
+  font-weight: var(--msr-weight-medium);
+}
+.msr-SchemaDiff__detail del {
+  opacity: 0.7;
+}
+.msr-SchemaDiff__detail ins {
+  text-decoration: none;
+  font-weight: var(--msr-weight-semibold);
+}

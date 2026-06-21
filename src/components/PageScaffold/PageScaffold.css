@@ -1,0 +1,212 @@
+/* ---- PageHeader ---- */
+.msr-PageHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-3);
+}
+.msr-PageHeader__breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--msr-space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg-muted);
+}
+.msr-PageHeader__breadcrumbs a {
+  color: var(--msr-color-fg-muted);
+  text-decoration: none;
+}
+.msr-PageHeader__breadcrumbs a:hover {
+  color: var(--msr-color-primary);
+}
+.msr-PageHeader__breadcrumbs li[aria-current="page"] span {
+  color: var(--msr-color-fg);
+}
+.msr-PageHeader__sep {
+  margin: 0 var(--msr-space-1);
+  color: var(--msr-color-fg-subtle);
+}
+.msr-PageHeader__row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--msr-space-4);
+  flex-wrap: wrap;
+}
+.msr-PageHeader__lead {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-3);
+  min-width: 0;
+}
+.msr-PageHeader__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.msr-PageHeader__title {
+  margin: 0;
+  font-size: var(--msr-text-2xl);
+  font-weight: var(--msr-weight-bold);
+  line-height: var(--msr-leading-tight);
+}
+.msr-PageHeader__subtitle {
+  margin: var(--msr-space-1) 0 0;
+  color: var(--msr-color-fg-muted);
+  font-size: var(--msr-text-md);
+}
+.msr-PageHeader__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--msr-space-2);
+  margin-top: var(--msr-space-2);
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg-muted);
+}
+.msr-PageHeader__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-2);
+  flex-shrink: 0;
+}
+
+/* ---- PageSection ---- */
+.msr-PageSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-4);
+}
+.msr-PageSection[data-bordered] {
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  padding: var(--msr-space-5);
+}
+.msr-PageSection__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--msr-space-3);
+}
+.msr-PageSection__title {
+  margin: 0;
+  font-size: var(--msr-text-lg);
+  font-weight: var(--msr-weight-semibold);
+}
+.msr-PageSection__desc {
+  margin: var(--msr-space-1) 0 0;
+  color: var(--msr-color-fg-muted);
+  font-size: var(--msr-text-sm);
+}
+.msr-PageSection__actions {
+  display: flex;
+  gap: var(--msr-space-2);
+  flex-shrink: 0;
+}
+.msr-PageSection__error {
+  color: var(--msr-tone-danger-fg);
+  background-color: var(--msr-tone-danger-bg);
+  border: 1px solid var(--msr-tone-danger-border);
+  border-radius: var(--msr-radius-md);
+  padding: var(--msr-space-3) var(--msr-space-4);
+  font-size: var(--msr-text-sm);
+}
+.msr-PageSection__empty {
+  color: var(--msr-color-fg-subtle);
+  font-size: var(--msr-text-sm);
+  text-align: center;
+  padding: var(--msr-space-8);
+}
+.msr-PageSection__loading {
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-3);
+}
+.msr-PageSection__bar {
+  height: 12px;
+  border-radius: var(--msr-radius-sm);
+  background: linear-gradient(
+    90deg,
+    var(--msr-color-surface-2) 25%,
+    var(--msr-color-border) 37%,
+    var(--msr-color-surface-2) 63%
+  );
+  background-size: 400% 100%;
+  animation: msr-PageSection-shimmer 1.4s ease infinite;
+}
+.msr-PageSection__bar:nth-child(2) {
+  width: 80%;
+}
+.msr-PageSection__bar:nth-child(3) {
+  width: 60%;
+}
+@keyframes msr-PageSection-shimmer {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+/* ---- PageActionsBar ---- */
+.msr-PageActionsBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--msr-space-3);
+  padding: var(--msr-space-3) var(--msr-space-4);
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+}
+.msr-PageActionsBar[data-sticky] {
+  position: sticky;
+  bottom: var(--msr-space-4);
+  box-shadow: var(--msr-shadow-2);
+}
+.msr-PageActionsBar__start,
+.msr-PageActionsBar__end {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-2);
+}
+
+/* ---- BulkActionBar ---- */
+.msr-BulkActionBar {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-4);
+  padding: var(--msr-space-2) var(--msr-space-4);
+  background-color: var(--msr-color-fg);
+  color: var(--msr-color-bg);
+  border-radius: var(--msr-radius-full);
+  box-shadow: var(--msr-shadow-3);
+}
+.msr-BulkActionBar__count {
+  font-size: var(--msr-text-sm);
+  font-weight: var(--msr-weight-medium);
+  white-space: nowrap;
+}
+.msr-BulkActionBar__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-2);
+}
+.msr-BulkActionBar__clear {
+  background: none;
+  border: none;
+  color: inherit;
+  opacity: 0.75;
+  cursor: pointer;
+  font-size: var(--msr-text-sm);
+  padding: var(--msr-space-1) var(--msr-space-2);
+  border-radius: var(--msr-radius-sm);
+}
+.msr-BulkActionBar__clear:hover {
+  opacity: 1;
+}
