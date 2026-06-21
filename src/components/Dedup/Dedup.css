@@ -1,0 +1,187 @@
+/* ---- DuplicateDetectorView ---- */
+.msr-Dupes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-4);
+}
+.msr-Dupes__empty {
+  padding: var(--msr-space-8);
+  text-align: center;
+  color: var(--msr-color-fg-subtle);
+  font-size: var(--msr-text-sm);
+}
+.msr-Dupes__group {
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  overflow: hidden;
+}
+.msr-Dupes__head {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-2);
+  padding: var(--msr-space-3) var(--msr-space-4);
+  background-color: var(--msr-color-surface-2);
+  border-bottom: 1px solid var(--msr-color-border);
+}
+.msr-Dupes__score {
+  font-size: var(--msr-text-xs);
+  font-weight: var(--msr-weight-semibold);
+  padding: 2px var(--msr-space-2);
+  border-radius: var(--msr-radius-full);
+}
+.msr-Dupes__score[data-tone="danger"] {
+  background-color: var(--msr-tone-danger-bg);
+  color: var(--msr-tone-danger-fg);
+}
+.msr-Dupes__score[data-tone="warning"] {
+  background-color: var(--msr-tone-warning-bg);
+  color: var(--msr-tone-warning-fg);
+}
+.msr-Dupes__score[data-tone="muted"] {
+  background-color: var(--msr-tone-muted-bg);
+  color: var(--msr-tone-muted-fg);
+}
+.msr-Dupes__fields {
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg-muted);
+}
+.msr-Dupes__actions {
+  margin-left: auto;
+  display: flex;
+  gap: var(--msr-space-2);
+}
+.msr-Dupes__dismiss {
+  border: 1px solid var(--msr-color-border);
+  background-color: var(--msr-color-surface);
+  color: var(--msr-color-fg);
+  border-radius: var(--msr-radius-md);
+  padding: var(--msr-space-1) var(--msr-space-3);
+  cursor: pointer;
+  font-size: var(--msr-text-xs);
+}
+.msr-Dupes__merge {
+  border: 1px solid var(--msr-color-primary);
+  background-color: var(--msr-color-primary);
+  color: var(--msr-color-primary-fg);
+  border-radius: var(--msr-radius-md);
+  padding: var(--msr-space-1) var(--msr-space-3);
+  cursor: pointer;
+  font-size: var(--msr-text-xs);
+}
+.msr-Dupes__records {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+.msr-Dupes__record {
+  padding: var(--msr-space-3) var(--msr-space-4);
+  border-right: 1px solid var(--msr-color-border);
+}
+.msr-Dupes__record:last-child {
+  border-right: none;
+}
+.msr-Dupes__recordLabel {
+  font-weight: var(--msr-weight-medium);
+  font-size: var(--msr-text-sm);
+  margin-bottom: var(--msr-space-2);
+}
+.msr-Dupes__recordFields {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-1);
+  font-size: var(--msr-text-xs);
+}
+.msr-Dupes__recordFields > div {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--msr-space-2);
+}
+.msr-Dupes__recordFields dt {
+  color: var(--msr-color-fg-subtle);
+}
+.msr-Dupes__recordFields dd {
+  margin: 0;
+  text-align: right;
+}
+
+/* ---- MergeRecordsDialog ---- */
+.msr-Merge {
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  background-color: var(--msr-color-surface);
+  overflow: hidden;
+}
+.msr-Merge__head {
+  padding: var(--msr-space-3) var(--msr-space-4);
+  border-bottom: 1px solid var(--msr-color-border);
+  font-weight: var(--msr-weight-semibold);
+  font-size: var(--msr-text-sm);
+}
+.msr-Merge__fields {
+  display: flex;
+  flex-direction: column;
+}
+.msr-Merge__field {
+  padding: var(--msr-space-3) var(--msr-space-4);
+  border-bottom: 1px solid var(--msr-color-border);
+}
+.msr-Merge__fieldLabel {
+  font-size: var(--msr-text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--msr-color-fg-subtle);
+  margin-bottom: var(--msr-space-2);
+}
+.msr-Merge__choices {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--msr-space-2);
+}
+.msr-Merge__choice {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-md);
+  padding: var(--msr-space-2) var(--msr-space-3);
+  cursor: pointer;
+}
+.msr-Merge__choice[data-chosen] {
+  border-color: var(--msr-color-primary);
+  background-color: var(--msr-tone-info-bg);
+}
+.msr-Merge__choiceValue {
+  font-size: var(--msr-text-sm);
+  font-weight: var(--msr-weight-medium);
+}
+.msr-Merge__choiceSource {
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg-subtle);
+}
+.msr-Merge__empty {
+  color: var(--msr-color-fg-subtle);
+}
+.msr-Merge__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--msr-space-2);
+  padding: var(--msr-space-3) var(--msr-space-4);
+}
+.msr-Merge__cancel {
+  border: 1px solid var(--msr-color-border);
+  background-color: var(--msr-color-surface);
+  color: var(--msr-color-fg);
+  border-radius: var(--msr-radius-md);
+  padding: var(--msr-space-2) var(--msr-space-4);
+  cursor: pointer;
+  font-size: var(--msr-text-sm);
+}
+.msr-Merge__confirm {
+  border: 1px solid var(--msr-color-primary);
+  background-color: var(--msr-color-primary);
+  color: var(--msr-color-primary-fg);
+  border-radius: var(--msr-radius-md);
+  padding: var(--msr-space-2) var(--msr-space-4);
+  cursor: pointer;
+  font-size: var(--msr-text-sm);
+}

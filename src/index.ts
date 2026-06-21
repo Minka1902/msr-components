@@ -252,6 +252,12 @@ export * from "./components/ResourcePages";
 export * from "./components/DetailLayouts";
 export * from "./components/EntityViews";
 
+// ---- Components: data-heavy (search, compare, dedup, graphs) ----
+export * from "./components/SearchViews";
+export * from "./components/Comparison";
+export * from "./components/Dedup";
+export * from "./components/DataGraph";
+
 // ---- Components: more inputs & data ----
 export * from "./components/VirtualizedList";
 export * from "./components/MaskedInput";

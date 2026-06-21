@@ -1,0 +1,79 @@
+/* ---- RelationshipGraph ---- */
+.msr-RelGraph {
+  max-width: 100%;
+  height: auto;
+}
+.msr-RelGraph__edge {
+  stroke: var(--msr-color-border-strong);
+  stroke-width: 1.5;
+}
+.msr-RelGraph__node circle {
+  stroke: var(--msr-color-surface);
+  stroke-width: 2;
+  transition: r var(--msr-transition-fast);
+}
+.msr-RelGraph__node[data-selected] circle {
+  stroke: var(--msr-color-fg);
+}
+.msr-RelGraph__label {
+  font-size: 11px;
+  fill: var(--msr-color-fg);
+  font-family: var(--msr-font-sans);
+}
+
+/* ---- LineageViewer ---- */
+.msr-Lineage {
+  display: flex;
+  align-items: stretch;
+  gap: var(--msr-space-2);
+  overflow-x: auto;
+  padding: var(--msr-space-2);
+}
+.msr-Lineage__stage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--msr-space-3);
+  min-width: 160px;
+}
+.msr-Lineage__node {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+  background-color: var(--msr-color-surface);
+  border: 1px solid var(--msr-color-border);
+  border-left: 3px solid var(--msr-color-border-strong);
+  border-radius: var(--msr-radius-md);
+  padding: var(--msr-space-3);
+  font: inherit;
+  cursor: pointer;
+}
+button.msr-Lineage__node:hover {
+  border-color: var(--msr-color-border-strong);
+  box-shadow: var(--msr-shadow-1);
+}
+.msr-Lineage__node[data-kind="source"] {
+  border-left-color: var(--msr-tone-info-fg);
+}
+.msr-Lineage__node[data-kind="transform"] {
+  border-left-color: var(--msr-tone-processing-fg);
+}
+.msr-Lineage__node[data-kind="output"] {
+  border-left-color: var(--msr-tone-success-fg);
+}
+.msr-Lineage__nodeLabel {
+  font-weight: var(--msr-weight-medium);
+  font-size: var(--msr-text-sm);
+}
+.msr-Lineage__nodeDetail {
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg-muted);
+}
+.msr-Lineage__arrow {
+  display: flex;
+  align-items: center;
+  color: var(--msr-color-fg-subtle);
+  font-size: var(--msr-text-xl);
+}
