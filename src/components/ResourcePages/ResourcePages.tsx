@@ -227,7 +227,7 @@ const ResourceFormPage = React.forwardRef<
 /* ResourceCreatePage                                                  */
 /* ------------------------------------------------------------------ */
 
-export interface ResourceCreatePageProps extends ResourceFormPageBaseProps {}
+export type ResourceCreatePageProps = ResourceFormPageBaseProps;
 
 /** Standard create screen with form, validation and save/cancel. */
 export const ResourceCreatePage = React.forwardRef<

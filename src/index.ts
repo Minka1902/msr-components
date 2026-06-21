@@ -263,6 +263,12 @@ export * from "./components/FormFlow";
 export * from "./components/FormState";
 export * from "./components/Setup";
 
+// ---- Components: integration & backend-facing ----
+export * from "./components/Integrations";
+export * from "./components/Webhooks";
+export * from "./components/Secrets";
+export * from "./components/Jobs";
+
 // ---- Components: more inputs & data ----
 export * from "./components/VirtualizedList";
 export * from "./components/MaskedInput";
