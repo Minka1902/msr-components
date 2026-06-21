@@ -239,6 +239,13 @@ export * from "./components/TableViews";
 export * from "./components/DataImport";
 export * from "./components/Validation";
 export * from "./components/Guards";
+export * from "./components/Audit";
+
+// ---- Components: AI-agent run, code & control UI ----
+export * from "./components/AgentRun";
+export * from "./components/AgentCode";
+export * from "./components/AgentPrompt";
+export * from "./components/AgentControl";
 
 // ---- Components: more inputs & data ----
 export * from "./components/VirtualizedList";
