@@ -247,6 +247,11 @@ export * from "./components/AgentCode";
 export * from "./components/AgentPrompt";
 export * from "./components/AgentControl";
 
+// ---- Components: resource pages & app layouts ----
+export * from "./components/ResourcePages";
+export * from "./components/DetailLayouts";
+export * from "./components/EntityViews";
+
 // ---- Components: more inputs & data ----
 export * from "./components/VirtualizedList";
 export * from "./components/MaskedInput";
