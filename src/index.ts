@@ -258,6 +258,11 @@ export * from "./components/Comparison";
 export * from "./components/Dedup";
 export * from "./components/DataGraph";
 
+// ---- Components: forms & setup flow ----
+export * from "./components/FormFlow";
+export * from "./components/FormState";
+export * from "./components/Setup";
+
 // ---- Components: more inputs & data ----
 export * from "./components/VirtualizedList";
 export * from "./components/MaskedInput";

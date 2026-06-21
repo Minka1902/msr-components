@@ -1,0 +1,94 @@
+/* ---- AutoSaveStatus ---- */
+.msr-AutoSave {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--msr-space-2);
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg-muted);
+}
+.msr-AutoSave__icon {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--msr-color-fg-subtle);
+  flex-shrink: 0;
+}
+.msr-AutoSave[data-state="saving"] .msr-AutoSave__icon,
+.msr-AutoSave[data-state="retrying"] .msr-AutoSave__icon {
+  background-color: var(--msr-tone-info-fg);
+  animation: msr-AutoSave-pulse 1s ease infinite;
+}
+.msr-AutoSave[data-state="saved"] .msr-AutoSave__icon,
+.msr-AutoSave[data-state="idle"] .msr-AutoSave__icon {
+  background-color: var(--msr-tone-success-fg);
+}
+.msr-AutoSave[data-state="error"] .msr-AutoSave__icon {
+  background-color: var(--msr-tone-danger-fg);
+}
+.msr-AutoSave[data-state="offline"] .msr-AutoSave__icon {
+  background-color: var(--msr-tone-warning-fg);
+}
+@keyframes msr-AutoSave-pulse {
+  50% {
+    opacity: 0.3;
+  }
+}
+.msr-AutoSave__time {
+  color: var(--msr-color-fg-subtle);
+  font-size: var(--msr-text-xs);
+}
+.msr-AutoSave__retry {
+  background: none;
+  border: none;
+  color: var(--msr-color-primary);
+  cursor: pointer;
+  font-size: var(--msr-text-sm);
+}
+
+/* ---- DraftRestoreBanner ---- */
+.msr-DraftBanner {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-3);
+  padding: var(--msr-space-3) var(--msr-space-4);
+  background-color: var(--msr-tone-info-bg);
+  color: var(--msr-tone-info-fg);
+  border: 1px solid var(--msr-tone-info-border);
+  border-radius: var(--msr-radius-md);
+}
+.msr-DraftBanner__icon {
+  font-size: var(--msr-text-lg);
+}
+.msr-DraftBanner__text {
+  flex: 1;
+  font-size: var(--msr-text-sm);
+}
+.msr-DraftBanner__time {
+  color: var(--msr-color-fg-muted);
+}
+.msr-DraftBanner__actions {
+  display: flex;
+  gap: var(--msr-space-2);
+}
+.msr-DraftBanner__discard {
+  border: none;
+  background: none;
+  color: inherit;
+  opacity: 0.8;
+  cursor: pointer;
+  font-size: var(--msr-text-sm);
+  padding: var(--msr-space-1) var(--msr-space-2);
+}
+.msr-DraftBanner__discard:hover {
+  opacity: 1;
+}
+.msr-DraftBanner__restore {
+  border: 1px solid currentColor;
+  background-color: var(--msr-color-surface);
+  color: var(--msr-tone-info-fg);
+  border-radius: var(--msr-radius-md);
+  padding: var(--msr-space-1) var(--msr-space-3);
+  cursor: pointer;
+  font-size: var(--msr-text-sm);
+  font-weight: var(--msr-weight-medium);
+}

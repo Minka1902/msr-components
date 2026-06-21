@@ -1,0 +1,233 @@
+/* ---- SetupRequirementCard ---- */
+.msr-SetupReq {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-3);
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  background-color: var(--msr-color-surface);
+  padding: var(--msr-space-3) var(--msr-space-4);
+}
+.msr-SetupReq[data-state="complete"] {
+  border-color: var(--msr-tone-success-border);
+}
+.msr-SetupReq__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background-color: var(--msr-color-surface-2);
+  color: var(--msr-color-fg-muted);
+}
+.msr-SetupReq__icon[data-state="complete"] {
+  background-color: var(--msr-tone-success-fg);
+  color: #fff;
+}
+.msr-SetupReq__icon[data-state="in-progress"] {
+  background-color: var(--msr-tone-info-bg);
+  color: var(--msr-tone-info-fg);
+}
+.msr-SetupReq__body {
+  flex: 1;
+  min-width: 0;
+}
+.msr-SetupReq__title {
+  font-weight: var(--msr-weight-medium);
+  font-size: var(--msr-text-sm);
+}
+.msr-SetupReq__desc {
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg-muted);
+  margin-top: 2px;
+}
+.msr-SetupReq__action {
+  border: 1px solid var(--msr-color-primary);
+  background-color: var(--msr-color-primary);
+  color: var(--msr-color-primary-fg);
+  border-radius: var(--msr-radius-md);
+  padding: var(--msr-space-2) var(--msr-space-3);
+  cursor: pointer;
+  font-size: var(--msr-text-sm);
+  white-space: nowrap;
+}
+
+/* ---- SetupBlockerList ---- */
+.msr-Blockers {
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  background-color: var(--msr-color-surface);
+  overflow: hidden;
+}
+.msr-Blockers__head {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-2);
+  padding: var(--msr-space-3) var(--msr-space-4);
+  border-bottom: 1px solid var(--msr-color-border);
+  font-weight: var(--msr-weight-semibold);
+  font-size: var(--msr-text-sm);
+}
+.msr-Blockers__count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  border-radius: var(--msr-radius-full);
+  background-color: var(--msr-tone-danger-bg);
+  color: var(--msr-tone-danger-fg);
+  font-size: var(--msr-text-xs);
+  padding: 0 var(--msr-space-1);
+}
+.msr-Blockers__count[data-empty] {
+  background-color: var(--msr-tone-success-bg);
+  color: var(--msr-tone-success-fg);
+}
+.msr-Blockers__clear {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-2);
+  padding: var(--msr-space-4);
+  color: var(--msr-tone-success-fg);
+  font-size: var(--msr-text-sm);
+}
+.msr-Blockers__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msr-Blockers__item {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-3);
+  padding: var(--msr-space-3) var(--msr-space-4);
+  border-bottom: 1px solid var(--msr-color-border);
+}
+.msr-Blockers__item:last-child {
+  border-bottom: none;
+}
+.msr-Blockers__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.msr-Blockers__item[data-severity="error"] .msr-Blockers__dot {
+  background-color: var(--msr-tone-danger-fg);
+}
+.msr-Blockers__item[data-severity="warning"] .msr-Blockers__dot {
+  background-color: var(--msr-tone-warning-fg);
+}
+.msr-Blockers__text {
+  flex: 1;
+}
+.msr-Blockers__title {
+  font-size: var(--msr-text-sm);
+  font-weight: var(--msr-weight-medium);
+}
+.msr-Blockers__desc {
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg-muted);
+}
+.msr-Blockers__action {
+  border: 1px solid var(--msr-color-border);
+  background-color: var(--msr-color-surface);
+  color: var(--msr-color-fg);
+  border-radius: var(--msr-radius-md);
+  padding: var(--msr-space-1) var(--msr-space-3);
+  cursor: pointer;
+  font-size: var(--msr-text-xs);
+  white-space: nowrap;
+}
+
+/* ---- PublishReadinessPanel ---- */
+.msr-Readiness {
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  background-color: var(--msr-color-surface);
+  padding: var(--msr-space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-3);
+}
+.msr-Readiness__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.msr-Readiness__title {
+  font-weight: var(--msr-weight-semibold);
+}
+.msr-Readiness__status {
+  font-size: var(--msr-text-xs);
+  padding: 2px var(--msr-space-2);
+  border-radius: var(--msr-radius-full);
+  background-color: var(--msr-tone-danger-bg);
+  color: var(--msr-tone-danger-fg);
+}
+.msr-Readiness__status[data-ready] {
+  background-color: var(--msr-tone-success-bg);
+  color: var(--msr-tone-success-fg);
+}
+.msr-Readiness__checks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-2);
+}
+.msr-Readiness__check {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--msr-space-2);
+  font-size: var(--msr-text-sm);
+}
+.msr-Readiness__glyph {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  font-size: var(--msr-text-xs);
+  font-weight: var(--msr-weight-bold);
+  flex-shrink: 0;
+}
+.msr-Readiness__check[data-status="pass"] .msr-Readiness__glyph {
+  background-color: var(--msr-tone-success-fg);
+  color: #fff;
+}
+.msr-Readiness__check[data-status="warn"] .msr-Readiness__glyph {
+  background-color: var(--msr-tone-warning-fg);
+  color: #fff;
+}
+.msr-Readiness__check[data-status="fail"] .msr-Readiness__glyph {
+  background-color: var(--msr-tone-danger-fg);
+  color: #fff;
+}
+.msr-Readiness__text {
+  display: flex;
+  flex-direction: column;
+}
+.msr-Readiness__detail {
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg-muted);
+}
+.msr-Readiness__publish {
+  align-self: flex-start;
+  border: 1px solid var(--msr-color-primary);
+  background-color: var(--msr-color-primary);
+  color: var(--msr-color-primary-fg);
+  border-radius: var(--msr-radius-md);
+  padding: var(--msr-space-2) var(--msr-space-5);
+  cursor: pointer;
+  font-size: var(--msr-text-sm);
+}
+.msr-Readiness__publish:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
