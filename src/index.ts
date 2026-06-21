@@ -228,6 +228,7 @@ export * from "./components/Spotlight";
 export * from "./components/HoldToConfirm";
 export * from "./components/GlitchText";
 export * from "./components/CardStack";
+export * from "./components/Globe";
 
 // ---- Components: more inputs & data ----
 export * from "./components/VirtualizedList";

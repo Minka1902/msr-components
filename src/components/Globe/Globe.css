@@ -1,0 +1,10 @@
+.msr-Globe {
+  display: inline-block;
+  position: relative;
+}
+.msr-Globe__canvas {
+  display: block;
+}
+.msr-Globe__canvas:active {
+  cursor: grabbing;
+}

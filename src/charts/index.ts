@@ -18,3 +18,8 @@ export * from "./BulletChart";
 export * from "./Sankey";
 export * from "./CalendarHeatmap";
 export * from "./Gantt";
+export * from "./RadialBar";
+export * from "./Histogram";
+export * from "./BoxPlot";
+export * from "./StreamGraph";
+export * from "./ChordDiagram";

@@ -85,7 +85,7 @@ Every component also accepts `className` / `style` and renders stable
 | `msr-components/modules` | Marketplace, SetupWizard, DependencyGraph, AccessGate, FeatureToggleCard, SetupChecklist, RolePermissionMatrix, OnboardingDashboard |
 | `msr-components/profile` | ProfileHeader, RoutineTimeline, TrainingSessionCard, MedicalRecordCard, QRProfileCard, AccessManager, TrackerMapCard |
 | `msr-components/quiz` | GuessInput, DistanceFeedbackCard, MapHint, FactReveal, ProximityMeter, DailyChallenge, ResultSummary |
-| `msr-components/charts` | Sparkline, LineChart, BarChart, DonutChart, RadialProgress, Gauge, Heatmap, ProgressBar, RadarChart, ScatterPlot, FunnelChart, StackedBarChart, Candlestick, Treemap (squarified), Waterfall, BulletChart, Sankey, CalendarHeatmap (contribution grid), Gantt (project timeline) (dependency-free SVG/CSS) |
+| `msr-components/charts` | Sparkline, LineChart, BarChart, DonutChart, RadialProgress, Gauge, Heatmap, ProgressBar, RadarChart, ScatterPlot, FunnelChart, StackedBarChart, Candlestick, Treemap (squarified), Waterfall, BulletChart, Sankey, CalendarHeatmap (contribution grid), Gantt (project timeline), RadialBar, Histogram, BoxPlot, StreamGraph (themeriver), ChordDiagram (dependency-free SVG/CSS) |
 | `msr-components/geo` | CountryFlag (code→emoji), MapLegend (color scale), Choropleth (consumer-supplied region paths), TileGridMap (built-in compact world tile grid) — dependency-free SVG/CSS |
 | `msr-components/styles.css` | The full stylesheet (tokens + 15 themes + all components) |
 
@@ -149,7 +149,7 @@ BorderBeam (traveling border), Meteors, Sparkles (canvas particles), AnimatedBea
 (connect two refs), OrbitingIcons, LiquidProgress (wavy fill), SplitFlapDisplay
 (Solari board), RippleButton, Odometer (rolling digits), GradientText,
 ShimmerButton, MorphingText (gooey morph), RetroGrid, Spotlight (cursor light),
-HoldToConfirm, GlitchText, CardStack.
+HoldToConfirm, GlitchText, CardStack, Globe (rotating dotted globe with markers).
 
 **Powered by `msr-hooks`** (showcase components): NetworkStatusBanner,
 CountdownTimer, IdleDialog, GeoPrompt.

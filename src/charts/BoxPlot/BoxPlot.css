@@ -1,0 +1,28 @@
+.msr-BoxPlot {
+  width: 100%;
+  color: var(--msr-color-fg);
+}
+.msr-BoxPlot svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.msr-BoxPlot__whisker,
+.msr-BoxPlot__cap {
+  stroke: var(--msr-color-fg-muted);
+  stroke-width: 1.5;
+}
+.msr-BoxPlot__box {
+  stroke-width: 1.5;
+}
+.msr-BoxPlot__median {
+  stroke-width: 2;
+}
+.msr-BoxPlot__outlier {
+  fill: var(--msr-color-surface);
+  stroke-width: 1.5;
+}
+.msr-BoxPlot__label {
+  fill: var(--msr-color-fg-subtle);
+  font-size: 11px;
+}

@@ -1,0 +1,23 @@
+.msr-Histogram {
+  width: 100%;
+  color: var(--msr-color-fg);
+}
+.msr-Histogram svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.msr-Histogram__bar {
+  transition: fill var(--msr-transition-fast);
+}
+.msr-Histogram__bar:hover {
+  filter: brightness(1.1);
+}
+.msr-Histogram__axis line {
+  stroke: var(--msr-color-border);
+  stroke-width: 1;
+}
+.msr-Histogram__tick {
+  fill: var(--msr-color-fg-subtle);
+  font-size: 10px;
+}

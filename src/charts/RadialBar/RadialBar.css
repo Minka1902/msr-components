@@ -1,0 +1,37 @@
+.msr-RadialBar {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--msr-space-4);
+  color: var(--msr-color-fg);
+}
+.msr-RadialBar svg {
+  display: block;
+}
+.msr-RadialBar__legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-2);
+}
+.msr-RadialBar__legendItem {
+  display: flex;
+  align-items: center;
+  gap: var(--msr-space-2);
+  font-size: var(--msr-text-sm);
+}
+.msr-RadialBar__swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--msr-radius-sm);
+  flex: none;
+}
+.msr-RadialBar__legendLabel {
+  color: var(--msr-color-fg-muted);
+}
+.msr-RadialBar__legendValue {
+  margin-inline-start: auto;
+  font-weight: var(--msr-weight-semibold);
+  font-variant-numeric: tabular-nums;
+}

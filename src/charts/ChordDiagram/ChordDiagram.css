@@ -1,0 +1,24 @@
+.msr-ChordDiagram {
+  display: inline-block;
+  color: var(--msr-color-fg);
+}
+.msr-ChordDiagram svg {
+  display: block;
+  overflow: visible;
+}
+.msr-ChordDiagram__ribbon {
+  transition: fill-opacity var(--msr-transition-fast);
+}
+.msr-ChordDiagram__node {
+  cursor: pointer;
+}
+.msr-ChordDiagram__node path {
+  transition: stroke-width var(--msr-transition-fast);
+}
+.msr-ChordDiagram__node:hover path {
+  stroke-width: 13;
+}
+.msr-ChordDiagram__label {
+  fill: var(--msr-color-fg-muted);
+  font-size: 11px;
+}

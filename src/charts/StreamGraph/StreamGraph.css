@@ -1,0 +1,40 @@
+.msr-StreamGraph {
+  width: 100%;
+  color: var(--msr-color-fg);
+}
+.msr-StreamGraph svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.msr-StreamGraph__layer {
+  transition: opacity var(--msr-transition-fast);
+}
+.msr-StreamGraph__layer:hover {
+  opacity: 0.82;
+}
+.msr-StreamGraph__axis {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg-subtle);
+  margin-top: 2px;
+}
+.msr-StreamGraph__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--msr-space-3);
+  margin-top: var(--msr-space-2);
+}
+.msr-StreamGraph__legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--msr-space-1);
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg-muted);
+}
+.msr-StreamGraph__swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
