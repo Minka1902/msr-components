@@ -269,6 +269,11 @@ export * from "./components/Webhooks";
 export * from "./components/Secrets";
 export * from "./components/Jobs";
 
+// ---- Components: agent conversation, observability & key-value editing ----
+export * from "./components/AgentChat";
+export * from "./components/Observability";
+export * from "./components/KeyValueEditor";
+
 // ---- Components: more inputs & data ----
 export * from "./components/VirtualizedList";
 export * from "./components/MaskedInput";

@@ -46,6 +46,19 @@ import {
   ApiKeyManager,
   BackgroundJobMonitor,
   RetryActionButton,
+  CitationList,
+  ResponseFeedback,
+  SuggestedPrompts,
+  MessageActions,
+  ConversationList,
+  CostEstimator,
+  ConfidenceMeter,
+  LatencyBadge,
+  RateLimitBanner,
+  UsageMeter,
+  KeyValueEditor,
+  EnvVarEditor,
+  HeadersEditor,
 } from "../index";
 import { Grid, Cell } from "./_demo";
 
@@ -501,6 +514,114 @@ export const FormsSetupAndBackend: Story = {
       </Cell>
       <Cell title="RetryActionButton" minWidth={200}>
         <RetryActionButton attempts={2} />
+      </Cell>
+    </Grid>
+  ),
+};
+
+export const ConversationAndObservability: Story = {
+  render: () => (
+    <Grid gap={32}>
+      <Cell title="CitationList" minWidth={360}>
+        <CitationList
+          citations={[
+            { id: "1", title: "Pricing docs", url: "#", source: "docs", snippet: "Plans start at $10/mo…", score: 0.94 },
+            { id: "2", title: "Changelog", url: "#", source: "web", snippet: "Added SSO support." },
+          ]}
+        />
+      </Cell>
+      <Cell title="ResponseFeedback" minWidth={280}>
+        <ResponseFeedback value="up" onChange={() => {}} />
+      </Cell>
+      <Cell title="SuggestedPrompts" minWidth={360}>
+        <SuggestedPrompts
+          title="Try asking"
+          prompts={["Summarize this thread", "Draft a reply", "Find action items"]}
+        />
+      </Cell>
+      <Cell title="MessageActions" minWidth={200}>
+        <MessageActions copyText="hello" onRegenerate={() => {}} onEdit={() => {}} />
+      </Cell>
+      <Cell title="ConversationList" minWidth={280}>
+        <ConversationList
+          activeId="b"
+          onNew={() => {}}
+          conversations={[
+            { id: "a", title: "Onboarding plan", preview: "Let's outline…", timestamp: now },
+            { id: "b", title: "Bug triage", preview: "The crash is…", timestamp: now, unread: true },
+          ]}
+        />
+      </Cell>
+      <Cell title="CostEstimator" minWidth={320}>
+        <CostEstimator
+          precision={4}
+          items={[
+            { label: "Input tokens", units: 12000, unitPrice: 0.000003, unitLabel: "tok" },
+            { label: "Output tokens", units: 3000, unitPrice: 0.000015, unitLabel: "tok" },
+          ]}
+        />
+      </Cell>
+      <Cell title="ConfidenceMeter" minWidth={260}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+          <ConfidenceMeter value={0.92} />
+          <ConfidenceMeter value={0.55} label="Match" />
+          <ConfidenceMeter value={0.2} label="Certainty" />
+        </div>
+      </Cell>
+      <Cell title="LatencyBadge" minWidth={240}>
+        <div style={{ display: "flex", gap: 8 }}>
+          <LatencyBadge ms={180} />
+          <LatencyBadge ms={1400} />
+          <LatencyBadge ms={5200} label="p95" />
+        </div>
+      </Cell>
+      <Cell title="RateLimitBanner" minWidth={360}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+          <RateLimitBanner remaining={8} limit={100} resetAt={now} />
+          <RateLimitBanner remaining={0} limit={100} resetAt={now} />
+        </div>
+      </Cell>
+      <Cell title="UsageMeter" minWidth={320}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+          <UsageMeter used={420} limit={1000} label="API calls" />
+          <UsageMeter used={950} limit={1000} label="Storage (GB)" />
+        </div>
+      </Cell>
+    </Grid>
+  ),
+};
+
+export const KeyValueEditors: Story = {
+  render: () => (
+    <Grid gap={32}>
+      <Cell title="KeyValueEditor" minWidth={420}>
+        <KeyValueEditor
+          toggleable
+          allowSecret
+          onChange={() => {}}
+          pairs={[
+            { key: "region", value: "us-east-1", enabled: true },
+            { key: "api_token", value: "sk_live_123", secret: true, enabled: true },
+          ]}
+        />
+      </Cell>
+      <Cell title="EnvVarEditor" minWidth={420}>
+        <EnvVarEditor
+          onChange={() => {}}
+          vars={[
+            { key: "NODE_ENV", value: "production" },
+            { key: "DATABASE_URL", value: "postgres://…", secret: true },
+          ]}
+        />
+      </Cell>
+      <Cell title="HeadersEditor" minWidth={420}>
+        <HeadersEditor
+          onChange={() => {}}
+          headers={[
+            { name: "Authorization", value: "Bearer …", enabled: true },
+            { name: "Content-Type", value: "application/json", enabled: true },
+          ]}
+        />
       </Cell>
     </Grid>
   ),
