@@ -71,6 +71,18 @@ import {
   NotificationItem,
   NotificationCenter,
   AnnouncementBanner,
+  FileUploader,
+  UploadList,
+  AttachmentChip,
+  FilePreviewCard,
+  PlanCard,
+  BillingSummary,
+  InvoiceList,
+  UsageBreakdown,
+  NpsSurvey,
+  EmojiRating,
+  SurveyForm,
+  FeedbackForm,
 } from "../index";
 import { Grid, Cell } from "./_demo";
 
@@ -737,6 +749,96 @@ export const NotificationsAndAnnouncements: Story = {
             Scheduled maintenance this Sunday 02:00–04:00 UTC.
           </AnnouncementBanner>
         </div>
+      </Cell>
+    </Grid>
+  ),
+};
+
+export const FilesAndBilling: Story = {
+  render: () => (
+    <Grid gap={32}>
+      <Cell title="FileUploader" minWidth={360}>
+        <FileUploader onFiles={() => {}} hint="PNG, JPG or PDF up to 10MB" />
+      </Cell>
+      <Cell title="UploadList" minWidth={360}>
+        <UploadList
+          onCancel={() => {}}
+          onRetry={() => {}}
+          onRemove={() => {}}
+          uploads={[
+            { id: "1", name: "design.fig", size: 2_400_000, status: "uploading", progress: 64 },
+            { id: "2", name: "report.pdf", size: 880_000, status: "done" },
+            { id: "3", name: "broken.zip", size: 1_200_000, status: "error", error: "Network error" },
+          ]}
+        />
+      </Cell>
+      <Cell title="AttachmentChip" minWidth={300}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+          <AttachmentChip name="spec.pdf" size={184_000} onRemove={() => {}} />
+          <AttachmentChip name="logo.svg" size={12_000} href="#" />
+        </div>
+      </Cell>
+      <Cell title="FilePreviewCard" minWidth={360}>
+        <div style={{ display: "flex", gap: 12 }}>
+          <FilePreviewCard name="hero.png" size={420_000} thumbnail={<img src="https://picsum.photos/id/1018/200/120" alt="" />} actions={<a href="#">Open</a>} />
+          <FilePreviewCard name="archive.zip" size={9_800_000} />
+        </div>
+      </Cell>
+      <Cell title="PlanCard" minWidth={540}>
+        <div style={{ display: "flex", gap: 16 }}>
+          <PlanCard name="Starter" price="$0" period="/mo" description="For trying things out" features={[{ label: "1 project" }, { label: "Community support" }, { label: "Advanced analytics", included: false }]} ctaLabel="Get started" onSelect={() => {}} />
+          <PlanCard name="Pro" price="$49" period="/mo" featured description="For growing teams" features={[{ label: "Unlimited projects" }, { label: "Priority support" }, { label: "Advanced analytics" }]} onSelect={() => {}} />
+        </div>
+      </Cell>
+      <Cell title="BillingSummary" minWidth={520}>
+        <BillingSummary planName="Pro" planPrice="$49/mo" nextInvoiceDate={now} nextInvoiceAmount="$49.00" onChangePlan={() => {}} onManage={() => {}} />
+      </Cell>
+      <Cell title="InvoiceList" minWidth={480}>
+        <InvoiceList
+          invoices={[
+            { id: "1", number: "INV-0007", date: now, amount: "$49.00", status: "paid", downloadUrl: "#" },
+            { id: "2", number: "INV-0006", date: now, amount: "$49.00", status: "paid", downloadUrl: "#" },
+            { id: "3", number: "INV-0005", date: now, amount: "$49.00", status: "past-due", downloadUrl: "#" },
+          ]}
+        />
+      </Cell>
+      <Cell title="UsageBreakdown" minWidth={360}>
+        <UsageBreakdown
+          title="Usage this period"
+          rows={[
+            { label: "API calls", used: 8200, limit: 10000 },
+            { label: "Storage", used: 19, limit: 20, unit: "GB" },
+            { label: "Seats", used: 4, limit: 10 },
+          ]}
+        />
+      </Cell>
+    </Grid>
+  ),
+};
+
+export const SurveysAndFeedback: Story = {
+  render: () => (
+    <Grid gap={32}>
+      <Cell title="NpsSurvey" minWidth={420}>
+        <NpsSurvey value={9} onChange={() => {}} />
+      </Cell>
+      <Cell title="EmojiRating" minWidth={280}>
+        <EmojiRating value={4} onChange={() => {}} />
+      </Cell>
+      <Cell title="SurveyForm" minWidth={360}>
+        <SurveyForm
+          answers={{ q1: 4, q2: "fast" }}
+          onChange={() => {}}
+          onSubmit={() => {}}
+          questions={[
+            { id: "q1", label: "Rate your experience", type: "rating", max: 5 },
+            { id: "q2", label: "What stood out?", type: "choice", options: [{ label: "Speed", value: "fast" }, { label: "Design", value: "design" }] },
+            { id: "q3", label: "Anything else?", type: "text" },
+          ]}
+        />
+      </Cell>
+      <Cell title="FeedbackForm" minWidth={340}>
+        <FeedbackForm withRating onSubmit={() => {}} />
       </Cell>
     </Grid>
   ),

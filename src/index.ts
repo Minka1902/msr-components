@@ -279,6 +279,11 @@ export * from "./components/Metrics";
 export * from "./components/StatusIndicators";
 export * from "./components/Notifications";
 
+// ---- Components: files, billing & feedback ----
+export * from "./components/FileManager";
+export * from "./components/Billing";
+export * from "./components/Feedback";
+
 // ---- Components: more inputs & data ----
 export * from "./components/VirtualizedList";
 export * from "./components/MaskedInput";
