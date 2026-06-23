@@ -59,6 +59,18 @@ import {
   KeyValueEditor,
   EnvVarEditor,
   HeadersEditor,
+  TrendIndicator,
+  MetricCard,
+  StatComparison,
+  KpiGrid,
+  StatusDot,
+  HealthIndicator,
+  ServiceStatusList,
+  Heartbeat,
+  IncidentBanner,
+  NotificationItem,
+  NotificationCenter,
+  AnnouncementBanner,
 } from "../index";
 import { Grid, Cell } from "./_demo";
 
@@ -622,6 +634,109 @@ export const KeyValueEditors: Story = {
             { name: "Content-Type", value: "application/json", enabled: true },
           ]}
         />
+      </Cell>
+    </Grid>
+  ),
+};
+
+export const MetricsAndStatus: Story = {
+  render: () => (
+    <Grid gap={32}>
+      <Cell title="KpiGrid + MetricCard" minWidth={520}>
+        <KpiGrid minColumnWidth={200}>
+          <MetricCard label="Revenue" value="$48.2k" delta={8.4} deltaPercent caption="vs last month" sparkline={[3, 5, 4, 6, 7, 6, 8]} />
+          <MetricCard label="Active users" value="1,284" delta={2.1} deltaPercent sparkline={[5, 4, 6, 5, 7, 8, 9]} />
+          <MetricCard label="Error rate" value="0.42%" delta={-0.1} deltaPercent invertTrend caption="lower is better" />
+          <MetricCard label="Latency p95" value="312ms" delta={-12} invertTrend />
+        </KpiGrid>
+      </Cell>
+      <Cell title="TrendIndicator" minWidth={240}>
+        <div style={{ display: "flex", gap: 12 }}>
+          <TrendIndicator delta={12.5} percent />
+          <TrendIndicator delta={-3.2} percent />
+          <TrendIndicator delta={-3.2} percent invert />
+          <TrendIndicator delta={0} />
+        </div>
+      </Cell>
+      <Cell title="StatComparison" minWidth={260}>
+        <StatComparison label="Signups this week" current={342} previous={290} />
+      </Cell>
+      <Cell title="StatusDot" minWidth={240}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+          <StatusDot tone="online" label="Online" pulse />
+          <StatusDot tone="busy" label="Busy" />
+          <StatusDot tone="away" label="Away" />
+          <StatusDot tone="offline" label="Offline" />
+        </div>
+      </Cell>
+      <Cell title="HealthIndicator" minWidth={240}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+          <HealthIndicator status="operational" />
+          <HealthIndicator status="degraded" />
+          <HealthIndicator status="major-outage" />
+          <HealthIndicator status="maintenance" />
+        </div>
+      </Cell>
+      <Cell title="ServiceStatusList" minWidth={360}>
+        <ServiceStatusList
+          services={[
+            { id: "1", name: "API", status: "operational", description: "REST + GraphQL" },
+            { id: "2", name: "Dashboard", status: "operational" },
+            { id: "3", name: "Search", status: "degraded", description: "Elevated latency" },
+            { id: "4", name: "Webhooks", status: "partial-outage" },
+          ]}
+        />
+      </Cell>
+      <Cell title="Heartbeat" minWidth={240}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+          <Heartbeat live label="Streaming" />
+          <Heartbeat live={false} lastSeen={now} />
+        </div>
+      </Cell>
+      <Cell title="IncidentBanner" minWidth={420}>
+        <IncidentBanner title="Elevated error rates on Search" severity="major" updatedAt={now} href="#">
+          We're investigating increased error rates and will post updates shortly.
+        </IncidentBanner>
+      </Cell>
+    </Grid>
+  ),
+};
+
+export const NotificationsAndAnnouncements: Story = {
+  render: () => (
+    <Grid gap={32}>
+      <Cell title="NotificationCenter" minWidth={380}>
+        <NotificationCenter
+          onMarkAllRead={() => {}}
+          notifications={[
+            { id: "1", title: "Deploy succeeded", body: "v1.4.0 is live in production.", tone: "success", timestamp: now },
+            { id: "2", title: "New comment", body: "Ada mentioned you in “Q3 plan”.", tone: "info", timestamp: now },
+            { id: "3", title: "Quota almost reached", body: "You've used 92% of your API quota.", tone: "warning", timestamp: now, read: true },
+          ]}
+        />
+      </Cell>
+      <Cell title="NotificationItem" minWidth={360}>
+        <div style={{ border: "1px solid var(--msr-color-border)", borderRadius: 12, overflow: "hidden" }}>
+          <NotificationItem
+            title="Build failed"
+            body="3 tests failed on the main branch."
+            tone="danger"
+            timestamp={now}
+            actions={<button>View logs</button>}
+            onMarkRead={() => {}}
+            onDismiss={() => {}}
+          />
+        </div>
+      </Cell>
+      <Cell title="AnnouncementBanner" minWidth={520}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+          <AnnouncementBanner tone="promo" center action={<a href="#" style={{ color: "inherit" }}>Upgrade →</a>} onDismiss={() => {}}>
+            🎉 New: Agent App Kit components are here
+          </AnnouncementBanner>
+          <AnnouncementBanner tone="warning" onDismiss={() => {}}>
+            Scheduled maintenance this Sunday 02:00–04:00 UTC.
+          </AnnouncementBanner>
+        </div>
       </Cell>
     </Grid>
   ),

@@ -1,0 +1,100 @@
+/* ---- TrendIndicator ---- */
+.msr-Trend {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-size: var(--msr-text-sm);
+  font-weight: var(--msr-weight-medium);
+  font-variant-numeric: tabular-nums;
+}
+.msr-Trend__arrow {
+  font-size: 0.7em;
+}
+.msr-Trend[data-tone="good"] {
+  color: var(--msr-tone-success-fg);
+}
+.msr-Trend[data-tone="bad"] {
+  color: var(--msr-tone-danger-fg);
+}
+.msr-Trend[data-tone="neutral"] {
+  color: var(--msr-color-fg-subtle);
+}
+
+/* ---- MetricCard ---- */
+.msr-Metric {
+  border: 1px solid var(--msr-color-border);
+  border-radius: var(--msr-radius-lg);
+  background-color: var(--msr-color-surface);
+  padding: var(--msr-space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--msr-space-2);
+}
+.msr-Metric__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.msr-Metric__label {
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg-muted);
+}
+.msr-Metric__icon {
+  color: var(--msr-color-fg-subtle);
+}
+.msr-Metric__valueRow {
+  display: flex;
+  align-items: baseline;
+  gap: var(--msr-space-2);
+}
+.msr-Metric__value {
+  font-size: var(--msr-text-3xl);
+  font-weight: var(--msr-weight-bold);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.msr-Metric__spark {
+  color: var(--msr-color-primary);
+  margin-top: var(--msr-space-1);
+}
+.msr-Metric__spark path {
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.msr-Metric__caption {
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg-subtle);
+}
+
+/* ---- StatComparison ---- */
+.msr-StatCompare {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.msr-StatCompare__label {
+  font-size: var(--msr-text-sm);
+  color: var(--msr-color-fg-muted);
+}
+.msr-StatCompare__row {
+  display: flex;
+  align-items: baseline;
+  gap: var(--msr-space-2);
+}
+.msr-StatCompare__current {
+  font-size: var(--msr-text-2xl);
+  font-weight: var(--msr-weight-bold);
+  font-variant-numeric: tabular-nums;
+}
+.msr-StatCompare__previous {
+  font-size: var(--msr-text-xs);
+  color: var(--msr-color-fg-subtle);
+}
+
+/* ---- KpiGrid ---- */
+.msr-KpiGrid {
+  display: grid;
+  gap: var(--msr-space-4);
+}

@@ -274,6 +274,11 @@ export * from "./components/AgentChat";
 export * from "./components/Observability";
 export * from "./components/KeyValueEditor";
 
+// ---- Components: metrics, status & notifications ----
+export * from "./components/Metrics";
+export * from "./components/StatusIndicators";
+export * from "./components/Notifications";
+
 // ---- Components: more inputs & data ----
 export * from "./components/VirtualizedList";
 export * from "./components/MaskedInput";
